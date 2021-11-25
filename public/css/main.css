@@ -1,0 +1,1437 @@
+/*
+0 - 650px       :   Phone
+650 - 992px     :   Tablet Potrait
+650 - 1200px    :   Tablet Landscape
+[1200 - 1800px] :   Desktop
+1800px +        :   Big Desktop
+*/
+/* 
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-lans
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* default 16px */
+  /* font-size: 10px; */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (max-width: 62em) {
+  body {
+    height: 100vh;
+  }
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+input:focus,
+textarea:focus,
+button:focus,
+select:focus,
+a:focus {
+  color: white;
+}
+
+button:focus {
+  outline: 0;
+}
+
+@media only screen and (max-width: 62em) {
+  main:not([page=home]) {
+    margin-top: unset;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DIN-Bold.woff";
+}
+
+p {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (max-width: 62em) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.forDesktop {
+  display: block !important;
+}
+@media only screen and (max-width: 62em) {
+  .forDesktop {
+    display: none !important;
+  }
+}
+
+.forDesktop-dflex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+@media only screen and (max-width: 62em) {
+  .forDesktop-dflex {
+    display: none !important;
+  }
+}
+
+.forMobile {
+  display: none !important;
+}
+@media only screen and (max-width: 62em) {
+  .forMobile {
+    display: block !important;
+  }
+}
+
+.forMobile-dflex {
+  display: none !important;
+}
+@media only screen and (max-width: 62em) {
+  .forMobile-dflex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+/* hamburger menu */
+#menu-hamburger {
+  width: 30px;
+  height: 37px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#menu-hamburger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.bg_white {
+  background-color: white;
+}
+
+#menu-hamburger span:nth-child(1) {
+  top: 10px;
+}
+
+#menu-hamburger span:nth-child(2) {
+  width: 100%;
+}
+
+#menu-hamburger span:nth-child(4) {
+  width: 60%;
+  right: 0;
+  left: unset;
+}
+
+#menu-hamburger span:nth-child(2), #menu-hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+#menu-hamburger span:nth-child(3) {
+  display: none;
+}
+
+#menu-hamburger span:nth-child(4) {
+  top: 26px;
+}
+
+#menu-hamburger.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#menu-hamburger.open span:nth-child(2) {
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+#menu-hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  display: block;
+}
+
+#menu-hamburger.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+  display: none;
+}
+
+@font-face {
+  font-family: "DIN-Bold.woff";
+  src: url("/fonts/DINCondensed-Bold.woff") format("woff");
+}
+footer {
+  padding: 4rem 6.7rem;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .left {
+  width: 50%;
+  padding-right: 20rem;
+}
+footer .left .get {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+footer .left .get h3 {
+  color: white;
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  margin-right: 8rem;
+  margin-bottom: 0;
+}
+footer .left .get h4 {
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+}
+footer .left .get h4 span {
+  margin-left: 1rem;
+}
+footer .left .kretek {
+  margin-bottom: 1.5rem;
+}
+footer .left p {
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  font-weight: 300;
+}
+footer .right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+}
+footer .right ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+footer .right ul li {
+  list-style: none;
+}
+footer .right ul li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+footer .right ul li a {
+  font-family: "DIN-Bold.woff";
+  text-decoration: none;
+  color: white;
+  font-size: 2.8rem;
+  line-height: 34px;
+  letter-spacing: 0.2px;
+}
+footer .right ul li p {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  color: white;
+}
+
+menu {
+  padding: 0 4rem;
+  background-color: #111114;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  min-height: 80px;
+  z-index: 99;
+}
+menu img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header {
+  margin-top: 80px;
+  background-color: #111114;
+  position: relative;
+}
+header .header_slider {
+  height: 100%;
+  overflow: hidden;
+}
+header .header_slider_item {
+  height: 100%;
+  padding-left: 13.4rem;
+  position: relative;
+}
+header .header_slider_item .bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .header_slider_item .img_on_bg {
+  position: absolute;
+  width: 670px;
+  height: 435px;
+  left: 43px;
+  top: 53px;
+}
+header .header_slider_item .box_banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 825.32px;
+  height: 335px;
+  position: absolute;
+  bottom: 0;
+  right: 8rem;
+}
+header .header_slider_item .box_banner .left {
+  width: 40%;
+}
+header .header_slider_item .box_banner .left img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+header .header_slider_item .box_banner .right {
+  width: 60%;
+  background-color: #ED1C24;
+  padding: 5.4rem;
+}
+header .header_slider_item .box_banner .right h3 {
+  color: white;
+  font-size: 3.6rem;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+}
+
+.menu__showcase {
+  padding: 4rem;
+  background-color: #111114;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  transition: 0.2s all ease-in;
+}
+.menu__showcase.show-menu {
+  right: 0%;
+}
+.menu__showcase .box {
+  border: 1px solid white;
+  padding: 8rem;
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu__showcase .box .btn-close {
+  position: absolute;
+  top: 33px;
+  right: 33px;
+  width: 26px;
+  height: 26px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+.menu__showcase .box ul {
+  padding: 0;
+  margin: 0;
+}
+.menu__showcase .box ul li {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+.menu__showcase .box ul li a {
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  color: white;
+  font-family: "DIN-Bold.woff";
+}
+.menu__showcase .box .lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+.menu__showcase .box .lang a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  font-family: "DIN-Bold.woff";
+}
+.menu__showcase .box .lang .lang-init {
+  color: #ED1C24;
+}
+.menu__showcase .box .lang p {
+  color: white;
+  margin-bottom: 0;
+  font-family: "DIN-Bold.woff";
+  margin: 0 1rem;
+}
+.menu__showcase .box .lang .btn-search {
+  margin-left: 2.5rem;
+  width: 19px;
+  height: 19px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+.confirmation__wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.685);
+}
+.confirmation__wrapper .confirmation {
+  width: 55%;
+  height: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.confirmation__wrapper .confirmation img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.confirmation__wrapper .confirmation .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.confirmation__wrapper .confirmation .box h3 {
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  line-height: 38px;
+  letter-spacing: 0.3px;
+  margin-bottom: 5rem;
+}
+.confirmation__wrapper .confirmation .box h4 {
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: white;
+  margin-bottom: 3.5rem;
+}
+.confirmation__wrapper .confirmation .box .btn_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+.confirmation__wrapper .confirmation .box .btn_wrapper button {
+  width: 170px;
+  padding: 1rem 0;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  background-color: #ED1C24;
+  color: white;
+  box-shadow: none;
+  border: none;
+  font-family: "DIN-Bold.woff";
+}
+.v-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+main[page=home] {
+  padding-top: 8rem;
+  background-color: #111114;
+}
+main[page=home] .section__first {
+  padding-left: 13.4rem;
+  padding-right: 8.4rem;
+  padding-bottom: 17rem;
+  position: relative;
+}
+main[page=home] .section__first .smoke_bg {
+  position: absolute;
+  top: 58%;
+  left: 0;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+main[page=home] .section__first .smoke_bg img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: rotateY(180deg);
+  width: 100%;
+}
+main[page=home] .section__first .title__sf {
+  margin-bottom: 2rem;
+  position: relative;
+}
+main[page=home] .section__first .title__sf h2 {
+  font-size: 6.5rem;
+  line-height: 60px;
+  color: white;
+  margin-bottom: 0;
+}
+main[page=home] .section__first .title__sf h2 span {
+  color: #ED1C24;
+}
+main[page=home] .section__first .box__sf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  z-index: 2;
+}
+main[page=home] .section__first .box__sf .left {
+  width: 42%;
+  height: 490px;
+  position: relative;
+}
+main[page=home] .section__first .box__sf .left .box_red {
+  background-color: #ED1C24;
+  width: 259px;
+  height: 280px;
+  position: absolute;
+  right: 0;
+  bottom: -160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-right: 4rem;
+  text-align: end;
+}
+main[page=home] .section__first .box__sf .left .box_red h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+main[page=home] .section__first .box__sf .left .box_red p {
+  margin-bottom: 0;
+  color: white;
+}
+main[page=home] .section__first .box__sf .left .box_red a {
+  color: white;
+  font-family: "DIN-Bold.woff";
+  font-size: 2.8rem;
+  line-height: 34px;
+}
+main[page=home] .section__first .box__sf .left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=home] .section__first .box__sf .right {
+  width: 58%;
+  height: auto;
+  background-color: black;
+  padding: 4.1rem;
+}
+main[page=home] .section__first .box__sf .right .caption {
+  padding: 4.1rem;
+  border: 1px solid #313131;
+}
+main[page=home] .section__first .box__sf .right .caption h3 {
+  color: white;
+  font-size: 2.8rem;
+  line-height: 34px;
+}
+main[page=home] .section__first .box__sf .right .caption .kutip-l {
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+main[page=home] .section__first .box__sf .right .caption .kutip-r {
+  margin-top: 4rem;
+}
+main[page=home] .section__first .box__sf .right .video_yt {
+  margin-top: 8rem;
+}
+main[page=home] .section__second {
+  overflow: hidden;
+  padding: 5rem 0;
+  position: relative;
+}
+main[page=home] .section__second .v-img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+}
+main[page=home] .section__second .slider__products {
+  padding-left: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+main[page=home] .section__second .slider__products-item {
+  padding-top: 5rem;
+}
+main[page=home] .section__second .slider__products-item .item__wrapper {
+  width: 900px;
+}
+main[page=home] .section__second .slider__products-item .box {
+  height: 549px;
+  width: 600px;
+  position: relative;
+}
+main[page=home] .section__second .slider__products-item .box .bg {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=home] .section__second .slider__products-item .box .title {
+  font-size: 5.3rem;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  color: white;
+  position: absolute;
+  top: -40px;
+  left: 80px;
+}
+main[page=home] .section__second .slider__products-item .box .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 203px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main[page=home] .section__second .slider__products-item .box .description {
+  width: 350px;
+  height: 358px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -188.5px;
+  border: 1px solid #999999;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main[page=home] .section__second .slider__products-item .box .description p {
+  color: white;
+  font-size: 19px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  margin-bottom: 4rem;
+}
+main[page=home] .section__second .slider__products-item .box .description .to_all_products {
+  background-color: #ED1C24;
+  color: white;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "DIN-Bold.woff";
+  padding: 0.5rem;
+  text-align: center;
+}
+main[page=home] .section__third {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main[page=home] .section__third .left {
+  width: 35%;
+  background-color: black;
+  padding: 8rem;
+}
+main[page=home] .section__third .left h3 {
+  font-size: 5.3rem;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 6.6rem;
+}
+main[page=home] .section__third .left form select {
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: white;
+  padding: 1.8rem;
+  margin-bottom: 1rem;
+}
+main[page=home] .section__third .left form select option {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: black;
+}
+main[page=home] .section__third .left .btn-search-now {
+  background-color: #ED1C24;
+  color: white;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  font-family: "DIN-Bold.woff";
+  font-size: 2rem;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+main[page=home] .section__third .right {
+  width: 65%;
+}
+main[page=home] .section__third .right img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=home] .section__fourth {
+  padding: 8rem;
+  background-color: black;
+}
+main[page=home] .section__fourth .sf-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+main[page=home] .section__fourth .sf-header h2 {
+  font-family: "DIN-Bold.woff";
+  font-size: 53px;
+  color: white;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+}
+main[page=home] .section__fourth .sf-header p {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ED1C24;
+  margin-bottom: 0;
+}
+main[page=home] .section__fourth .inspiration__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+main[page=home] .section__fourth .inspiration__wrapper .ins-box {
+  width: 401px;
+  height: 355px;
+  position: relative;
+}
+main[page=home] .section__fourth .inspiration__wrapper .ins-box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=home] .section__fourth .inspiration__wrapper .ins-box .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border: 1px solid white;
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+
+main[page=about] {
+  margin-top: 80px;
+}
+main[page=about] .section__first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #111114;
+}
+main[page=about] .section__first .left-1 {
+  width: 30%;
+}
+main[page=about] .section__first .left-1 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=about] .section__first .left-1 h2 {
+  position: absolute;
+  left: 125px;
+  top: 164px;
+  font-weight: bold;
+  font-size: 53px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: white;
+}
+main[page=about] .section__first .right-1 {
+  width: 70%;
+  padding: 8rem;
+}
+main[page=about] .section__first .right-1 h5 {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+main[page=about] .section__first .right-1 p {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+main[page=about] .section__first .left-2 {
+  width: 70%;
+  padding: 8rem;
+}
+main[page=about] .section__first .left-2 h2 {
+  color: white;
+  font-size: 53px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  margin-bottom: 4rem;
+}
+main[page=about] .section__first .left-2 h5 {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+main[page=about] .section__first .left-2 p {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+main[page=about] .section__first .right-2 {
+  width: 30%;
+}
+main[page=about] .section__first .right-2 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main[page=kretekCollection] {
+  margin-top: 80px;
+}
+main[page=kretekCollection] .section__first {
+  background-color: #111114;
+}
+main[page=kretekCollection] .section__first h2 {
+  font-size: 53px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 4rem;
+}
+main[page=kretekCollection] .section__first .product__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+main[page=kretekCollection] .section__first .left {
+  width: 50%;
+  padding: 8rem;
+}
+main[page=kretekCollection] .section__first .left img {
+  width: 440px;
+  margin-bottom: 4rem;
+}
+main[page=kretekCollection] .section__first .left .cp {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  margin-bottom: 4rem;
+}
+main[page=kretekCollection] .section__first .left form select {
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: white;
+  padding: 1.8rem;
+  margin-bottom: 1rem;
+}
+main[page=kretekCollection] .section__first .left form select option {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: black;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek {
+  width: 350px;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .btn-collapse-cs {
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  color: white;
+  padding: 1.5rem 2rem;
+  border: 1px solid white;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-family: "DIN-Bold.woff";
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .collapse {
+  padding: 2rem;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .collapse p {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #999999;
+}
+main[page=kretekCollection] .section__first .right {
+  width: 50%;
+}
+main[page=kretekCollection] .section__first .right h5 {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+main[page=kretekCollection] .section__first .right p {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+main[page=kretekCollection] .section__first .right .photo_product {
+  height: 595px;
+  position: relative;
+}
+main[page=kretekCollection] .section__first .right .photo_product .bg {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=kretekCollection] .section__first .right .photo_product .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main[page=kretekCollection] .section__first .right .desc {
+  padding: 4rem;
+  background-color: black;
+}
+main[page=kretekCollection] .section__first .right .desc-box {
+  border: 1px solid white;
+  padding: 4rem;
+}
+main[page=kretekCollection] .section__first .right .desc-box h4 {
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 4rem;
+}
+main[page=testimonials] {
+  margin-top: 80px;
+}
+main[page=testimonials] .section__first {
+  background-color: #111114;
+  padding-bottom: 10rem;
+}
+main[page=testimonials] .section__first h2 {
+  font-size: 53px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  color: white;
+  padding-left: 8rem;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+main[page=testimonials] .section__first .testimonials__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+main[page=testimonials] .section__first .testimonials__item:not(:last-child) {
+  margin-bottom: 10rem;
+}
+main[page=testimonials] .section__first .testimonials__item .left {
+  width: 50%;
+}
+main[page=testimonials] .section__first .testimonials__item .left img {
+  width: 100%;
+}
+main[page=testimonials] .section__first .testimonials__item .right {
+  width: 50%;
+  position: relative;
+}
+main[page=testimonials] .section__first .testimonials__item .right .box__wrapper {
+  background-color: black;
+  padding: 2rem;
+  width: 60%;
+  position: absolute;
+  left: -13%;
+  bottom: 5rem;
+}
+main[page=testimonials] .section__first .testimonials__item .right .box__wrapper.even-bw {
+  left: unset;
+  right: -13%;
+}
+main[page=testimonials] .section__first .testimonials__item .right .box__wrapper .border-box {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+}
+main[page=testimonials] .section__first .testimonials__item .right .box__wrapper .border-box p {
+  font-size: 2rem;
+  line-height: 23px;
+  text-align: right;
+  letter-spacing: 0.2px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+main[page=testimonials] .section__first .testimonials__item .right .box__wrapper .border-box h4 {
+  font-size: 2rem;
+  line-height: 23px;
+  text-align: right;
+  letter-spacing: 0.2px;
+  color: #ED1C24;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+main[page=store] {
+  margin-top: 80px;
+}
+main[page=store] .section__first {
+  background-color: black;
+  padding-top: 8rem;
+}
+main[page=store] .section__first h2 {
+  font-size: 53px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  color: white;
+  text-align: center;
+}
+main[page=store] .section__first form {
+  width: 100%;
+  padding: 4rem 16rem;
+}
+main[page=store] .section__first form .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+main[page=store] .section__first form select {
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: white;
+  padding: 1.8rem;
+  margin-bottom: 0rem;
+}
+main[page=store] .section__first form select:nth-child(2) {
+  margin: 0 1rem;
+}
+main[page=store] .section__first form select option {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: black;
+}
+main[page=store] .section__first form .btn-search-now {
+  background-color: #ED1C24;
+  color: white;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  font-family: "DIN-Bold.woff";
+  font-size: 2rem;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+main[page=store] .section__first .map--search {
+  height: 500px;
+}
+main[page=store] .section__first .map--search img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main[page=contact] {
+  margin-top: 80px;
+}
+main[page=contact] .section__first {
+  background-color: #111114;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8rem;
+}
+main[page=contact] .section__first h2 {
+  color: white;
+  font-size: 53px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  margin-bottom: 4rem;
+}
+main[page=contact] .section__first h4 {
+  color: #ED1C24;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.2px;
+  margin-bottom: 2rem;
+}
+main[page=contact] .section__first p {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  color: #999999;
+}
+main[page=contact] .section__first p span img {
+  width: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main[page=contact] .section__first form input {
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: white;
+  padding: 1.8rem;
+  margin-bottom: 0rem;
+}
+main[page=contact] .section__first form input::-moz-placeholder {
+  color: white;
+}
+main[page=contact] .section__first form input:-ms-input-placeholder {
+  color: white;
+}
+main[page=contact] .section__first form input::placeholder {
+  color: white;
+}
+main[page=contact] .section__first form textarea {
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: white;
+  padding: 1.8rem;
+  margin-bottom: 0rem;
+}
+main[page=contact] .section__first form textarea::-moz-placeholder {
+  color: white;
+}
+main[page=contact] .section__first form textarea:-ms-input-placeholder {
+  color: white;
+}
+main[page=contact] .section__first form textarea::placeholder {
+  color: white;
+}
+main[page=contact] .section__first form .btn-submit {
+  background-color: #ED1C24;
+  color: white;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  font-family: "DIN-Bold.woff";
+  font-size: 2rem;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+main[page=kretek-detail] {
+  margin-top: 8rem;
+}
+main[page=kretek-detail] .section__first {
+  padding: 12rem 8rem 0 8rem;
+  background-color: #111114;
+  position: relative;
+}
+main[page=kretek-detail] .section__first .bg-kretek-detail {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=kretek-detail] .section__first .product-detail {
+  background-color: #ED1C24;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6rem 4rem;
+  position: relative;
+}
+main[page=kretek-detail] .section__first .product-detail .left {
+  width: 50%;
+  position: relative;
+}
+main[page=kretek-detail] .section__first .product-detail .left .box {
+  width: 350px;
+  border: 1px solid white;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 15rem;
+  position: relative;
+}
+main[page=kretek-detail] .section__first .product-detail .left .box p {
+  color: white;
+}
+main[page=kretek-detail] .section__first .product-detail .left .box .pr-img {
+  position: absolute;
+  right: -60%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main[page=kretek-detail] .section__first .product-detail .right {
+  width: 50%;
+  padding: 2rem 8rem;
+}
+main[page=kretek-detail] .section__first .product-detail .right .img2 {
+  position: absolute;
+  top: -67px;
+  width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main[page=kretek-detail] .section__first .product-detail .right h2 {
+  font-size: 60px;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 3rem;
+}
+main[page=kretek-detail] .section__first .product-detail .right p {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+  color: white;
+}
+main[page=kretek-detail] .section__first .product-detail .right .desc {
+  margin-bottom: 6rem;
+}
+main[page=kretek-detail] .section__first .product-detail .right .to-other {
+  background-color: black;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DIN-Bold.woff";
+}
+
+main[page=inspiration] .section__first {
+  margin-top: 8rem;
+  padding: 8rem;
+  background-color: #111114;
+}
+main[page=inspiration] .section__first h2 {
+  font-size: 53px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 4rem;
+}
+main[page=inspiration] .section__first .mb-2rem {
+  margin-bottom: 2rem;
+}
+main[page=inspiration] .section__first .mb-5rem {
+  margin-bottom: 5rem;
+}
+main[page=inspiration] .section__first .inspiration__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main[page=inspiration] .section__first .inspiration__item {
+  height: 304.5px;
+  position: relative;
+}
+main[page=inspiration] .section__first .inspiration__item.big {
+  height: 629px;
+  padding-right: 2rem;
+}
+main[page=inspiration] .section__first .inspiration__item.box-list {
+  width: 32%;
+}
+main[page=inspiration] .section__first .inspiration__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=inspiration] .section__first .inspiration__item .box_inspiration {
+  background-color: #ED1C24;
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  width: 40%;
+  height: 100%;
+}
+main[page=inspiration] .section__first .inspiration__item .box_inspiration.big {
+  padding-right: 15rem;
+  width: 60%;
+  height: unset;
+}
+main[page=inspiration] .section__first .inspiration__item .box_inspiration h2 {
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 1rem;
+}
+main[page=inspiration] .section__first .inspiration__item .box_inspiration p {
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.35618px;
+  color: white;
+}

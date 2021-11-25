@@ -1,0 +1,605 @@
+main[page="about"]{
+    margin-top: 80px;
+    .section__first{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $color_lightBlack;
+        .left-1{
+            width: 30%;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+            h2{
+                position: absolute;
+                left: 125px;
+                top: 164px;
+                font-weight: bold;
+                font-size: 53px;
+                line-height: 64px;
+                letter-spacing: 0.2px;
+                font-family: "DIN-Bold.woff";
+                color: white;
+            }
+        }
+        .right-1{
+            width: 70%;
+            padding: 8rem;
+            h5{
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: 0.2px;
+                color: #999999;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                margin-bottom: 4rem;
+            }
+            p{
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.2px;
+                color: #999999;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .left-2{
+            width: 70%;
+            padding: 8rem;
+            h2{
+                color: white;
+                font-size: 53px;
+                line-height: 64px;
+                letter-spacing: 0.2px;
+                margin-bottom: 4rem;
+            }
+            h5{
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: 0.2px;
+                color: #999999;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                margin-bottom: 4rem;
+            }
+            p{
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.2px;
+                color: #999999;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .right-2{
+            width: 30%;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+main[page="kretekCollection"]{
+    margin-top: 80px;
+    .section__first{
+        background-color: $color_lightBlack;
+        h2{
+            font-size: 53px;
+            line-height: 64px;
+            letter-spacing: 0.2px;
+            color: white;
+            margin-bottom: 4rem;
+        }
+        .product__item{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left{
+            width: 50%;
+            padding: 8rem;
+            img{
+                width: 440px;
+                margin-bottom: 4rem;
+            }
+            .cp{
+                font-family: 'Roboto', sans-serif;
+                font-size: 24px;
+                line-height: 35px;
+                letter-spacing: 0.2px;
+                color: #999999;
+                margin-bottom: 4rem;
+            }
+            form{
+                select{
+                    background-color: transparent;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 0.2px;
+                    font-family: "DIN-Bold.woff";
+                    color: white;
+                    padding: 1.8rem;
+                    margin-bottom: 1rem;
+                    option{
+                        font-size: 20px;
+                        line-height: 24px;
+                        letter-spacing: 0.2px;
+                        font-family: "DIN-Bold.woff";
+                        color: black;
+                    }
+                }
+            }
+            .cs-kretek{
+                width: 350px;
+                .btn-collapse-cs{
+                    font-size: 22px;
+                    line-height: 26px;
+                    letter-spacing: 0.2px;
+                    color: white;
+                    padding: 1.5rem 2rem;
+                    border: 1px solid white;
+                    text-decoration: none;
+                    display: block;
+                    cursor: pointer;
+                    margin-bottom: 1rem;
+                    font-family: 'DIN-Bold.woff';
+                }
+
+                .collapse{
+                    padding: 2rem;
+                    p{
+                        font-size: 18px;
+                        line-height: 24px;
+                        letter-spacing: 0.2px;
+                        color: #999999;
+                    }
+                }
+            }
+
+        }
+        .right{
+            width: 50%;
+            h5{
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: 0.2px;
+                color: #999999;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                margin-bottom: 4rem;
+            }
+            p{
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.2px;
+                color: #999999;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+
+            .photo_product{
+                height: 595px;
+                position: relative;
+                .bg{
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .product{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 200px;
+                    object-fit: contain;
+                }
+            }
+
+            .desc{
+                padding: 4rem;
+                background-color: black;
+                &-box{
+                    border: 1px solid white;
+                    padding: 4rem;
+                    h4{
+                        font-size: 26px;
+                        line-height: 31px;
+                        letter-spacing: 0.2px;
+                        color: white;
+                        margin-bottom: 4rem;
+                    }
+                }
+            }
+        }
+        .full{
+
+        }
+    }
+}
+
+main[page="testimonials"]{
+    margin-top: 80px;
+    .section__first{
+        background-color: $color_lightBlack;
+        
+        padding-bottom: 10rem;
+        h2{
+            font-size: 53px;
+            line-height: 64px;
+            letter-spacing: 0.2px;
+            color: white;
+            padding-left: 8rem;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
+        .testimonials__item{
+            display: flex;
+            flex-wrap: wrap;
+            &:not(:last-child){
+                margin-bottom: 10rem;
+            }
+            .left{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+            .right{
+                width: 50%;
+                position: relative;
+                .box__wrapper{
+                    background-color: black;
+                    padding: 2rem;
+                    width: 60%;
+                    position: absolute;
+                    left: -13%;
+                    bottom: 5rem;
+                    &.even-bw{
+                        left: unset;
+                        right: -13%;
+                    }
+                    .border-box{
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        padding: 2rem;
+                        p{
+                            font-size: 2rem;
+                            line-height: 23px;
+                            text-align: right;
+                            letter-spacing: 0.2px;
+                            color: #999999;
+                            font-family: 'Roboto', sans-serif;
+                            font-weight: 400;
+                        }
+                        h4{
+                            font-size: 2rem;
+                            line-height: 23px;
+                            text-align: right;
+                            letter-spacing: 0.2px;
+                            color: $color_red;
+                            font-family: 'Roboto', sans-serif;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+main[page="store"]{
+    margin-top: 80px;
+    .section__first{
+        background-color: black;
+        padding-top: 8rem;
+        h2{
+            font-size: 53px;
+            line-height: 64px;
+            letter-spacing: 0.2px;
+            color: white;
+            text-align: center;
+        }
+        form{
+            width: 100%;
+            padding: 4rem 16rem;
+            .column{
+                display: flex;
+                justify-content: space-between;
+            }
+            select{
+                background-color: transparent;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                font-family: "DIN-Bold.woff";
+                color: white;
+                padding: 1.8rem;
+                margin-bottom: 0rem;
+                &:nth-child(2){
+                    margin: 0 1rem;
+                }
+                option{
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 0.2px;
+                    font-family: "DIN-Bold.woff";
+                    color: black;
+                }
+            }
+
+            .btn-search-now{
+                background-color: $color_red;
+                color: white;
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                font-family: "DIN-Bold.woff";
+                font-size: 2rem;
+                padding: 1rem 0;
+                margin-top: 1rem;
+            }
+        }
+
+        .map--search{
+            height: 500px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+main[page="contact"]{
+    margin-top: 80px;
+    .section__first{
+        background-color: $color_lightBlack;
+        display: flex;
+        padding: 8rem;
+        h2{
+            color: white;
+            font-size: 53px;
+            line-height: 64px;
+            letter-spacing: 0.2px;
+            margin-bottom: 4rem;
+        }
+
+        h4{
+            color: $color_red;
+            font-size: 26px;
+            line-height: 31px;
+            letter-spacing: 0.2px;
+            margin-bottom: 2rem;
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 0.2px;
+            color: #999999;
+            span{
+                img{
+                    width: 32px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        form{
+            input{
+                background-color: transparent;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                font-family: "DIN-Bold.woff";
+                color: white;
+                padding: 1.8rem;
+                margin-bottom: 0rem;
+                &::placeholder{
+                    color: white;
+                }
+            }
+
+            textarea{
+                background-color: transparent;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                font-family: "DIN-Bold.woff";
+                color: white;
+                padding: 1.8rem;
+                margin-bottom: 0rem;
+                &::placeholder{
+                    color: white;
+                }
+            }
+
+            .btn-submit{
+                background-color: $color_red;
+                color: white;
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                font-family: "DIN-Bold.woff";
+                font-size: 2rem;
+                padding: 1rem 0;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+main[page="kretek-detail"]{
+    margin-top: 8rem;
+    .section__first{
+        padding: 12rem 8rem 0 8rem;
+        background-color: $color_lightBlack;
+        position: relative;
+        .bg-kretek-detail{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 35%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-detail{
+            background-color: $color_red;
+            display: flex;
+            padding: 6rem 4rem;
+            position: relative;
+            .left{
+                width: 50%;
+                position: relative;
+                .box{
+                    width: 350px;
+                    border: 1px solid white;
+                    padding-top: 2.5rem;
+                    padding-bottom: 2.5rem;
+                    padding-left: 2.5rem;
+                    padding-right: 15rem;
+                    position: relative;
+                    p{
+                        color: white;
+                    }
+
+                    .pr-img{
+                        position: absolute;
+                        right: -60%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 300px;
+                        object-fit: contain;
+                    }
+                }
+            }
+            .right{
+                width: 50%;
+                padding: 2rem 8rem;
+
+                .img2{
+                    position: absolute;
+                    top: -67px;
+                    width: 300px;
+                    object-fit: contain;
+                }
+
+                h2{
+                    font-size: 60px;
+                    line-height: 50px;
+                    letter-spacing: 0.2px;
+                    color: white;
+                    margin-bottom: 3rem;
+                }
+
+                p{
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 0.2px;
+                    color: white;
+                }
+
+                .desc{
+                    margin-bottom: 6rem;
+                }
+
+                .to-other{
+                    background-color: black;
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-decoration: none;
+                    color: white;
+                    display: block;
+                    padding: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: "DIN-Bold.woff";
+                }
+            }
+        }
+    }
+}
+
+main[page="inspiration"]{
+    .section__first{
+        margin-top: 8rem;
+        padding: 8rem;
+        background-color: $color_lightBlack;
+        h2{
+            font-size: 53px;
+            line-height: 64px;
+            letter-spacing: 0.2px;
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .mb-2rem{
+            margin-bottom: 2rem;
+        }
+
+        .mb-5rem{
+            margin-bottom: 5rem;
+        }
+
+        .inspiration__list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .inspiration__item{
+            height: calc(609px / 2);
+            position: relative;
+            &.big{
+                height: 629px;
+                padding-right: 2rem;
+            }
+            &.box-list{
+                width: 32%;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .box_inspiration{
+                background-color: $color_red;
+                position: absolute;
+                bottom: 0;
+                padding: 2rem;
+                width: 40%;
+                height: 100%;
+                &.big{
+                    padding-right: 15rem;
+                    width: 60%;
+                    height: unset;
+                }
+                h2{
+                    font-size: 32px;
+                    line-height: 38px;
+                    letter-spacing: 0.2px;
+                    color: white;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    font-size: 11px;
+                    line-height: 13px;
+                    letter-spacing: 0.35618px;
+                    color: white;
+                }
+            }
+        }
+
+    }
+}
