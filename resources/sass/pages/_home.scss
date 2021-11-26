@@ -524,6 +524,34 @@ main[page="home"]{
                     border: 1px solid white;
                     width: calc(100% - 4rem);
                     height: calc(100% - 4rem);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    span{
+                        font-size: 9.34406px;
+                        line-height: 11px;
+                        letter-spacing: 0.373762px;
+                        font-family: 'DIN-Bold.woff';
+                        color: white;
+                    }
+                    p{
+                        font-size: 13.0817px;
+                        line-height: 15px;
+                        letter-spacing: 0.373762px;
+                        color: white;
+                        margin-bottom: 4rem;
+                    }
+                    a{
+                        width: fit-content;
+                        background: $color_red;
+                        text-decoration: none;
+                        color: white;
+                        padding: 2rem 1rem;
+                        font-size: 20px;
+                        line-height: 24px;
+                        letter-spacing: 0.373762px;
+                        display: block;
+                    }
                 }
             }
         }

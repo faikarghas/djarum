@@ -162,19 +162,31 @@
                 <div class="ins-box">
                     <img src="{{asset('images/foto1.png')}}" alt="">
                     <div class="box">
-
+                        <span>02 November 2021</span>
+                        <div>
+                            <p>3 minutes reading</p>
+                            <a href="">READ NOW</a>
+                        </div>
                     </div>
                 </div>
                 <div class="ins-box">
                     <img src="{{asset('images/foto2.png')}}" alt="">
                     <div class="box">
-
+                        <span>02 November 2021</span>
+                        <div>
+                            <p>3 minutes reading</p>
+                            <a href="">READ NOW</a>
+                        </div>
                     </div>
                 </div>
                 <div class="ins-box">
                     <img src="{{asset('images/foto3.png')}}" alt="">
                     <div class="box">
-
+                        <span>02 November 2021</span>
+                        <div>
+                            <p>3 minutes reading</p>
+                            <a href="">READ NOW</a>
+                        </div>
                     </div>
                 </div>
             </div>

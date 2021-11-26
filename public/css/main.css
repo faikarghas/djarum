@@ -832,6 +832,38 @@ main[page=home] .section__fourth .inspiration__wrapper .ins-box .box {
   border: 1px solid white;
   width: calc(100% - 4rem);
   height: calc(100% - 4rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main[page=home] .section__fourth .inspiration__wrapper .ins-box .box span {
+  font-size: 9.34406px;
+  line-height: 11px;
+  letter-spacing: 0.373762px;
+  font-family: "DIN-Bold.woff";
+  color: white;
+}
+main[page=home] .section__fourth .inspiration__wrapper .ins-box .box p {
+  font-size: 13.0817px;
+  line-height: 15px;
+  letter-spacing: 0.373762px;
+  color: white;
+  margin-bottom: 4rem;
+}
+main[page=home] .section__fourth .inspiration__wrapper .ins-box .box a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #ED1C24;
+  text-decoration: none;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.373762px;
+  display: block;
 }
 
 main[page=about] {
