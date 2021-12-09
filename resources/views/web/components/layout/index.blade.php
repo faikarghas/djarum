@@ -63,7 +63,7 @@
                 </ul>
                 <p class="forMobile copyright">© 2021 - DJARUM INTERNATIONAL - All Rights Reserved.</p>
             </div>
-            <div class="right forDesktop">
+            <div class="right forDesktop-dflex">
                 <ul>
                     <li><p>Sitemap</p></li>
                     <li><a href="{{route('about')}}">ABOUT</a></li>
