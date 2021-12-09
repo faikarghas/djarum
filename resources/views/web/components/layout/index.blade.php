@@ -48,14 +48,22 @@
 
         <footer>
             <div class="left">
-                <div class="get">
+                <div class="get forDesktop">
                     <h3>GET IN TOUCH</h3>
                     <h4>FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="15px" alt="" srcset=""></span></h4>
                 </div>
                 <img class="kretek" src="{{asset('images/kreteworld 1.png')}}" width="155px" alt="" srcset="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maxime voluptate eveniet, nemo incidunt perferendis officia aperiam ab veniam autem?</p>
+                <br>
+                <h4 class="forMobile mb-5">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="18px" alt="" srcset=""></span></h4>
+                <ul class="term">
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                </ul>
+                <p class="forMobile copyright">© 2021 - DJARUM INTERNATIONAL - All Rights Reserved.</p>
             </div>
-            <div class="right">
+            <div class="right forDesktop">
                 <ul>
                     <li><p>Sitemap</p></li>
                     <li><a href="{{route('about')}}">ABOUT</a></li>

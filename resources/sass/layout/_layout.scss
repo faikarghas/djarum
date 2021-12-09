@@ -1,14 +1,28 @@
 footer{
     padding: 4rem 6.7rem;
-    background-color: black;
+    background-color: #000000;
     display: flex;
+    @include respond(down-tab-port){
+        padding: 2rem;
+    }
     .left{
         width: 50%;
         padding-right: 20rem;
+         @include respond(down-tab-port){
+             width: 100%;
+             padding: 0;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+         }
         .get{
             display: flex;
             align-items: center;
             margin-bottom: 2rem;
+            @include respond(down-tab-port){
+                text-align: center;
+            }
             h3{
                 color: white;
                 font-size: 36px;
@@ -18,15 +32,16 @@ footer{
                 margin-right: 8rem;
                 margin-bottom: 0;
             }
-            h4{
-                color: white;
-                font-size: 20px;
-                line-height: 24px;
-                letter-spacing: 0.2px;
-                margin-bottom: 0;
-                span{
-                    margin-left: 1rem;
-                }
+
+        }
+        h4{
+            color: white;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            margin-bottom: 0;
+            span{
+                margin-left: 1rem;
             }
         }
         .kretek{
@@ -38,6 +53,36 @@ footer{
             line-height: 16px;
             letter-spacing: 0.2px;
             font-weight: 300;
+            @include respond(down-tab-port){
+                text-align: center;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.2px;
+            }
+        }
+
+        .copyright{
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.2px;
+        }
+
+        .term{
+            padding-left: 0;
+            margin-bottom: 2rem;
+            li{
+                list-style: none;
+                display: inline-block;
+                margin: 0 1rem;
+                a{
+                    font-weight: 300;
+                    font-size: 10px;
+                    line-height: 12px;
+                    letter-spacing: 0.2px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
         }
     }
 

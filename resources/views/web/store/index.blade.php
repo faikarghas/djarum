@@ -15,24 +15,29 @@
 @section('main')
     <main page="store">
         <section class="section__first">
-            <h2>STORE LOCATION</h2>
-            <form action="">
-                <div class="column">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>FIND CIGARETTE</option>
-                        <option value="1">One</option>
-                    </select>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>FIND CIGARETTE</option>
-                        <option value="1">One</option>
-                    </select>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>FIND CIGARETTE</option>
-                        <option value="1">One</option>
-                    </select>
+            <div class="filter_wrapper">
+                <div class="bg"></div>
+                <div class="filter-map">
+                    <h2>STORE LOCATION</h2>
+                    <form action="">
+                        <div class="column">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>FIND CIGARETTE</option>
+                                <option value="1">One</option>
+                            </select>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>FIND CIGARETTE</option>
+                                <option value="1">One</option>
+                            </select>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>FIND CIGARETTE</option>
+                                <option value="1">One</option>
+                            </select>
+                        </div>
+                        <button class="btn-search-now">SEARCH NOW</button>
+                    </form>
                 </div>
-                <button class="btn-search-now">SEARCH NOW</button>
-            </form>
+            </div>
             <div class="map--search">
                 <img src="{{asset('images/peta 1.png')}}" alt="" srcset="">
             </div>

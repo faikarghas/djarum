@@ -16,7 +16,7 @@
     <main page="inspiration">
         <section class="section__first">
             <h2>INSPIRATIONS</h2>
-            <div class="container-fluid g-0">
+            <div class="container-fluid g-0 forDesktop">
                 <div class="row g-0">
                     <div class="col-12 col-lg-8 pr-2">
                         <a href="">

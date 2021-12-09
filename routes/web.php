@@ -26,8 +26,8 @@ use App\Http\Controllers\TestimonialsController;
 
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[AboutController::class,'index'])->name('about');
-Route::get('/kretek-collection',[KretekCollectionController::class,'index'])->name('kretek');
-Route::get('/kretek',[KretekCollectionController::class,'kretek'])->name('kretek');
+// Route::get('/kretek-collection',[KretekCollectionController::class,'index'])->name('kretek');
+Route::get('/kretek-collection',[KretekCollectionController::class,'kretek'])->name('kretek');
 Route::get('/kretek/{slug}',[KretekCollectionController::class,'detail'])->name('kretek-detail');
 Route::get('/inspiration',[InspirationController::class,'index'])->name('inspiration');
 Route::get('/testimonials',[TestimonialsController::class,'index'])->name('testimonials');

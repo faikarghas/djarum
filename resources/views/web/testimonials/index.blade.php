@@ -16,9 +16,14 @@
     <main page="testimonials">
         <section class="section__first">
             <h2>TESTIMONIALS</h2>
-            <div class="testimonials__item">
+            <div class="iframe-yt">
+                <iframe id="iframeYT" width="100%" height="100%" src="https://www.youtube.com/embed/RLnGX_oRq2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <img class="close-yt" src="{{asset('images/cross.png')}}" alt="" srcset="">
+            </div>
+            <div class="testimonials__item yt">
                 <div class="left">
                     <img src="{{asset('images/ins1.png')}}" alt="" srcset="">
+                    <img class="play-yt" src="{{asset('images/play-yt.png')}}" width="20px" alt="">
                 </div>
                 <div class="right">
                     <div class="box__wrapper">
@@ -74,7 +79,20 @@
 @section('script')
     <script>
         $( document ).ready(function() {
+            $('.play-yt').each(function (params) {
+                $(this).on('click',function (params) {
+                    $('.iframe-yt').addClass('open')
+                })
+            })
 
+            $('.close-yt').each(function (params) {
+                $(this).on('click',function (params) {
+                    $('.iframe-yt').removeClass('open')
+                    $('#iframeYT').each(function(){
+                        $(this).stopVideo();
+                    });
+                })
+            })
         });
     </script>
 @endsection

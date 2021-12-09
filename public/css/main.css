@@ -210,14 +210,31 @@ a {
 }
 footer {
   padding: 4rem 6.7rem;
-  background-color: black;
+  background-color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+@media only screen and (max-width: 62em) {
+  footer {
+    padding: 2rem;
+  }
+}
 footer .left {
   width: 50%;
   padding-right: 20rem;
+}
+@media only screen and (max-width: 62em) {
+  footer .left {
+    width: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 footer .left .get {
   display: -webkit-box;
@@ -225,6 +242,11 @@ footer .left .get {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 62em) {
+  footer .left .get {
+    text-align: center;
+  }
 }
 footer .left .get h3 {
   color: white;
@@ -235,14 +257,14 @@ footer .left .get h3 {
   margin-right: 8rem;
   margin-bottom: 0;
 }
-footer .left .get h4 {
+footer .left h4 {
   color: white;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
   margin-bottom: 0;
 }
-footer .left .get h4 span {
+footer .left h4 span {
   margin-left: 1rem;
 }
 footer .left .kretek {
@@ -254,6 +276,36 @@ footer .left p {
   line-height: 16px;
   letter-spacing: 0.2px;
   font-weight: 300;
+}
+@media only screen and (max-width: 62em) {
+  footer .left p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.2px;
+  }
+}
+footer .left .copyright {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+}
+footer .left .term {
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+footer .left .term li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 1rem;
+}
+footer .left .term li a {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 footer .right {
   width: 50%;
@@ -307,20 +359,40 @@ menu img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+menu a img {
+  width: 200px;
+}
 
 header {
   margin-top: 80px;
   background-color: #111114;
   position: relative;
 }
+@media only screen and (max-width: 62em) {
+  header {
+    height: unset;
+  }
+}
 header .header_slider {
   height: 100%;
   overflow: hidden;
+}
+header .header_slider .slick-list,
+header .header_slider .slick-track {
+  height: 100%;
+}
+header .header_slider .slick-slide > div {
+  height: 100%;
 }
 header .header_slider_item {
   height: 100%;
   padding-left: 13.4rem;
   position: relative;
+}
+@media only screen and (max-width: 62em) {
+  header .header_slider_item {
+    padding: 0 4rem;
+  }
 }
 header .header_slider_item .bg {
   width: 100%;
@@ -340,13 +412,31 @@ header .header_slider_item .box_banner {
   display: -ms-flexbox;
   display: flex;
   width: 825.32px;
-  height: 335px;
+  height: 330px;
   position: absolute;
   bottom: 0;
   right: 8rem;
 }
+@media only screen and (max-width: 62em) {
+  header .header_slider_item .box_banner {
+    flex-direction: column;
+    position: static;
+    bottom: 0;
+    right: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    height: 500px;
+  }
+}
 header .header_slider_item .box_banner .left {
   width: 40%;
+}
+@media only screen and (max-width: 62em) {
+  header .header_slider_item .box_banner .left {
+    width: 100%;
+  }
 }
 header .header_slider_item .box_banner .left img {
   -o-object-fit: cover;
@@ -354,16 +444,33 @@ header .header_slider_item .box_banner .left img {
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 62em) {
+  header .header_slider_item .box_banner .left img {
+    height: 180px;
+  }
+}
 header .header_slider_item .box_banner .right {
   width: 60%;
   background-color: #ED1C24;
   padding: 5.4rem;
+}
+@media only screen and (max-width: 62em) {
+  header .header_slider_item .box_banner .right {
+    width: 100%;
+    padding: 2.5rem;
+  }
 }
 header .header_slider_item .box_banner .right h3 {
   color: white;
   font-size: 3.6rem;
   line-height: 50px;
   letter-spacing: 0.2px;
+}
+@media only screen and (max-width: 62em) {
+  header .header_slider_item .box_banner .right h3 {
+    line-height: 35px;
+    font-size: 2.6rem;
+  }
 }
 
 .menu__showcase {
@@ -382,7 +489,7 @@ header .header_slider_item .box_banner .right h3 {
 }
 .menu__showcase .box {
   border: 1px solid white;
-  padding: 8rem;
+  padding: 4rem;
   position: relative;
   height: 100%;
   display: -webkit-box;
@@ -530,6 +637,13 @@ main[page=home] .section__first {
   padding-bottom: 17rem;
   position: relative;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+  }
+}
 main[page=home] .section__first .smoke_bg {
   position: absolute;
   top: 58%;
@@ -553,6 +667,13 @@ main[page=home] .section__first .title__sf h2 {
   color: white;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .title__sf h2 {
+    font-size: 4rem;
+    line-height: 40px;
+    letter-spacing: 0.2px;
+  }
+}
 main[page=home] .section__first .title__sf h2 span {
   color: #ED1C24;
 }
@@ -565,10 +686,20 @@ main[page=home] .section__first .box__sf {
   position: relative;
   z-index: 2;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .box__sf {
+    flex-direction: column;
+  }
+}
 main[page=home] .section__first .box__sf .left {
   width: 42%;
   height: 490px;
   position: relative;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .box__sf .left {
+    width: 100%;
+  }
 }
 main[page=home] .section__first .box__sf .left .box_red {
   background-color: #ED1C24;
@@ -587,12 +718,26 @@ main[page=home] .section__first .box__sf .left .box_red {
   padding-right: 4rem;
   text-align: end;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .box__sf .left .box_red {
+    width: 262px;
+    bottom: 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 main[page=home] .section__first .box__sf .left .box_red h4 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: white;
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .box__sf .left .box_red h4 {
+    font-size: 1.4rem;
+  }
 }
 main[page=home] .section__first .box__sf .left .box_red p {
   margin-bottom: 0;
@@ -616,14 +761,31 @@ main[page=home] .section__first .box__sf .right {
   background-color: black;
   padding: 4.1rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .box__sf .right {
+    width: 100%;
+    padding: 2rem;
+  }
+}
 main[page=home] .section__first .box__sf .right .caption {
   padding: 4.1rem;
   border: 1px solid #313131;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .box__sf .right .caption {
+    padding: 2rem;
+  }
 }
 main[page=home] .section__first .box__sf .right .caption h3 {
   color: white;
   font-size: 2.8rem;
   line-height: 34px;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .box__sf .right .caption h3 {
+    font-size: 2.2rem;
+    line-height: 26px;
+  }
 }
 main[page=home] .section__first .box__sf .right .caption .kutip-l {
   display: inline-block;
@@ -639,6 +801,18 @@ main[page=home] .section__second {
   overflow: hidden;
   padding: 5rem 0;
   position: relative;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__second {
+    padding-top: 0;
+  }
+}
+main[page=home] .section__second .titleM {
+  color: white;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.2px;
+  text-align: center;
 }
 main[page=home] .section__second .v-img {
   position: absolute;
@@ -657,16 +831,38 @@ main[page=home] .section__second .slider__products {
   position: relative;
   z-index: 2;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__second .slider__products {
+    padding: 4rem;
+  }
+}
 main[page=home] .section__second .slider__products-item {
   padding-top: 5rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__second .slider__products-item {
+    padding-top: 0;
+  }
+}
 main[page=home] .section__second .slider__products-item .item__wrapper {
   width: 900px;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__second .slider__products-item .item__wrapper {
+    width: unset;
+  }
 }
 main[page=home] .section__second .slider__products-item .box {
   height: 549px;
   width: 600px;
   position: relative;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__second .slider__products-item .box {
+    width: 100%;
+    height: 340px;
+    margin-bottom: 4rem;
+  }
 }
 main[page=home] .section__second .slider__products-item .box .bg {
   height: 100%;
@@ -690,6 +886,11 @@ main[page=home] .section__second .slider__products-item .box .product {
   width: 203px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__second .slider__products-item .box .product {
+    width: 140px;
+  }
 }
 main[page=home] .section__second .slider__products-item .box .description {
   width: 350px;
@@ -727,15 +928,62 @@ main[page=home] .section__second .slider__products-item .box .description .to_al
   padding: 0.5rem;
   text-align: center;
 }
+main[page=home] .section__second .slider__products-item .description h3 {
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: 0.2px;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main[page=home] .section__second .slider__products-item .description p {
+  color: #999999;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin-bottom: 3rem;
+}
+main[page=home] .section__second .slider__products-item .description .to_all_products {
+  background-color: #ED1C24;
+  color: white;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "DIN-Bold.woff";
+  padding: 0.5rem;
+  text-align: center;
+}
+main[page=home] .section__second .asep-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 main[page=home] .section__third {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__third {
+    flex-direction: column;
+  }
+}
 main[page=home] .section__third .left {
   width: 35%;
   background-color: black;
   padding: 8rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__third .left {
+    width: 100%;
+    padding: 4rem;
+    background: -webkit-gradient(linear, left top, right top, color-stop(70%, black), color-stop(30%, rgba(219, 219, 219, 0)));
+    background: -o-linear-gradient(left, black 70%, rgba(219, 219, 219, 0) 30%);
+    background: linear-gradient(90deg, black 70%, rgba(219, 219, 219, 0) 30%);
+  }
 }
 main[page=home] .section__third .left h3 {
   font-size: 5.3rem;
@@ -743,6 +991,12 @@ main[page=home] .section__third .left h3 {
   letter-spacing: 0.2px;
   color: white;
   margin-bottom: 6.6rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__third .left h3 {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 main[page=home] .section__third .left form select {
   background-color: transparent;
@@ -775,6 +1029,11 @@ main[page=home] .section__third .left .btn-search-now {
 main[page=home] .section__third .right {
   width: 65%;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__third .right {
+    width: 100%;
+  }
+}
 main[page=home] .section__third .right img {
   width: 100%;
   -o-object-fit: cover;
@@ -783,6 +1042,11 @@ main[page=home] .section__third .right img {
 main[page=home] .section__fourth {
   padding: 8rem;
   background-color: black;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__fourth {
+    padding: 4rem;
+  }
 }
 main[page=home] .section__fourth .sf-header {
   display: -webkit-box;
@@ -800,6 +1064,12 @@ main[page=home] .section__fourth .sf-header h2 {
   letter-spacing: 0.2px;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__fourth .sf-header h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
 main[page=home] .section__fourth .sf-header p {
   font-size: 20px;
   line-height: 24px;
@@ -813,15 +1083,33 @@ main[page=home] .section__fourth .inspiration__wrapper {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__fourth .inspiration__wrapper {
+    flex-wrap: wrap;
+  }
+}
 main[page=home] .section__fourth .inspiration__wrapper .ins-box {
   width: 401px;
   height: 355px;
   position: relative;
 }
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__fourth .inspiration__wrapper .ins-box {
+    width: 100%;
+  }
+}
 main[page=home] .section__fourth .inspiration__wrapper .ins-box img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__fourth .inspiration__wrapper .ins-box img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 main[page=home] .section__fourth .inspiration__wrapper .ins-box .box {
   position: absolute;
@@ -864,6 +1152,12 @@ main[page=home] .section__fourth .inspiration__wrapper .ins-box .box a {
   line-height: 24px;
   letter-spacing: 0.373762px;
   display: block;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__fourth .inspiration__wrapper .ins-box .box a {
+    font-size: 18.6881px;
+    line-height: 22px;
+  }
 }
 
 main[page=about] {
@@ -954,6 +1248,85 @@ main[page=about] .section__first .right-2 img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main[page=about] .section__first_m {
+  background-color: #111114;
+}
+main[page=about] .section__first_m .about-1 {
+  position: relative;
+  background-color: #111114;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+}
+main[page=about] .section__first_m .about-1 img {
+  width: calc(100% - 8rem);
+}
+main[page=about] .section__first_m .about-1 .box__wrapper {
+  position: absolute;
+  bottom: -1px;
+  z-index: 10;
+  left: 0;
+  width: calc(100% - 8rem);
+}
+main[page=about] .section__first_m .about-1 .box__wrapper h2 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.2px;
+  color: white;
+  padding-left: 4rem;
+}
+main[page=about] .section__first_m .about-1 .box__wrapper .box {
+  background-color: #111114;
+  padding: 4rem 4rem 2rem 4rem;
+}
+main[page=about] .section__first_m .about-1 .box__wrapper .box p {
+  color: #999999;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+}
+main[page=about] .section__first_m .about-1-1 {
+  padding: 4rem;
+  background-color: #111114;
+}
+main[page=about] .section__first_m .about-1-1 p {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+  color: #999999;
+}
+main[page=about] .section__first_m .about-2 {
+  background-color: #111114;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main[page=about] .section__first_m .about-2 img {
+  width: 130px;
+}
+main[page=about] .section__first_m .about-2 h2 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.2px;
+  color: white;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
+}
+main[page=about] .section__first_m .about-2-1 {
+  padding: 4rem;
+  background-color: #111114;
+  transform: translateY(-120px);
+  margin-left: 4rem;
+}
+main[page=about] .section__first_m .about-2-1 p {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+  color: #999999;
+}
 
 main[page=kretekCollection] {
   margin-top: 80px;
@@ -968,6 +1341,13 @@ main[page=kretekCollection] .section__first h2 {
   color: white;
   margin-bottom: 4rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=kretekCollection] .section__first h2 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.2px;
+  }
+}
 main[page=kretekCollection] .section__first .product__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -977,6 +1357,12 @@ main[page=kretekCollection] .section__first .product__item {
 main[page=kretekCollection] .section__first .left {
   width: 50%;
   padding: 8rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=kretekCollection] .section__first .left {
+    width: 100%;
+    padding: 4rem;
+  }
 }
 main[page=kretekCollection] .section__first .left img {
   width: 440px;
@@ -1010,6 +1396,18 @@ main[page=kretekCollection] .section__first .left form select option {
 main[page=kretekCollection] .section__first .left .cs-kretek {
   width: 350px;
 }
+@media only screen and (max-width: 62em) {
+  main[page=kretekCollection] .section__first .left .cs-kretek {
+    width: unset;
+  }
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .nav {
+  display: unset;
+  flex-wrap: unset;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
 main[page=kretekCollection] .section__first .left .cs-kretek .btn-collapse-cs {
   font-size: 22px;
   line-height: 26px;
@@ -1026,11 +1424,61 @@ main[page=kretekCollection] .section__first .left .cs-kretek .btn-collapse-cs {
 main[page=kretekCollection] .section__first .left .cs-kretek .collapse {
   padding: 2rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=kretekCollection] .section__first .left .cs-kretek .collapse {
+    padding: 0rem;
+  }
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .collapse .first_p {
+  margin-bottom: 2rem;
+}
 main[page=kretekCollection] .section__first .left .cs-kretek .collapse p {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #999999;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .product_item {
+  margin-bottom: 4rem;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .product_item .photo_product {
+  height: 255px;
+  position: relative;
+  margin-bottom: 4rem;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .product_item .photo_product .bg {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .product_item .photo_product .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .product_item .desc-box {
+  border: 1px solid white;
+  padding: 4rem;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .product_item .desc-box h4 {
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 2.5rem;
+}
+main[page=kretekCollection] .section__first .left .cs-kretek .product_item .desc-box span {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+  color: #999999;
+  margin-bottom: 2rem;
+  display: block;
 }
 main[page=kretekCollection] .section__first .right {
   width: 50%;
@@ -1093,6 +1541,27 @@ main[page=testimonials] .section__first {
   background-color: #111114;
   padding-bottom: 10rem;
 }
+main[page=testimonials] .section__first .iframe-yt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+main[page=testimonials] .section__first .iframe-yt.open {
+  display: block;
+}
+main[page=testimonials] .section__first .iframe-yt .close-yt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  width: 30px;
+}
 main[page=testimonials] .section__first h2 {
   font-size: 53px;
   line-height: 64px;
@@ -1108,18 +1577,51 @@ main[page=testimonials] .section__first .testimonials__item {
   display: flex;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 62em) {
+  main[page=testimonials] .section__first .testimonials__item {
+    min-height: 500px;
+  }
+}
 main[page=testimonials] .section__first .testimonials__item:not(:last-child) {
   margin-bottom: 10rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=testimonials] .section__first .testimonials__item:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+}
 main[page=testimonials] .section__first .testimonials__item .left {
   width: 50%;
+  position: relative;
+}
+@media only screen and (max-width: 62em) {
+  main[page=testimonials] .section__first .testimonials__item .left {
+    width: 75%;
+    height: 280px;
+  }
 }
 main[page=testimonials] .section__first .testimonials__item .left img {
   width: 100%;
 }
+main[page=testimonials] .section__first .testimonials__item .left .play-yt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 main[page=testimonials] .section__first .testimonials__item .right {
   width: 50%;
   position: relative;
+}
+@media only screen and (max-width: 62em) {
+  main[page=testimonials] .section__first .testimonials__item .right {
+    width: 25%;
+    height: 280px;
+  }
 }
 main[page=testimonials] .section__first .testimonials__item .right .box__wrapper {
   background-color: black;
@@ -1128,10 +1630,29 @@ main[page=testimonials] .section__first .testimonials__item .right .box__wrapper
   position: absolute;
   left: -13%;
   bottom: 5rem;
+  z-index: 2;
+}
+@media only screen and (max-width: 62em) {
+  main[page=testimonials] .section__first .testimonials__item .right .box__wrapper {
+    width: 294%;
+    left: unset;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 main[page=testimonials] .section__first .testimonials__item .right .box__wrapper.even-bw {
   left: unset;
   right: -13%;
+}
+@media only screen and (max-width: 62em) {
+  main[page=testimonials] .section__first .testimonials__item .right .box__wrapper.even-bw {
+    left: 0;
+    right: unset;
+  }
 }
 main[page=testimonials] .section__first .testimonials__item .right .box__wrapper .border-box {
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -1159,28 +1680,62 @@ main[page=testimonials] .section__first .testimonials__item .right .box__wrapper
 main[page=store] {
   margin-top: 80px;
 }
-main[page=store] .section__first {
-  background-color: black;
+main[page=store] .section__first .filter_wrapper {
   padding-top: 8rem;
+  position: relative;
+  background-color: #111114;
 }
-main[page=store] .section__first h2 {
+main[page=store] .section__first .filter_wrapper .bg {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+@media only screen and (max-width: 62em) {
+  main[page=store] .section__first .filter_wrapper .bg {
+    width: 75%;
+  }
+}
+main[page=store] .section__first .filter_wrapper .filter-map {
+  position: relative;
+  z-index: 2;
+}
+main[page=store] .section__first .filter_wrapper h2 {
   font-size: 53px;
   line-height: 64px;
   letter-spacing: 0.2px;
   color: white;
   text-align: center;
 }
-main[page=store] .section__first form {
+@media only screen and (max-width: 62em) {
+  main[page=store] .section__first .filter_wrapper h2 {
+    margin-bottom: 0;
+  }
+}
+main[page=store] .section__first .filter_wrapper form {
   width: 100%;
   padding: 4rem 16rem;
 }
-main[page=store] .section__first form .column {
+@media only screen and (max-width: 62em) {
+  main[page=store] .section__first .filter_wrapper form {
+    padding: 4rem;
+  }
+}
+main[page=store] .section__first .filter_wrapper form .column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
 }
-main[page=store] .section__first form select {
+@media only screen and (max-width: 62em) {
+  main[page=store] .section__first .filter_wrapper form .column {
+    flex-direction: column;
+  }
+}
+main[page=store] .section__first .filter_wrapper form .column select {
   background-color: transparent;
   font-size: 20px;
   line-height: 24px;
@@ -1190,17 +1745,22 @@ main[page=store] .section__first form select {
   padding: 1.8rem;
   margin-bottom: 0rem;
 }
-main[page=store] .section__first form select:nth-child(2) {
+main[page=store] .section__first .filter_wrapper form .column select:nth-child(2) {
   margin: 0 1rem;
 }
-main[page=store] .section__first form select option {
+@media only screen and (max-width: 62em) {
+  main[page=store] .section__first .filter_wrapper form .column select:nth-child(2) {
+    margin: 0;
+  }
+}
+main[page=store] .section__first .filter_wrapper form .column select option {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
   font-family: "DIN-Bold.woff";
   color: black;
 }
-main[page=store] .section__first form .btn-search-now {
+main[page=store] .section__first .filter_wrapper form .btn-search-now {
   background-color: #ED1C24;
   color: white;
   box-shadow: none;
@@ -1231,12 +1791,23 @@ main[page=contact] .section__first {
   display: flex;
   padding: 8rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=contact] .section__first {
+    padding: 4rem;
+  }
+}
 main[page=contact] .section__first h2 {
   color: white;
   font-size: 53px;
   line-height: 64px;
   letter-spacing: 0.2px;
-  margin-bottom: 4rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=contact] .section__first h2 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.2px;
+  }
 }
 main[page=contact] .section__first h4 {
   color: #ED1C24;
@@ -1245,16 +1816,37 @@ main[page=contact] .section__first h4 {
   letter-spacing: 0.2px;
   margin-bottom: 2rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=contact] .section__first h4 {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.2px;
+  }
+}
 main[page=contact] .section__first p {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2px;
   color: #999999;
 }
+@media only screen and (max-width: 62em) {
+  main[page=contact] .section__first p {
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 0.2px;
+    margin-bottom: 4rem;
+  }
+}
 main[page=contact] .section__first p span img {
   width: 32px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media only screen and (max-width: 62em) {
+  main[page=contact] .section__first p span img {
+    width: 25px;
+    margin-right: 10px;
+  }
 }
 main[page=contact] .section__first form input {
   background-color: transparent;
@@ -1265,6 +1857,13 @@ main[page=contact] .section__first form input {
   color: white;
   padding: 1.8rem;
   margin-bottom: 0rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=contact] .section__first form input {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
 }
 main[page=contact] .section__first form input::-moz-placeholder {
   color: white;
@@ -1285,6 +1884,13 @@ main[page=contact] .section__first form textarea {
   padding: 1.8rem;
   margin-bottom: 0rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=contact] .section__first form textarea {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+}
 main[page=contact] .section__first form textarea::-moz-placeholder {
   color: white;
 }
@@ -1304,6 +1910,13 @@ main[page=contact] .section__first form .btn-submit {
   font-size: 2rem;
   padding: 1rem 0;
   margin-top: 1rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=contact] .section__first form .btn-submit {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
 }
 
 main[page=kretek-detail] {
@@ -1398,11 +2011,94 @@ main[page=kretek-detail] .section__first .product-detail .right .to-other {
   justify-content: center;
   font-family: "DIN-Bold.woff";
 }
+main[page=kretek-detail] .section__firstM {
+  background-color: #111114;
+}
+main[page=kretek-detail] .section__firstM .logo-wrapper {
+  padding: 4rem 4rem 8rem 4rem;
+}
+main[page=kretek-detail] .section__firstM .product-detail {
+  height: 320px;
+  position: relative;
+}
+main[page=kretek-detail] .section__firstM .product-detail .bg {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main[page=kretek-detail] .section__firstM .product-detail .red-box {
+  background-color: #ED1C24;
+  position: absolute;
+  top: -22px;
+  width: calc(100% - 4rem);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 208px;
+}
+main[page=kretek-detail] .section__firstM .product-detail .red-box .left {
+  width: 50%;
+}
+main[page=kretek-detail] .section__firstM .product-detail .red-box .left h2 {
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 4rem;
+}
+main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box {
+  width: 120%;
+  border: 1px solid white;
+  padding: 2rem;
+  position: relative;
+}
+main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box p {
+  color: white;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+}
+main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box .pr-img {
+  position: absolute;
+  right: -60%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main[page=kretek-detail] .section__firstM .product-detail .red-box .right {
+  width: 50%;
+  position: relative;
+}
+main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-img {
+  position: absolute;
+  width: 150px;
+  bottom: 0;
+}
+main[page=kretek-detail] .section__firstM .product-desc {
+  padding: 2rem;
+}
+main[page=kretek-detail] .section__firstM .product-desc p {
+  color: #999999;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+}
 
 main[page=inspiration] .section__first {
   margin-top: 8rem;
   padding: 8rem;
   background-color: #111114;
+}
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first {
+    padding: 4rem;
+  }
 }
 main[page=inspiration] .section__first h2 {
   font-size: 53px;
@@ -1428,12 +2124,30 @@ main[page=inspiration] .section__first .inspiration__item {
   height: 304.5px;
   position: relative;
 }
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .inspiration__item {
+    padding-right: 0rem;
+    height: 300px;
+  }
+}
 main[page=inspiration] .section__first .inspiration__item.big {
   height: 629px;
   padding-right: 2rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .inspiration__item.big {
+    padding-right: 0rem;
+    height: 300px;
+  }
+}
 main[page=inspiration] .section__first .inspiration__item.box-list {
   width: 32%;
+}
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .inspiration__item.box-list {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 main[page=inspiration] .section__first .inspiration__item img {
   width: 100%;
@@ -1449,10 +2163,22 @@ main[page=inspiration] .section__first .inspiration__item .box_inspiration {
   width: 40%;
   height: 100%;
 }
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .inspiration__item .box_inspiration {
+    width: 100%;
+    height: unset;
+  }
+}
 main[page=inspiration] .section__first .inspiration__item .box_inspiration.big {
   padding-right: 15rem;
   width: 60%;
   height: unset;
+}
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .inspiration__item .box_inspiration.big {
+    width: 100%;
+    padding-right: 0rem;
+  }
 }
 main[page=inspiration] .section__first .inspiration__item .box_inspiration h2 {
   font-size: 32px;
@@ -1460,6 +2186,13 @@ main[page=inspiration] .section__first .inspiration__item .box_inspiration h2 {
   letter-spacing: 0.2px;
   color: white;
   margin-bottom: 1rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .inspiration__item .box_inspiration h2 {
+    font-size: 32px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+  }
 }
 main[page=inspiration] .section__first .inspiration__item .box_inspiration p {
   font-size: 11px;

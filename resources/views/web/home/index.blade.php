@@ -11,7 +11,7 @@
             <span></span>
         </div>
     </menu>
-    <header>
+    <header class="forDesktop">
         {{-- <img class="v-img" src="{{asset('images/Vector2.png')}}" alt=""> --}}
         <div class="header_slider">
             <div class="header_slider_item">
@@ -40,6 +40,21 @@
             </div>
         </div>
     </header>
+    <header class="forMobile header-mobile">
+        <div class="header_slider">
+            <div class="header_slider_item">
+                <img src="{{asset('images/bannerpsd 2m.png')}}" alt="">
+                <div class="box_banner">
+                    <div class="left">
+                        <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
+                    </div>
+                    <div class="right">
+                        <h3>KRETEK FROM DJARUM ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA. </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 @endsection
 @section('main')
     <main page="home">
@@ -52,33 +67,16 @@
             <div class="box__sf">
                 <div class="left">
                     <img src="{{'images/Djarum_kretek2 1.png'}}" alt="">
-                    <div class="box_red">
-                        <div>
-                            <h4>Mikhail Dimitry</h4>
-                            <p>29 year old</p>
-                            <p>St. Petersburg</p>
-                        </div>
-                        <div>
-                            <a>READ OTHER REVIEW</a>
-                        </div>
-                    </div>
                 </div>
                 <div class="right">
                     <div class="caption">
-                        <img class="kutip-l" src="{{asset('images/kutip.png')}}" width="20px" alt="" srcset="">
                         <h3>A PIECE OF KRETEK CIGARETTE, WHICH WAS PREVIOUSLY ONLY A TREAT BETWEEN TWO FINGERS, MAY NOW BE MORE. KRETEK CAN POSSIBLY BE WORN TO ENHANCE YOUR APPEARANCE. THROUGH ITS UNIQUE TASTE ANDAROMA, KRETEK CAN SPEAK ABOUT YOUR AUTHENTIC PERSONALITY AS WELL.</h3>
-                        <div class="text-end">
-                            <img class="kutip-r" src="{{asset('images/kutip.png')}}" width="20px" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="video_yt">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/AU3W-_N0GyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section__second">
+        <section class="section__second forDesktop">
             <img class="v-img" src="{{asset('images/Vector2.png')}}" alt="">
             <div class="slider__products">
                 <div class="slider__products-item">
@@ -89,7 +87,7 @@
                             <img class="product" src="{{asset('images/Djarum_black.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
                                 <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
-                                <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                                <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +101,7 @@
                             <img class="product" src="{{asset('images/Djarum_ruby.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
                                 <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
-                                <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                                <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                             </div>
                         </div>
                     </div>
@@ -117,13 +115,65 @@
                             <img class="product" src="{{asset('images/Djarum_shisha.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
                                 <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
-                                <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                                <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="section__second forMobile">
+            <h2 class="titleM">KRETEK COLLECTIONS</h2>
+            <img class="v-img" src="{{asset('images/Vector2.png')}}" alt="">
+            <div class="slider__products">
+                <div class="slider__products-item">
+                    <div class="item__wrapper">
+                        <div class="box">
+                            <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/Djarum_black.png')}}" width="100%" alt="" srcset="">
+                        </div>
+                        <div class="description">
+                            <h3 class="title">KRETEK CIGARETTE</h3>
+                            <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                            <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider__products-item">
+                    <div class="item__wrapper">
+                        <div class="box">
+                            <img class="bg" src="{{asset('images/bg-djarumruby.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/Djarum_ruby.png')}}" width="100%" alt="" srcset="">
+                        </div>
+                        <div class="description">
+                            <h3 class="title">KRETEK CIGARILLO</h3>
+                            <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                            <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider__products-item">
+                    <div class="item__wrapper">
+                        <div class="box">
+                            <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/Djarum_shisha.png')}}" width="100%" alt="" srcset="">
+                        </div>
+                        <div class="description">
+                            <h3 class="title">KRETEK SHISHA</h3>
+                            <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                            <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            {{-- <img class="asep-img" src="{{asset('images/asep 3.png')}}" alt=""> --}}
+        </section>
+
 
         <section class="section__third">
             <div class="left">
@@ -149,16 +199,17 @@
                 </form>
             </div>
             <div class="right">
-                <img src="{{asset('images/peta 1.png')}}" alt="" srcset="">
+                <div id="map"></div>
+                {{-- <img src="{{asset('images/peta 1.png')}}" alt="" srcset=""> --}}
             </div>
         </section>
 
         <section class="section__fourth">
             <div class="sf-header">
                 <h2>INSPIRATIONS</h2>
-                <p>SEE ALL ARTICLES</p>
+                <p class="forDesktop">SEE ALL ARTICLES</p>
             </div>
-            <div class="inspiration__wrapper">
+            <div class="inspiration__wrapper slider-inpiration">
                 <div class="ins-box">
                     <img src="{{asset('images/foto1.png')}}" alt="">
                     <div class="box">
@@ -194,13 +245,14 @@
     </main>
 @endsection
 @section('script')
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCT4Omb8kNS-CKd0NYmGw129_BVyGVoB3E" type="text/javascript"></script>
     <script>
         $( document ).ready(function() {
             $('.header_slider').slick({
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows:false
+                arrows:false,
             });
 
             $(window).scroll(function (event) {
@@ -217,12 +269,75 @@
                 infinite: true,
                 speed: 300,
                 slidesToShow: 2,
-                variableWidth: true
+                variableWidth: true,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        variableWidth: false,
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        variableWidth: false,
+                    }
+                    }
+                ]
+            });
+
+            $('.slider-inpiration').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                variableWidth: false,
+                arrows:false,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1
+                    }
+                    }
+                ]
             });
 
             $('.btn-search-now').on('click',function () {
                 e.preventDefault()
             })
+
+            const directionsService = new google.maps.DirectionsService();
+            const directionsDisplay = new google.maps.DirectionsRenderer();
+            const uluru = { lat: -6.280008964188023, lng:  106.70123074866336 };
+            const mapOptions = {
+              zoom:12,
+              center: uluru
+            }
+
+            function initMap() {
+
+                const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                const marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                });
+
+            }
+
+            initMap()
 
         });
     </script>

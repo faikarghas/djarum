@@ -14,19 +14,37 @@ menu{
     img{
         object-fit: contain;
     }
+    a{
+        img{
+            width: 200px;
+        }
+    }
 }
 
 header{
     margin-top: 80px;
     background-color: $color_lightBlack;
     position: relative;
+    @include respond(down-tab-port){
+        height: unset;
+    }
     .header_slider{
         height: 100%;
         overflow: hidden;
+        .slick-list,
+        .slick-track {
+            height: 100%;
+        }
+        .slick-slide>div{
+            height: 100%;
+        }
         &_item{
             height: 100%;
             padding-left: 13.4rem;
             position: relative;
+            @include respond(down-tab-port){
+                padding: 0 4rem;
+            }
             .bg{
                 width: 100%;
                 height: 100%;
@@ -42,27 +60,50 @@ header{
             .box_banner{
                 display: flex;
                 width: calc(352px + 473.32px);
-                height: 335px;
+                height: 330px;
                 position: absolute;
                 bottom: 0;
                 right: 8rem;
+                @include respond(down-tab-port){
+                    flex-direction: column;
+                    position: static;
+                    bottom: 0;
+                    right: 0;
+                    height: fit-content;
+                    width: 100%;
+                    height: 500px;
+                }
                 .left{
                     width: 40%;
+                    @include respond(down-tab-port){
+                        width: 100%;
+                    }
                     img{
                         object-fit: cover;
                         width: 100%;
                         height: 100%;
+                        @include respond(down-tab-port){
+                            height: 180px;
+                        }
                     }
                 }
                 .right{
                     width: 60%;
                     background-color: $color_red;
                     padding: 5.4rem;
+                    @include respond(down-tab-port){
+                        width: 100%;
+                        padding: 2.5rem;
+                    }
                     h3{
                         color: white;
                         font-size: 3.6rem;
                         line-height: 50px;
                         letter-spacing: 0.2px;
+                        @include respond(down-tab-port){
+                            line-height: 35px;
+                            font-size: 2.6rem;
+                        }
                     }
                 }
             }
@@ -87,7 +128,7 @@ header{
 
     .box{
         border: 1px solid white;
-        padding: 8rem;
+        padding: 4rem;
         position: relative;
         height: 100%;
         display: flex;
@@ -234,6 +275,11 @@ main[page="home"]{
         padding-right: 8.4rem;
         padding-bottom: 17rem;
         position: relative;
+        @include respond(down-tab-port){
+            padding-left: 4rem;
+            padding-right:4rem;
+            padding-bottom: 4rem;
+        }
         .smoke_bg{
             position: absolute;
             top: 58%;
@@ -254,6 +300,11 @@ main[page="home"]{
                 line-height: 60px;
                 color: white;
                 margin-bottom: 0;
+                @include respond(down-tab-port){
+                    font-size: 4rem;
+                    line-height: 40px;
+                    letter-spacing: 0.2px;
+                }
                 span{
                     color: $color_red;
                 }
@@ -266,10 +317,16 @@ main[page="home"]{
             align-content:flex-start;
             position: relative;
             z-index: 2;
+            @include respond(down-tab-port){
+                flex-direction: column;
+            }
             .left{
                 width: 42%;
                 height: 490px;
                 position: relative;
+                @include respond(down-tab-port){
+                    width: 100%;
+                }
                 .box_red{
                     background-color: $color_red;
                     width: 259px;
@@ -284,12 +341,20 @@ main[page="home"]{
                     padding-bottom: 3rem;
                     padding-right: 4rem;
                     text-align: end;
+                    @include respond(down-tab-port){
+                        width: 262px;
+                        bottom: 0px;
+                        height: fit-content;
+                    }
                     h4{
                         font-family: 'Roboto', sans-serif;
                         font-weight: 700;
                         color: white;
                         font-size: 2rem;
                         margin-bottom: 1rem;
+                        @include respond(down-tab-port){
+                            font-size: 1.4rem;
+                        }
                     }
                     p{
                         margin-bottom: 0;
@@ -314,13 +379,24 @@ main[page="home"]{
                 height: auto;
                 background-color: black;
                 padding: 4.1rem;
+                @include respond(down-tab-port){
+                    width: 100%;
+                    padding: 2rem;
+                }
                 .caption{
                     padding: 4.1rem;
                     border: 1px solid #313131;
+                    @include respond(down-tab-port){
+                        padding: 2rem;
+                    }
                     h3{
                         color: white;
                         font-size: 2.8rem;
                         line-height: 34px;
+                        @include respond(down-tab-port){
+                            font-size: 2.2rem;
+                            line-height: 26px;
+                        }
                     }
                     .kutip-l{
                         display: inline-block;
@@ -341,6 +417,16 @@ main[page="home"]{
         overflow: hidden;
         padding: 5rem 0;
         position: relative;
+        @include respond(down-tab-port){
+            padding-top: 0;
+        }
+        .titleM{
+            color: white;
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: 0.2px;
+            text-align: center;
+        }
         .v-img{
             position: absolute;
             left: 0;
@@ -355,15 +441,29 @@ main[page="home"]{
             display: flex;
             position: relative;
             z-index: 2;
+            @include respond(down-tab-port){
+                padding: 4rem;
+            }
             &-item{
                 padding-top: 5rem;
+                @include respond(down-tab-port){
+                    padding-top: 0;
+                }
                 .item__wrapper{
                     width: 900px;
+                    @include respond(down-tab-port){
+                        width: unset;
+                    }
                 }
                 .box{
                     height: 549px;
                     width: 600px;
                     position: relative;
+                     @include respond(down-tab-port){
+                        width: 100%;
+                        height: 340px;
+                        margin-bottom: 4rem;
+                     }
                     .bg{
                         height: 100%;
                         object-fit: cover;
@@ -384,6 +484,9 @@ main[page="home"]{
                         transform: translate(-50%,-50%);
                         width: 203px;
                         object-fit: contain;
+                        @include respond(down-tab-port){
+                            width: 140px;
+                         }
                     }
                     .description{
                         width: 350px;
@@ -398,6 +501,9 @@ main[page="home"]{
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
+                        @include respond(down-tab-port){
+                            // display: none !important;
+                        }
                         p{
                             color: white;
                             font-size: 19px;
@@ -420,23 +526,72 @@ main[page="home"]{
                         }
                     }
                 }
+
+                .description{
+                    h3{
+                        font-size: 36px;
+                        line-height: 43px;
+                        letter-spacing: 0.2px;
+                        color: white;
+                        text-align: center;
+                        margin-bottom: 2rem;
+                    }
+                    p{
+                        color: #999999;
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-align: center;
+                        letter-spacing: 0.2px;
+                        margin-bottom: 3rem;
+                    }
+                    .to_all_products{
+                        background-color: $color_red;
+                        color: white;
+                        display: block;
+                        width: 100%;
+                        text-decoration: none;
+                        font-size: 20px;
+                        line-height: 24px;
+                        font-family: "DIN-Bold.woff";
+                        padding: 0.5rem;
+                        text-align: center;
+                    }
+                }
             }
+        }
+
+        .asep-img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
 
     }
 
     .section__third{
         display: flex;
+        @include respond(down-tab-port){
+            flex-direction: column;
+        }
         .left{
             width: 35%;
             background-color: black;
             padding: 8rem;
+            @include respond(down-tab-port){
+                width: 100%;
+                padding: 4rem;
+                background: linear-gradient(90deg, rgb(0, 0, 0) 70%, rgba(219, 219, 219, 0) 30%);
+            }
             h3{
                 font-size: 5.3rem;
                 line-height: 64px;
                 letter-spacing: 0.2px;
                 color: white;
                 margin-bottom: 6.6rem;
+                @include respond(down-tab-port){
+                    font-size: 40px;
+                    line-height: 48px;
+                }
             }
             form{
                 select{
@@ -472,6 +627,9 @@ main[page="home"]{
 
         .right{
             width: 65%;
+            @include respond(down-tab-port){
+                width: 100%;
+            }
             img{
                 width: 100%;
                 object-fit: cover;
@@ -482,6 +640,9 @@ main[page="home"]{
     .section__fourth{
         padding: 8rem;
         background-color: black;
+        @include respond(down-tab-port){
+            padding: 4rem;
+        }
         .sf-header{
             display: flex;
             align-items: center;
@@ -494,6 +655,10 @@ main[page="home"]{
                 line-height: 64px;
                 letter-spacing: 0.2px;
                 margin-bottom: 0;
+                 @include respond(down-tab-port){
+                    font-size: 40px;
+                    line-height: 48px;
+                 }
             }
             p{
                 font-size: 20px;
@@ -507,13 +672,25 @@ main[page="home"]{
         .inspiration__wrapper{
             display: flex;
             justify-content: space-between;
+            @include respond(down-tab-port){
+                flex-wrap: wrap;
+            }
             .ins-box{
                 width: 401px;
                 height: 355px;
                 position: relative;
+
+                @include respond(down-tab-port){
+                    width: 100%;
+                }
                 img{
                     width: 100%;
+                    height: 100%;
                     object-fit: cover;
+                     @include respond(down-tab-port){
+                        width: 100%;
+                        object-fit: cover;
+                     }
                 }
                 .box{
                     position: absolute;
@@ -551,6 +728,10 @@ main[page="home"]{
                         line-height: 24px;
                         letter-spacing: 0.373762px;
                         display: block;
+                        @include respond(down-tab-port){
+                            font-size: 18.6881px;
+                            line-height: 22px;
+                        }
                     }
                 }
             }
