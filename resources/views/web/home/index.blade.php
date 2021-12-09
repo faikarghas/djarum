@@ -51,6 +51,7 @@
                     <div class="right">
                         <h3>KRETEK FROM DJARUM ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA. </h3>
                     </div>
+                    <img class="img_on_bg" src="{{asset('images/Banner.png')}}" alt="">
                 </div>
             </div>
         </div>

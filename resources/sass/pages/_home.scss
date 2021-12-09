@@ -43,7 +43,7 @@ header{
             padding-left: 13.4rem;
             position: relative;
             @include respond(down-tab-port){
-                padding: 0 4rem;
+                padding: 0;
             }
             .bg{
                 width: 100%;
@@ -56,6 +56,12 @@ header{
                 height: 435px;
                 left: 43px;
                 top: calc(133px - 80px);
+                @include respond(down-tab-port){
+                    width: 305px;
+                    left: 43px;
+                    top: 240px;
+                    object-fit: contain;
+                }
             }
             .box_banner{
                 display: flex;
@@ -72,6 +78,7 @@ header{
                     height: fit-content;
                     width: 100%;
                     height: 500px;
+                    padding: 4rem;
                 }
                 .left{
                     width: 40%;
