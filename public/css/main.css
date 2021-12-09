@@ -1182,6 +1182,7 @@ main[page=home] .section__fourth .inspiration__wrapper .ins-box .box a {
   line-height: 24px;
   letter-spacing: 0.373762px;
   display: block;
+  font-family: "DIN-Bold.woff";
 }
 @media only screen and (max-width: 62em) {
   main[page=home] .section__fourth .inspiration__wrapper .ins-box .box a {
@@ -1668,7 +1669,7 @@ main[page=testimonials] .section__first .testimonials__item .right .box__wrapper
     left: unset;
     right: 0;
     position: absolute;
-    top: 50%;
+    top: 60%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
