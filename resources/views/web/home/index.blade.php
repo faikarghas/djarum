@@ -44,6 +44,7 @@
         <div class="header_slider">
             <div class="header_slider_item">
                 <img src="{{asset('images/bannerpsd 2m.png')}}" alt="">
+                <img class="img_on_bg" src="{{asset('images/Banner.png')}}" alt="">
                 <div class="box_banner">
                     <div class="left">
                         <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
@@ -51,7 +52,6 @@
                     <div class="right">
                         <h3>KRETEK FROM DJARUM ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA. </h3>
                     </div>
-                    <img class="img_on_bg" src="{{asset('images/Banner.png')}}" alt="">
                 </div>
             </div>
         </div>

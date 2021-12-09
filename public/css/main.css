@@ -429,7 +429,8 @@ header .header_slider_item .box_banner {
 @media only screen and (max-width: 62em) {
   header .header_slider_item .box_banner {
     flex-direction: column;
-    position: static;
+    position: relative;
+    z-index: 10;
     bottom: 0;
     right: 0;
     height: -webkit-fit-content;
@@ -1819,6 +1820,7 @@ main[page=contact] .section__first {
   display: -ms-flexbox;
   display: flex;
   padding: 8rem;
+  padding-bottom: 10rem;
 }
 @media only screen and (max-width: 62em) {
   main[page=contact] .section__first {

@@ -43,7 +43,7 @@
 @section('script')
     <script>
         $( document ).ready(function() {
-
+            console.log(location.path);
         });
     </script>
 @endsection

@@ -601,6 +601,7 @@ main[page="contact"]{
         background-color: $color_lightBlack;
         display: flex;
         padding: 8rem;
+        padding-bottom: 10rem;
         @include respond(down-tab-port){
             padding: 4rem;
         }
