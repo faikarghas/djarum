@@ -379,13 +379,21 @@ main[page="home"]{
                 height: auto;
                 background-color: black;
                 padding: 4.1rem;
+
+                transform: translateX(-4rem);
+                position: relative;
+                top: 8rem;
                 @include respond(down-tab-port){
                     width: 100%;
                     padding: 2rem;
+                    transform: unset;
+                    top: unset;
+                    position: unset;
                 }
                 .caption{
                     padding: 4.1rem;
                     border: 1px solid #313131;
+                    margin-bottom: 4rem;
                     @include respond(down-tab-port){
                         padding: 2rem;
                     }
@@ -405,6 +413,18 @@ main[page="home"]{
                     .kutip-r{
                         margin-top: 4rem;
                     }
+                }
+                .read_all_testimonials{
+                    background-color: $color_red;
+                    color: white;
+                    display: block;
+                    width: 100%;
+                    text-decoration: none;
+                    font-size: 20px;
+                    line-height: 24px;
+                    font-family: "DIN-Bold.woff";
+                    padding: 0.5rem;
+                    text-align: center;
                 }
                 .video_yt{
                     margin-top: 8rem;

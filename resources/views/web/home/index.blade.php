@@ -72,6 +72,7 @@
                     <div class="caption">
                         <h3>A PIECE OF KRETEK CIGARETTE, WHICH WAS PREVIOUSLY ONLY A TREAT BETWEEN TWO FINGERS, MAY NOW BE MORE. KRETEK CAN POSSIBLY BE WORN TO ENHANCE YOUR APPEARANCE. THROUGH ITS UNIQUE TASTE ANDAROMA, KRETEK CAN SPEAK ABOUT YOUR AUTHENTIC PERSONALITY AS WELL.</h3>
                     </div>
+                    <a class="read_all_testimonials" href="{{route('kretek')}}">READ ALL TESTIMONIALS</a>
                 </div>
             </div>
         </section>

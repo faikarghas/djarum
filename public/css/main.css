@@ -760,16 +760,23 @@ main[page=home] .section__first .box__sf .right {
   height: auto;
   background-color: black;
   padding: 4.1rem;
+  transform: translateX(-4rem);
+  position: relative;
+  top: 8rem;
 }
 @media only screen and (max-width: 62em) {
   main[page=home] .section__first .box__sf .right {
     width: 100%;
     padding: 2rem;
+    transform: unset;
+    top: unset;
+    position: unset;
   }
 }
 main[page=home] .section__first .box__sf .right .caption {
   padding: 4.1rem;
   border: 1px solid #313131;
+  margin-bottom: 4rem;
 }
 @media only screen and (max-width: 62em) {
   main[page=home] .section__first .box__sf .right .caption {
@@ -793,6 +800,18 @@ main[page=home] .section__first .box__sf .right .caption .kutip-l {
 }
 main[page=home] .section__first .box__sf .right .caption .kutip-r {
   margin-top: 4rem;
+}
+main[page=home] .section__first .box__sf .right .read_all_testimonials {
+  background-color: #ED1C24;
+  color: white;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "DIN-Bold.woff";
+  padding: 0.5rem;
+  text-align: center;
 }
 main[page=home] .section__first .box__sf .right .video_yt {
   margin-top: 8rem;
