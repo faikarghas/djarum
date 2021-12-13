@@ -90,7 +90,7 @@
                         success: function(result){
                             locations = []
                             result.data.map((i,a)=>{
-                                locations.push([i.store_name,i.coordinate.split(',')[0],i.coordinate.split(',')[1]])
+                                locations.push([i.address,i.coordinate.split(',')[0],i.coordinate.split(',')[1]])
                             })
                             console.log(locations[0][1]);
                             initialize([locations[0][1],locations[0][2]])
