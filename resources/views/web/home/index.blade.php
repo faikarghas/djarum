@@ -22,7 +22,7 @@
                         <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
                     </div>
                     <div class="right">
-                        <h3>KRETEK FROM DJARUM ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA. </h3>
+                        <h3>Kretek for Authenticity/for Vigor/for Pride/for Boldness</h3>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
                     </div>
                     <div class="right">
-                        <h3>KRETEK FROM DJARUM ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA. </h3>
+                        <h3>Kretek for Authenticity/for Vigor/for Pride/for Boldness</h3>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="right">
                     <div class="caption">
-                        <h3>A PIECE OF KRETEK CIGARETTE, WHICH WAS PREVIOUSLY ONLY A TREAT BETWEEN TWO FINGERS, MAY NOW BE MORE. KRETEK CAN POSSIBLY BE WORN TO ENHANCE YOUR APPEARANCE. THROUGH ITS UNIQUE TASTE ANDAROMA, KRETEK CAN SPEAK ABOUT YOUR AUTHENTIC PERSONALITY AS WELL.</h3>
+                        <h3>Most people believe that what you wear defines your personality. There are times when you decide to dress in a certain way in order to express something about your inner self. Similar to fashion, Kretek from Djarum allows you to express yourself in a unique and authentic way through its distinctive taste and aroma. A piece of Kretek, that was previously hidden and unseen may now be more. Nowadays, Kretek can possibly be worn to enhance your appearance. Through its unique taste and aroma, Kretek can speak about your authentic personality as well. </h3>
                     </div>
                     <a class="read_all_testimonials" href="{{route('kretek')}}">READ ALL TESTIMONIALS</a>
                 </div>
@@ -88,7 +88,7 @@
                             <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
                             <img class="product" src="{{asset('images/Djarum_black.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
-                                <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                                <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing your vigor. </p>
                                 <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                             <img class="bg" src="{{asset('images/bg-djarumruby.png')}}" width="100%" alt="" srcset="">
                             <img class="product" src="{{asset('images/Djarum_ruby.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
-                                <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                                <p>An exotic line of cigarillos made with chopped cloves, a wooden mouthpiece, and a natural tobacco leaf wrapper. Choose your Kretek Cigarillos now!</p>
                                 <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                             <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
                             <img class="product" src="{{asset('images/Djarum_shisha.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
-                                <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                                <p>Exceptional product manufactured in Indonesia that come from ancestral heritage receipe. A special collection of six distinct aroma’s derived from handpicked tobacco leaves, sauces, and spices from the Indonesian island of Java.</p>
                                 <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                             </div>
                         </div>
