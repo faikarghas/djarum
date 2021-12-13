@@ -35,4 +35,8 @@ Route::get('/store-location',[StoreLocationController::class,'index'])->name('st
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::get('/membership',[ContactController::class,'membership'])->name('membership');
 
+Route::get('/api-store-name/api/{city}',[StoreLocationController::class,'getStoreNameByCity'])->name('getStoreNameByCity');
+Route::get('/api-store-location/api/{city}/{store_name}',[StoreLocationController::class,'getStoreLocation'])->name('getStoreLocation');
+
+
 

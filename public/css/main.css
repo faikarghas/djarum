@@ -204,6 +204,10 @@ a {
   display: none;
 }
 
+.h-100 {
+  height: 100%;
+}
+
 @font-face {
   font-family: "DIN-Bold.woff";
   src: url("/fonts/DINCondensed-Bold.woff") format("woff");
@@ -1106,12 +1110,6 @@ main[page=home] .section__fourth .sf-header p {
   letter-spacing: 0.2px;
   color: #ED1C24;
   margin-bottom: 0;
-}
-main[page=home] .section__fourth .inspiration__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: space-between;
 }
 @media only screen and (max-width: 62em) {
   main[page=home] .section__fourth .inspiration__wrapper {
@@ -2231,4 +2229,9 @@ main[page=inspiration] .section__first .inspiration__item .box_inspiration p {
   line-height: 13px;
   letter-spacing: 0.35618px;
   color: white;
+}
+
+#gmap_canvas2 img {
+  max-width: none !important;
+  background: none !important;
 }

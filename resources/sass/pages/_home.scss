@@ -698,8 +698,8 @@ main[page="home"]{
         }
 
         .inspiration__wrapper{
-            display: flex;
-            justify-content: space-between;
+            // display: flex;
+            // justify-content: space-between;
             @include respond(down-tab-port){
                 flex-wrap: wrap;
             }

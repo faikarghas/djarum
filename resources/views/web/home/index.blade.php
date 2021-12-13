@@ -181,28 +181,23 @@
             <div class="left">
                 <h3>STORE LOCATOR</h3>
                 <form action="">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select select-city" aria-label="Default select example">
                         <option selected>CHOOSE CITY</option>
-                        <option value="1">One</option>
+                        @foreach ($listCity as $item)
+                            <option data-id="{{$item->city}}" value="{{$item->city}}">{{$item->city}}</option>
+                        @endforeach
                     </select>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>CHOOSE METRO</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
                     </select>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>CHOOSE STORE TYPE</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select class="form-select select-metro" aria-label="Default select example">
+                        <option selected>CHOOSE STORE NAME</option>
                     </select>
                     <button class="btn-search-now">SEARCH NOW</button>
                 </form>
             </div>
             <div class="right">
-                <div id="map"></div>
-                {{-- <img src="{{asset('images/peta 1.png')}}" alt="" srcset=""> --}}
+                <div id="googleMap" class="h-100"></div>
             </div>
         </section>
 
@@ -247,14 +242,41 @@
     </main>
 @endsection
 @section('script')
-    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCT4Omb8kNS-CKd0NYmGw129_BVyGVoB3E" type="text/javascript"></script>
+
     <script>
         $( document ).ready(function() {
+            var base_url = window.location.origin;
+
             $('.header_slider').slick({
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows:false,
+            });
+
+            $('.slider-inpiration').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                variableWidth: false,
+                arrows:false,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1
+                    }
+                    }
+                ]
             });
 
             $(window).scroll(function (event) {
@@ -292,54 +314,224 @@
                 ]
             });
 
-            $('.slider-inpiration').slick({
-                dots: false,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 3,
-                variableWidth: false,
-                arrows:false,
-                responsive: [
-                    {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        slidesToShow: 1
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        slidesToShow: 1
-                    }
-                    }
-                ]
-            });
+            $('.select-city').each(function name(params) {
+                $(this).on('change',function (params) {
+                    let idenCity = $(this).find("option:selected").attr('data-id')
 
-            $('.btn-search-now').on('click',function () {
-                e.preventDefault()
+                    $.ajax({
+                        type: "GET",
+                        url: `${base_url}/api-store-name/api/${idenCity}`,
+                        data: "",
+                        cache: false,
+                        success: function(result){
+                            $('.select-metro').empty()
+                            $('.select-metro').append('<option selected>CHOOSE STORE NAME</option>')
+
+                            result.data.map((i,a)=>{
+                                $('.select-metro').append(`<option value="${i.store_name}" data-id="${i.store_name}">${i.store_name}</option>`)
+                            })
+                        }
+                    });
+                })
             })
 
-            const directionsService = new google.maps.DirectionsService();
-            const directionsDisplay = new google.maps.DirectionsRenderer();
-            const uluru = { lat: -6.280008964188023, lng:  106.70123074866336 };
-            const mapOptions = {
-              zoom:12,
-              center: uluru
-            }
+            var locations = [];
 
-            function initMap() {
+            $('.btn-search-now').on('click',function name(e) {
+                e.preventDefault()
 
-                const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-                const marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map,
+                let city = $('.select-city').find(":selected").text();
+                let metro = $('.select-metro').find(":selected").text();
+
+                $.ajax({
+                        type: "GET",
+                        url: `${base_url}/api-store-location/api/${city}/${metro}`,
+                        data: "",
+                        cache: false,
+                        success: function(result){
+                            locations = []
+                            result.data.map((i,a)=>{
+                                locations.push([i.store_name,i.coordinate.split(',')[0],i.coordinate.split(',')[1]])
+                            })
+                            console.log(locations[0][1]);
+                            initialize([locations[0][1],locations[0][2]])
+
+                        }
                 });
 
+            })
+
+            function initialize(cor=[59.975352, 30.407865]) {
+
+                var map = new google.maps.Map(document.getElementById('googleMap'), {
+                    zoom: 10,
+                    center: new google.maps.LatLng(cor[0], cor[1]),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    styles: [{
+                            "elementType": "geometry",
+                            "stylers": [{
+                            "color": "#212121"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.icon",
+                            "stylers": [{
+                            "visibility": "off"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#757575"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                            "color": "#212121"
+                            }]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry",
+                            "stylers": [{
+                            "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "administrative.country",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "administrative.land_parcel",
+                            "stylers": [{
+                            "visibility": "off"
+                            }]
+                        },
+                        {
+                            "featureType": "administrative.locality",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#bdbdbd"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "geometry",
+                            "stylers": [{
+                            "color": "#181818"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#616161"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                            "color": "#1b1b1b"
+                            }]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "geometry.fill",
+                            "stylers": [{
+                            "color": "#2c2c2c"
+                            }]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#8a8a8a"
+                            }]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry",
+                            "stylers": [{
+                            "color": "#373737"
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry",
+                            "stylers": [{
+                            "color": "#3c3c3c"
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway.controlled_access",
+                            "elementType": "geometry",
+                            "stylers": [{
+                            "color": "#4e4e4e"
+                            }]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#616161"
+                            }]
+                        },
+                        {
+                            "featureType": "transit",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [{
+                            "color": "#000000"
+                            }]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                            "color": "#3d3d3d"
+                            }]
+                        }
+                    ]
+                });
+
+                var infowindow = new google.maps.InfoWindow();
+
+                var marker, i;
+
+                for (i = 0; i < locations.length; i++) {
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                        map: map
+                    });
+
+                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                        return function() {
+                            infowindow.setContent(locations[i][0]);
+                            infowindow.open(map, marker);
+                        }
+                    })(marker, i));
+                }
             }
 
-            initMap()
+            initialize()
 
         });
     </script>
