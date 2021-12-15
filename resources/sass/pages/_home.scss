@@ -662,6 +662,11 @@ main[page="home"]{
                 width: 100%;
                 object-fit: cover;
             }
+            #googleMap{
+                @include respond(down-tab-port){
+                    height: 500px !important;
+                }
+            }
         }
     }
 

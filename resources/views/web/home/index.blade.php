@@ -182,16 +182,16 @@
                 <h3>STORE LOCATOR</h3>
                 <form action="">
                     <select class="form-select select-city" aria-label="Default select example">
-                        <option selected>CHOOSE CITY</option>
+                        <option selected>CITY</option>
                         @foreach ($listCity as $item)
                             <option data-id="{{$item->city}}" value="{{$item->city}}">{{$item->city}}</option>
                         @endforeach
                     </select>
                     <select class="form-select" aria-label="Default select example">
-                        <option selected>CHOOSE METRO</option>
+                        <option selected>METRO</option>
                     </select>
-                    <select class="form-select select-metro" aria-label="Default select example">
-                        <option selected>CHOOSE STORE NAME</option>
+                    <select class="form-select select-store" aria-label="Default select example">
+                        <option selected>STORE NAME</option>
                     </select>
                     <button class="btn-search-now">SEARCH NOW</button>
                 </form>
@@ -324,11 +324,11 @@
                         data: "",
                         cache: false,
                         success: function(result){
-                            $('.select-metro').empty()
-                            $('.select-metro').append('<option selected>CHOOSE STORE NAME</option>')
+                            $('.select-store').empty()
+                            $('.select-store').append('<option selected>STORE NAME</option>')
 
                             result.data.map((i,a)=>{
-                                $('.select-metro').append(`<option value="${i.store_name}" data-id="${i.store_name}">${i.store_name}</option>`)
+                                $('.select-store').append(`<option value="${i.store_name}" data-id="${i.store_name}">${i.store_name}</option>`)
                             })
                         }
                     });
@@ -341,11 +341,18 @@
                 e.preventDefault()
 
                 let city = $('.select-city').find(":selected").text();
-                let metro = $('.select-metro').find(":selected").text();
+                let store = $('.select-store').find(":selected").text();
+                let url = `${base_url}/api-store-location/api/${city}/${store}`;
+
+                if (store == 'STORE NAME') {
+                    url = `${base_url}/api-store-location/api/${city}`;
+                } else {
+                    url = `${base_url}/api-store-location/api/${city}/${store}`;
+                }
 
                 $.ajax({
                         type: "GET",
-                        url: `${base_url}/api-store-location/api/${city}/${metro}`,
+                        url: url,
                         data: "",
                         cache: false,
                         success: function(result){
@@ -353,14 +360,11 @@
                             result.data.map((i,a)=>{
                                 locations.push([i.address,i.coordinate.split(',')[0],i.coordinate.split(',')[1]])
                             })
-                            console.log(locations[0][1]);
                             initialize([locations[0][1],locations[0][2]])
-
                         }
                 });
 
             })
-
             function initialize(cor=[59.975352, 30.407865]) {
 
                 var map = new google.maps.Map(document.getElementById('googleMap'), {

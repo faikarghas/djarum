@@ -22,16 +22,16 @@
                     <form action="">
                         <div class="column">
                             <select class="form-select select-city" aria-label="Default select example">
-                                <option selected>CHOOSE CITY</option>
+                                <option selected>CITY</option>
                                 @foreach ($listCity as $item)
                                     <option data-id="{{$item->city}}" value="{{$item->city}}">{{$item->city}}</option>
                                 @endforeach
                             </select>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>CHOOSE METRO</option>
+                                <option selected>METRO</option>
                             </select>
                             <select class="form-select select-store" aria-label="Default select example">
-                                <option selected>CHOOSE STORE NAME</option>
+                                <option selected>STORE NAME</option>
                             </select>
                         </div>
                         <button class="btn-search-now">SEARCH NOW</button>
@@ -40,6 +40,7 @@
             </div>
             <div class="map--search" id="googleMap">
             </div>
+
         </section>
     </main>
 @endsection
@@ -60,7 +61,7 @@
                         cache: false,
                         success: function(result){
                             $('.select-store').empty()
-                            $('.select-store').append('<option selected>CHOOSE STORE NAME</option>')
+                            $('.select-store').append('<option selected>STORE NAME</option>')
 
                             result.data.map((i,a)=>{
                                 $('.select-store').append(`<option value="${i.store_name}" data-id="${i.store_name}">${i.store_name}</option>`)
@@ -75,6 +76,7 @@
             //     ['Tabakpodarki2', 59.975352, 30.407865, 4],
             // ];
             var locations = [];
+            
 
             $('.btn-search-now').on('click',function name(e) {
                 e.preventDefault()
@@ -83,13 +85,11 @@
                 let store = $('.select-store').find(":selected").text();
                 let url = `${base_url}/api-store-location/api/${city}/${store}`;
 
-                if (store.length == 17) {
+                if (store == 'STORE NAME') {
                     url = `${base_url}/api-store-location/api/${city}`;
                 } else {
                     url = `${base_url}/api-store-location/api/${city}/${store}`;
                 }
-
-                console.log(store.length);
 
                 $.ajax({
                         type: "GET",
@@ -99,11 +99,10 @@
                         success: function(result){
                             locations = []
                             result.data.map((i,a)=>{
-                                locations.push([i.address,i.coordinate.split(',')[0],i.coordinate.split(',')[1]])
+                                locations.push([`<h4 style="padding-right:20px;">${i.address}</h4>`,i.coordinate.split(',')[0],i.coordinate.split(',')[1],i.store_name])
                             })
-                            console.log(locations[0][1]);
                             initialize([locations[0][1],locations[0][2]])
-
+                            console.log(locations);
                         }
                 });
 
@@ -271,11 +270,21 @@
                     });
 
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                        return function() {
-                            infowindow.setContent(locations[i][0]);
+                        return function(e) {
+                            infowindow.setContent(`
+                                <div class="wrapper-content-gmap">
+                                    <div class="left"><img src="http://127.0.0.1:8000/images/djblack1.png" width="50px" height="50px"/></div>
+                                    <div class="right">
+                                        <h3>${locations[i][3]}</h3>
+                                        ${locations[i][0]}
+                                    </div>
+                                </div>
+                            `);
                             infowindow.open(map, marker);
+                            // initialize([e.latLng.lat(),e.latLng.lng()])
                         }
                     })(marker, i));
+
                 }
             }
 

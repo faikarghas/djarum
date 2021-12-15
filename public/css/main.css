@@ -208,6 +208,26 @@ a {
   height: 100%;
 }
 
+.gm-ui-hover-effect {
+  border: none !important;
+}
+
+.wrapper-content-gmap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrapper-content-gmap .left img {
+  width: 200px !important;
+  height: 200px !important;
+}
+.wrapper-content-gmap .right {
+  padding: 2rem;
+}
+.wrapper-content-gmap .right h3 {
+  color: #ED1C24;
+}
+
 @font-face {
   font-family: "DIN-Bold.woff";
   src: url("/fonts/DINCondensed-Bold.woff") format("woff");
@@ -1072,6 +1092,11 @@ main[page=home] .section__third .right img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__third .right #googleMap {
+    height: 500px !important;
+  }
 }
 main[page=home] .section__fourth {
   padding: 8rem;
