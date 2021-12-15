@@ -15,4 +15,12 @@ class InspirationController extends Controller
         return view('web.inspiration.index',$data);
     }
 
+    public function detail(){
+
+        $data = [
+        ];
+
+        return view('web.inspiration.detail',$data);
+    }
+
 }

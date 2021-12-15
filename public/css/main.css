@@ -2137,6 +2137,26 @@ main[page=inspiration] .section__first h2 {
   color: white;
   margin-bottom: 4rem;
 }
+main[page=inspiration] .section__first .content-detail .minutes {
+  color: white;
+  font-size: 13.0817px;
+  letter-spacing: 0.373762px;
+  margin-bottom: 4rem;
+  display: block;
+}
+main[page=inspiration] .section__first .content-detail .date {
+  color: white;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.35618px;
+  margin-bottom: 2rem;
+}
+main[page=inspiration] .section__first .content-detail h2 {
+  margin-bottom: 0;
+}
+main[page=inspiration] .section__first .content-detail p {
+  color: white;
+}
 main[page=inspiration] .section__first .mb-2rem {
   margin-bottom: 2rem;
 }

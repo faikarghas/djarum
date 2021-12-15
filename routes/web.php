@@ -30,6 +30,7 @@ Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/kretek-collection',[KretekCollectionController::class,'kretek'])->name('kretek');
 Route::get('/kretek/{slug}',[KretekCollectionController::class,'detail'])->name('kretek-detail');
 Route::get('/inspiration',[InspirationController::class,'index'])->name('inspiration');
+Route::get('/inspiration/{slug}',[InspirationController::class,'detail'])->name('inspiration-detail');
 Route::get('/testimonials',[TestimonialsController::class,'index'])->name('testimonials');
 Route::get('/store-location',[StoreLocationController::class,'index'])->name('store');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');

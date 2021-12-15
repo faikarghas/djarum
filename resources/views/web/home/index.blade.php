@@ -15,7 +15,7 @@
         {{-- <img class="v-img" src="{{asset('images/Vector2.png')}}" alt=""> --}}
         <div class="header_slider">
             <div class="header_slider_item">
-                <img class="bg" src="{{asset('images/bannerpsd 2.png')}}" alt="">
+                <img class="bg" src="{{asset('images/bannerpsd 2.jpg')}}" alt="">
                 <img class="img_on_bg" src="{{asset('images/Banner.png')}}" alt="">
                 <div class="box_banner">
                     <div class="left">

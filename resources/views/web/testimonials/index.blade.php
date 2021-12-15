@@ -44,12 +44,12 @@
                     </div>
                 </div>
                 <div class="left">
-                    <img src="{{asset('images/ins2.png')}}" alt="" srcset="">
+                    <img src="{{asset('images/ins2.jpg')}}" alt="" srcset="">
                 </div>
             </div>
             <div class="testimonials__item">
                 <div class="left">
-                    <img src="{{asset('images/ins3.png')}}" alt="" srcset="">
+                    <img src="{{asset('images/ins3.jpg')}}" alt="" srcset="">
                 </div>
                 <div class="right">
                     <div class="box__wrapper">
