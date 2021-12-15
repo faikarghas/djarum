@@ -59,5 +59,23 @@ class StoreLocationController extends Controller
         ]);
     }
 
+    public function getStoreLocationByCity($city){
+
+
+        $storeData = DB::table('store_location')
+        ->where(['city'=>$city])
+        ->get();
+
+        $data = [
+            'storeData' => $storeData,
+        ];
+
+
+        return response()->json([
+            'respond' => 'success',
+            'data' => $storeData
+        ]);
+    }
+
 }
 

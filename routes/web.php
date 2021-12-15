@@ -38,6 +38,7 @@ Route::get('/membership',[ContactController::class,'membership'])->name('members
 
 Route::get('/api-store-name/api/{city}',[StoreLocationController::class,'getStoreNameByCity'])->name('getStoreNameByCity');
 Route::get('/api-store-location/api/{city}/{store_name}',[StoreLocationController::class,'getStoreLocation'])->name('getStoreLocation');
+Route::get('/api-store-location/api/{city}',[StoreLocationController::class,'getStoreLocationByCity'])->name('getStoreLocationByCity');
 
 
 

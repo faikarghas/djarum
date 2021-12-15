@@ -30,7 +30,7 @@
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>CHOOSE METRO</option>
                             </select>
-                            <select class="form-select select-metro" aria-label="Default select example">
+                            <select class="form-select select-store" aria-label="Default select example">
                                 <option selected>CHOOSE STORE NAME</option>
                             </select>
                         </div>
@@ -59,11 +59,11 @@
                         data: "",
                         cache: false,
                         success: function(result){
-                            $('.select-metro').empty()
-                            $('.select-metro').append('<option selected>CHOOSE STORE NAME</option>')
+                            $('.select-store').empty()
+                            $('.select-store').append('<option selected>CHOOSE STORE NAME</option>')
 
                             result.data.map((i,a)=>{
-                                $('.select-metro').append(`<option value="${i.store_name}" data-id="${i.store_name}">${i.store_name}</option>`)
+                                $('.select-store').append(`<option value="${i.store_name}" data-id="${i.store_name}">${i.store_name}</option>`)
                             })
                         }
                     });
@@ -80,11 +80,20 @@
                 e.preventDefault()
 
                 let city = $('.select-city').find(":selected").text();
-                let metro = $('.select-metro').find(":selected").text();
+                let store = $('.select-store').find(":selected").text();
+                let url = `${base_url}/api-store-location/api/${city}/${store}`;
+
+                if (store.length == 17) {
+                    url = `${base_url}/api-store-location/api/${city}`;
+                } else {
+                    url = `${base_url}/api-store-location/api/${city}/${store}`;
+                }
+
+                console.log(store.length);
 
                 $.ajax({
                         type: "GET",
-                        url: `${base_url}/api-store-location/api/${city}/${metro}`,
+                        url: url,
                         data: "",
                         cache: false,
                         success: function(result){
