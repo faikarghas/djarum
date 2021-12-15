@@ -284,7 +284,7 @@
                                         <h3>${locations[i][3]}</h3>
                                         ${locations[i][0]}
                                         <br/>
-                                        <a href="https://www.google.com/maps/place/${locations[i][1]}/${locations[i][2]}" target="_blank" rel="noopener"><img width="19px" height="19px" src="${base_url}/images/pin-google.png"/> Open in Googlemap</a>
+                                        <a href="https://www.google.com/maps/place/${locations[i][1]},${locations[i][2]}" target="_blank" rel="noopener"><img width="19px" height="19px" src="${base_url}/images/pin-google.png"/> Open in Googlemap</a>
                                     </div>
                                 </div>
                             `);
