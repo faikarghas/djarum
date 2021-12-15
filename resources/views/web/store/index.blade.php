@@ -99,7 +99,7 @@
                         success: function(result){
                             locations = []
                             result.data.map((i,a)=>{
-                                locations.push([`<h4 style="padding-right:20px;">${i.address}</h4>`,i.coordinate.split(',')[0],i.coordinate.split(',')[1],i.store_name])
+                                locations.push([`<h4 style="padding-right:20px;">${i.address}</h4>`,i.coordinate.split(',')[0],i.coordinate.split(',')[1],i.store_name,i.id])
                             })
                             initialize([locations[0][1],locations[0][2]])
                             console.log(locations);
@@ -271,17 +271,24 @@
 
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function(e) {
+                            let imageUrl;
+                            if (!locations[i][4]) {
+                                imageUrl = `<img src="${base_url}/images/store-photo/default-store.png" width="100px" height="100px"/>`
+                            } else {
+                                imageUrl = `<img src="${base_url}/images/store-photo/${locations[i][4]}.jpg" width="100%" height="100%"/>`
+                            }
                             infowindow.setContent(`
                                 <div class="wrapper-content-gmap">
-                                    <div class="left"><img src="http://127.0.0.1:8000/images/djblack1.png" width="50px" height="50px"/></div>
+                                    <div class="left">${imageUrl}</div>
                                     <div class="right">
                                         <h3>${locations[i][3]}</h3>
                                         ${locations[i][0]}
+                                        <br/>
+                                        <a href="https://www.google.com/maps/place/${locations[i][1]}/${locations[i][2]}" target="_blank" rel="noopener"><img width="19px" height="19px" src="${base_url}/images/pin-google.png"/> Open in Googlemap</a>
                                     </div>
                                 </div>
                             `);
                             infowindow.open(map, marker);
-                            // initialize([e.latLng.lat(),e.latLng.lng()])
                         }
                     })(marker, i));
 
