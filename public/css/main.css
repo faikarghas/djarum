@@ -2141,7 +2141,7 @@ main[page=inspiration] .section__first .content-detail .minutes {
   color: white;
   font-size: 13.0817px;
   letter-spacing: 0.373762px;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   display: block;
 }
 main[page=inspiration] .section__first .content-detail .date {
@@ -2149,7 +2149,8 @@ main[page=inspiration] .section__first .content-detail .date {
   font-size: 11px;
   line-height: 13px;
   letter-spacing: 0.35618px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  display: block;
 }
 main[page=inspiration] .section__first .content-detail h2 {
   margin-bottom: 0;
