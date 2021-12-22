@@ -43,7 +43,7 @@
     <header class="forMobile header-mobile">
         <div class="header_slider">
             <div class="header_slider_item">
-                <img src="{{asset('images/bannerpsd 2m.png')}}" alt="">
+                <img class="bg" src="{{asset('images/bannerpsd 2m.png')}}" alt="">
                 <img class="img_on_bg" src="{{asset('images/Banner.png')}}" alt="">
                 <div class="box_banner">
                     <div class="left">

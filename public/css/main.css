@@ -130,7 +130,7 @@ a {
 /* hamburger menu */
 #menu-hamburger {
   width: 30px;
-  height: 37px;
+  height: 34px;
   position: relative;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
@@ -170,7 +170,7 @@ a {
 }
 
 #menu-hamburger span:nth-child(2), #menu-hamburger span:nth-child(3) {
-  top: 18px;
+  top: 19px;
 }
 
 #menu-hamburger span:nth-child(3) {
@@ -178,7 +178,7 @@ a {
 }
 
 #menu-hamburger span:nth-child(4) {
-  top: 26px;
+  top: 28px;
 }
 
 #menu-hamburger.open span:nth-child(1) {
@@ -414,6 +414,11 @@ menu {
   min-height: 80px;
   z-index: 99;
 }
+@media only screen and (max-width: 62em) {
+  menu {
+    padding: 0 4rem;
+  }
+}
 menu img {
   -o-object-fit: contain;
      object-fit: contain;
@@ -459,6 +464,11 @@ header .header_slider_item .bg {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media only screen and (max-width: 62em) {
+  header .header_slider_item .bg {
+    transform: translateY(-51px);
+  }
+}
 header .header_slider_item .img_on_bg {
   position: absolute;
   width: 670px;
@@ -468,9 +478,9 @@ header .header_slider_item .img_on_bg {
 }
 @media only screen and (max-width: 62em) {
   header .header_slider_item .img_on_bg {
-    width: 305px;
-    left: 43px;
-    top: 240px;
+    width: 360px;
+    left: 25px;
+    top: 354px;
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -644,6 +654,12 @@ header .header_slider_item .box_banner .right h3 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width: 62em) {
+  .confirmation__wrapper .confirmation {
+    width: 90%;
+    height: 45%;
+  }
+}
 .confirmation__wrapper .confirmation img {
   width: 100%;
   height: 100%;
@@ -656,6 +672,12 @@ header .header_slider_item .box_banner .right h3 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width: 62em) {
+  .confirmation__wrapper .confirmation .box {
+    width: 100%;
+    padding: 1rem;
+  }
+}
 .confirmation__wrapper .confirmation .box h3 {
   color: white;
   font-size: 32px;
@@ -663,6 +685,12 @@ header .header_slider_item .box_banner .right h3 {
   line-height: 38px;
   letter-spacing: 0.3px;
   margin-bottom: 5rem;
+}
+@media only screen and (max-width: 62em) {
+  .confirmation__wrapper .confirmation .box h3 {
+    font-size: 23px;
+    line-height: 28px;
+  }
 }
 .confirmation__wrapper .confirmation .box h4 {
   font-size: 26px;
@@ -672,6 +700,12 @@ header .header_slider_item .box_banner .right h3 {
   color: white;
   margin-bottom: 3.5rem;
 }
+@media only screen and (max-width: 62em) {
+  .confirmation__wrapper .confirmation .box h4 {
+    line-height: 14px;
+    text-align: center;
+  }
+}
 .confirmation__wrapper .confirmation .box .btn_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -680,7 +714,7 @@ header .header_slider_item .box_banner .right h3 {
 }
 .confirmation__wrapper .confirmation .box .btn_wrapper button {
   width: 170px;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
@@ -689,6 +723,12 @@ header .header_slider_item .box_banner .right h3 {
   box-shadow: none;
   border: none;
   font-family: "DIN-Bold.woff";
+}
+@media only screen and (max-width: 62em) {
+  .confirmation__wrapper .confirmation .box .btn_wrapper button {
+    font-size: 15px;
+    margin: 1rem;
+  }
 }
 .v-img {
   position: absolute;
@@ -1112,7 +1152,7 @@ main[page=home] .section__third .left .btn-search-now {
   width: 100%;
   font-family: "DIN-Bold.woff";
   font-size: 2rem;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   margin-top: 1rem;
 }
 main[page=home] .section__third .right {
@@ -1546,7 +1586,7 @@ main[page=kretekCollection] .section__first .left .cs-kretek .product_item .phot
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90px;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1604,9 +1644,11 @@ main[page=kretekCollection] .section__first .right .photo_product .product {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+main[page=kretekCollection] .section__first .right a {
+  text-decoration: none;
 }
 main[page=kretekCollection] .section__first .right .desc {
   padding: 4rem;

@@ -8,7 +8,8 @@ use App\Http\Controllers\InspirationController;
 use App\Http\Controllers\StoreLocationController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TestimonialsController;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 
 
 
@@ -42,3 +43,13 @@ Route::get('/api-store-location/api/{city}',[StoreLocationController::class,'get
 
 
 
+// AUTH
+Route::group(['middleware'=>['auth']],function(){
+    Route::group(['middleware'=>['check_auth:admin']],function(){
+        Route::get('/admin',[AdminController::class,'index'])->name('homeadmin');
+    });
+});
+
+Route::get('login',[AuthController::class,'index'])->name('login');
+Route::post('proses_login',[AuthController::class,'proses_login']);
+Route::post('proses_register',[AuthController::class,'proses_register']);
