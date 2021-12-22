@@ -1,9 +1,21 @@
 main[page="about"]{
     margin-top: 80px;
+    position: relative;
+    background-color: #111114;
+
+    .bar{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        z-index: 1;
+    }
     .section__first{
         display: flex;
         flex-wrap: wrap;
-        background-color: $color_lightBlack;
+        position: relative;
+        z-index: 2;
         .left-1{
             width: 30%;
             img{
@@ -85,10 +97,9 @@ main[page="about"]{
     }
 
     .section__first_m{
-        background-color: #111114;
         .about-1{
             position: relative;
-            background-color: #111114;
+            // background-color: #111114;
             display: flex;
             justify-content: flex-end;
             img{

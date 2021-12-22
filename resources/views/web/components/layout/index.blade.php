@@ -49,20 +49,20 @@
 
         <footer>
             <div class="left">
-                <div class="get forDesktop">
+                <div class="get forDesktop-dflex">
                     <h3>GET IN TOUCH</h3>
-                    <h4>FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="15px" alt="" srcset=""></span></h4>
+                    <a href="https://vk.com/club21798278" target="_blank" rel="noopener">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="15px" alt="" srcset=""></span></a>
                 </div>
                 <img class="kretek" src="{{asset('images/kreteworld 1.png')}}" width="155px" alt="" srcset="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maxime voluptate eveniet, nemo incidunt perferendis officia aperiam ab veniam autem?</p>
                 <br>
                 <h4 class="forMobile mb-5">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="18px" alt="" srcset=""></span></h4>
-                <ul class="term">
+                {{-- <ul class="term">
                     <li><a href="">Terms & Conditions</a></li>
                     <li><a href="">Privacy Policy</a></li>
                     <li><a href="">Cookie Policy</a></li>
-                </ul>
-                <p class="forMobile copyright">© 2021 - DJARUM INTERNATIONAL - All Rights Reserved.</p>
+                </ul> --}}
+                <p class="forMobile copyright">© 2022 - KRETEK WORLD - All Rights Reserved.</p>
             </div>
             <div class="right forDesktop-dflex">
                 <ul>
@@ -73,6 +73,9 @@
                     <li><a href="{{route('store')}}">STORE LOCATION</a></li>
                     <li><a href="{{route('contact')}}">CONTACT</a></li>
                 </ul>
+            </div>
+            <div class="w-100">
+                <p class="copyright">© 2022 - KRETEK WORLD - All Rights Reserved.</p>
             </div>
         </footer>
 

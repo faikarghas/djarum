@@ -220,6 +220,16 @@ a {
 .gm-style-iw {
   padding: 0 !important;
 }
+@media only screen and (max-width: 62em) {
+  .gm-style-iw {
+    max-width: 334px !important;
+  }
+}
+
+.gm-ui-hover-effect {
+  top: 2px;
+  right: -1px;
+}
 
 .wrapper-content-gmap {
   display: -webkit-box;
@@ -243,12 +253,25 @@ a {
 .wrapper-content-gmap .right {
   padding: 2rem;
 }
+@media only screen and (max-width: 62em) {
+  .wrapper-content-gmap .right {
+    padding: 1rem;
+  }
+}
 .wrapper-content-gmap .right h3 {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
+  font-family: "Roboto", sans-serif;
   color: #ED1C24;
 }
 .wrapper-content-gmap .right h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+@media only screen and (max-width: 62em) {
+  .wrapper-content-gmap .right h4 {
+    font-size: 1.5rem;
+  }
 }
 .wrapper-content-gmap .right a {
   font-size: 1.6rem;
@@ -278,6 +301,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 62em) {
   footer {
@@ -321,14 +345,16 @@ footer .left .get h3 {
   margin-right: 8rem;
   margin-bottom: 0;
 }
-footer .left h4 {
+footer .left a {
   color: white;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
   margin-bottom: 0;
+  text-decoration: none;
+  font-family: "DIN-Bold.woff";
 }
-footer .left h4 span {
+footer .left a span {
   margin-left: 1rem;
 }
 footer .left .kretek {
@@ -353,6 +379,7 @@ footer .left .copyright {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.2px;
+  color: white;
 }
 footer .left .term {
   padding-left: 0;
@@ -361,7 +388,7 @@ footer .left .term {
 footer .left .term li {
   list-style: none;
   display: inline-block;
-  margin: 0 1rem;
+  margin-right: 1rem;
 }
 footer .left .term li a {
   font-weight: 300;
@@ -377,6 +404,7 @@ footer .right {
   display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 5rem;
 }
 footer .right ul {
   margin-bottom: 0;
@@ -400,6 +428,12 @@ footer .right ul li p {
   font-weight: 300;
   font-size: 10px;
   line-height: 12px;
+  color: white;
+}
+footer .copyright {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.2px;
   color: white;
 }
 
@@ -790,16 +824,23 @@ main[page=home] .section__first {
 }
 main[page=home] .section__first .smoke_bg {
   position: absolute;
-  top: 58%;
+  top: 50%;
   left: 0;
   z-index: 0;
   transform: translateY(-50%);
+  width: 100%;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .section__first .smoke_bg {
+    top: 1%;
+  }
 }
 main[page=home] .section__first .smoke_bg img {
   -o-object-fit: contain;
      object-fit: contain;
   transform: rotateY(180deg);
   width: 100%;
+  filter: opacity(0.2);
 }
 main[page=home] .section__first .title__sf {
   margin-bottom: 2rem;
@@ -1230,6 +1271,9 @@ main[page=home] .section__fourth {
     padding: 4rem;
   }
 }
+main[page=home] .section__fourth .see-all {
+  font-family: "DIN-Bold.woff";
+}
 main[page=home] .section__fourth .sf-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1323,7 +1367,7 @@ main[page=home] .section__fourth .inspiration__wrapper .ins-box .box a {
   background: #ED1C24;
   text-decoration: none;
   color: white;
-  padding: 2rem 1rem;
+  padding: 1rem;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.373762px;
@@ -1339,13 +1383,24 @@ main[page=home] .section__fourth .inspiration__wrapper .ins-box .box a {
 
 main[page=about] {
   margin-top: 80px;
+  position: relative;
+  background-color: #111114;
+}
+main[page=about] .bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
 }
 main[page=about] .section__first {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  background-color: #111114;
+  position: relative;
+  z-index: 2;
 }
 main[page=about] .section__first .left-1 {
   width: 30%;
@@ -1425,12 +1480,8 @@ main[page=about] .section__first .right-2 img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main[page=about] .section__first_m {
-  background-color: #111114;
-}
 main[page=about] .section__first_m .about-1 {
   position: relative;
-  background-color: #111114;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -32,7 +32,7 @@
                 <p>Because of the product's authenticity and reputation, global export of Djarum tobacco products has increased quickly since the 1970s. Djarum tobacco products are now accessible on all five continents. Australia, Canada, Eastern Europe, Japan and the Far East, the Middle East, the Netherlands, Russia, Saudi Arabia, Southeast Asia, and the United States of America are among the major export markets. Djarum does not stop there; the company continues to develop innovative products aimed at conquering new markets.</p>
             </div>
             <div class="right-2">
-                <img src="{{asset('images/red2 1.png')}}" alt="" srcset="">
+                <img src="{{asset('images/red2 1.jpg')}}" alt="" srcset="">
             </div>
         </section>
 
@@ -64,6 +64,8 @@
                 <p>Djarum does not stop there; the company continues to develop innovative products aimed at conquering new markets.</p>
             </div>
         </section>
+
+        <img class="bar" src="{{asset('images/bar.png')}}" width="100%" alt="" srcset="">
     </main>
 @endsection
 @section('script')

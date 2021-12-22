@@ -348,14 +348,19 @@ main[page="home"]{
         }
         .smoke_bg{
             position: absolute;
-            top: 58%;
+            top: 50%;
             left: 0;
             z-index: 0;
             transform: translateY(-50%);
+            width: 100%;
+            @include respond(down-tab-port){
+                top: 1%;
+            }
             img{
                 object-fit: contain;
                 transform: rotateY(180deg);
                 width: 100%;
+                filter: opacity(0.2);
             }
         }
         .title__sf{
@@ -739,6 +744,9 @@ main[page="home"]{
         @include respond(down-tab-port){
             padding: 4rem;
         }
+        .see-all{
+            font-family: "DIN-Bold.woff";
+        }
         .sf-header{
             display: flex;
             align-items: center;
@@ -819,7 +827,7 @@ main[page="home"]{
                         background: $color_red;
                         text-decoration: none;
                         color: white;
-                        padding: 2rem 1rem;
+                        padding: 1rem;
                         font-size: 20px;
                         line-height: 24px;
                         letter-spacing: 0.373762px;
