@@ -98,7 +98,7 @@
                         <div class="box">
                             <h3 class="title">KRETEK CIGARETTE</h3>
                             <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
-                            <img class="product" src="{{asset('images/Djarum_black.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/product/Cigarettes1.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
                                 <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing your vigor. </p>
                                 <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
@@ -112,7 +112,7 @@
                         <div class="box">
                             <h3 class="title">KRETEK CIGARILLO</h3>
                             <img class="bg" src="{{asset('images/bg-djarumruby.png')}}" width="100%" alt="" srcset="">
-                            <img class="product" src="{{asset('images/Djarum_ruby.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/product/Cigarillos1.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
                                 <p>An exotic line of cigarillos made with chopped cloves, a wooden mouthpiece, and a natural tobacco leaf wrapper. Choose your Kretek Cigarillos now!</p>
                                 <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
@@ -126,7 +126,7 @@
                         <div class="box">
                             <h3 class="title">KRETEK SHISHA</h3>
                             <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
-                            <img class="product" src="{{asset('images/Djarum_shisha.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/product/Balihai1.png')}}" width="100%" alt="" srcset="">
                             <div class="description">
                                 <p>Exceptional product manufactured in Indonesia that come from ancestral heritage receipe. A special collection of six distinct aroma’s derived from handpicked tobacco leaves, sauces, and spices from the Indonesian island of Java.</p>
                                 <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
