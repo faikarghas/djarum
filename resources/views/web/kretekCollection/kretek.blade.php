@@ -20,8 +20,9 @@
                     <div class="cs-kretek">
                         <div class="nav" role="tablist">
                             <h2>KRETEK COLLECTION</h2>
-                            <a class="btn-collapse-cs nav-link active" data-target="#kretek-cigarette" id="nav-cigarette-tab" data-bs-toggle="tab" data-bs-target="#nav-cigarette" type="button" role="tab" aria-controls="nav-cigarette" aria-selected="true">
+                            <a class="btn-collapse-cs" data-target="#kretek-cigarette" id="nav-cigarette-tab" data-bs-toggle="tab" data-bs-target="#nav-cigarette" type="button" role="tab" aria-controls="nav-cigarette" aria-selected="true">
                                 KRETEK CIGARETTE
+                                <span class="arrow"><img src="{{asset('images/arrow.png')}}" width="10px" alt="" srcset=""></span>
                             </a>
                             <div class="collapse" id="kretek-cigarette">
                                 <p class="first_p">Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing
@@ -114,7 +115,7 @@
                                                 <div class="desc-box">
                                                     <h4>DJARUM BLACK ICE</h4>
                                                     <p>10 kreteks per pack</p>
-                                                    <p>A cooling blend of tobacco and cloves with a fresh mint aroma. 
+                                                    <p>A cooling blend of tobacco and cloves with a fresh mint aroma.
                                                         It suits the best for you who is on fire.
                                                         </p>
                                                 </div>
@@ -189,6 +190,7 @@
 
                             <a class="btn-collapse-cs" data-target="#kretek-cigarillo" class="nav-link" id="nav-cigarillo-tab" data-bs-toggle="tab" data-bs-target="#nav-cigarillo" type="button" role="tab" aria-controls="nav-cigarillo" aria-selected="false">
                                 KRETEK CIGARILLO
+                                <span class="arrow"><img src="{{asset('images/arrow.png')}}" width="10px" alt="" srcset=""></span>
                             </a>
                             <div class="collapse" id="kretek-cigarillo">
                                 <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing
@@ -245,6 +247,7 @@
 
                             <a class="btn-collapse-cs" data-target="#kretek-shisha" class="nav-link" id="nav-shisha-tab" data-bs-toggle="tab" data-bs-target="#nav-shisha" type="button" role="tab" aria-controls="nav-shisha" aria-selected="false">
                                 KRETEK SHISHA
+                                <span class="arrow"><img src="{{asset('images/arrow.png')}}" width="10px" alt="" srcset=""></span>
                             </a>
                             <div class="collapse" id="kretek-shisha">
                                 <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing
@@ -348,9 +351,20 @@
 
                 <div class="right forDesktop">
                     <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-default" role="tabpanel" aria-labelledby="nav-default-tab">
+                            <div class="slider-product">
+                                <div class="product_item default">
+                                    <a href="{{route('kretek-detail','test')}}">
+                                        <div class="photo_product">
+                                            <img class="product" src="{{asset('images/all-collection-Kretek 1.png')}}" width="100%" alt="" srcset="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-                        <div class="tab-pane fade show active" id="nav-cigarette" role="tabpanel" aria-labelledby="nav-cigarette-tab">
-                            <div class="slider-product ">
+                        <div class="tab-pane fade" id="nav-cigarette" role="tabpanel" aria-labelledby="nav-cigarette-tab">
+                            <div class="slider-product-cigarette">
                                 <div class="product_item">
                                     <a href="{{route('kretek-detail','test')}}">
                                         <div class="photo_product">
@@ -359,7 +373,7 @@
                                         </div>
                                         <div class="desc">
                                             <div class="desc-box">
-                                                <h4>DJARUM<br/>BLACK</h4>
+                                                <h4>DJARUM BLACK</h4>
                                                 <p>10 kreteks per pack</p>
                                                 <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
                                             </div>
@@ -438,9 +452,8 @@
                                             <div class="desc-box">
                                                 <h4>DJARUM BLACK ICE</h4>
                                                 <p>10 kreteks per pack</p>
-                                                <p>A cooling blend of tobacco and cloves with a fresh mint aroma. 
-                                                    It suits the best for you who is on fire.
-                                                    </p>
+                                                <p>A cooling blend of tobacco and cloves with a fresh mint aroma.
+                                                    It suits the best for you who is on fire.</p>
                                             </div>
                                         </div>
                                     </a>
@@ -509,10 +522,14 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="arrow_wrapper">
+                                <img class="cigarette-prev" src="{{asset('images/round-arrow-l.png')}}" alt="">
+                                <img class="cigarette-next" src="{{asset('images/round-arrow-r.png')}}" alt="">
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="nav-cigarillo" role="tabpanel" aria-labelledby="nav-cigarillo-tab">
-                            <div class="slider-product ">
+                            <div class="slider-product">
                                 <div class="product_item">
                                     <a href="{{route('kretek-detail','test')}}">
                                         <div class="photo_product">
@@ -521,7 +538,7 @@
                                         </div>
                                         <div class="desc">
                                             <div class="desc-box">
-                                                <h4>Djarum Wood<br/>tip Ruby </h4>
+                                                <h4>Djarum Wood tip Ruby </h4>
                                                 <p>5 individually wrapped cigarillos</p>
                                                 <p>No other cigar combines imported natural leaf wrapper and a shaped wood tip with premium cigar tobaccos and the balanced cherry aroma of fresh cloves. Made for relaxing. Infused with pleasure. Only from Djarum.</p>
                                             </div>
@@ -536,7 +553,7 @@
                                         </div>
                                         <div class="desc">
                                             <div class="desc-box">
-                                                <h4>Djarum Wood <br/>tip Ivory</h4>
+                                                <h4>Djarum Wood tip Ivory</h4>
                                                 <p>5 individually wrapped cigarillos </p>
                                                 <p>No other cigar combines imported natural leaf wrapper and a shaped wood tip with premium cigar tobaccos and the balanced vanilla aroma of fresh cloves. Made for relaxing. Infused with pleasure. Only from Djarum.</p>
                                             </div>
@@ -562,7 +579,7 @@
                         </div>
 
                         <div class="tab-pane fade" id="nav-shisha" role="tabpanel" aria-labelledby="nav-shisha-tab">
-                            <div class="slider-product-cigarillo">
+                            <div class="slider-product-shisha">
                                 <div class="product_item">
                                     <a href="{{route('kretek-detail','test')}}">
                                         <div class="photo_product">
@@ -658,6 +675,7 @@
                     </div>
                 </div>
             </div>
+            <img class="bar" src="{{asset('images/bar.png')}}" width="100%" alt="" srcset="">
         </section>
     </main>
 @endsection
@@ -669,8 +687,11 @@
                     $($(this).data('target')).toggleClass('d-block')
 
                     $('.collapse').not($(this).data('target')).removeClass('d-block')
+
                     $(`.slider-product`).slick('refresh');
-                    $(`.slider-product-cigarillo`).slick('refresh');
+                    $(`.slider-product-cigarette`).slick('refresh');
+                    $(`.slider-product-shisha`).slick('refresh');
+
                     $('.product_item').css('opacity',0)
 
                     setTimeout(() => {
@@ -684,14 +705,30 @@
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows:false
+                arrows:true,
+                adaptiveHeight: true,
+                prevArrow: $('.cigarillo-prev'),
+                nextArrow: $('.cigarillo-next')
             });
 
-            $('.slider-product-cigarillo').slick({
+            $('.slider-product-cigarette').slick({
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows:false
+                arrows:true,
+                adaptiveHeight: true,
+                prevArrow: $('.cigarette-prev'),
+                nextArrow: $('.cigarette-next')
+            });
+
+            $('.slider-product-shisha').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:true,
+                adaptiveHeight: true,
+                prevArrow: $('.shisha-prev'),
+                nextArrow: $('.shisha-next')
             });
         });
     </script>

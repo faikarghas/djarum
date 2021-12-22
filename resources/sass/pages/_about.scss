@@ -177,6 +177,7 @@ main[page="kretekCollection"]{
     margin-top: 80px;
     .section__first{
         background-color: $color_lightBlack;
+        position: relative;
         h2{
             font-size: 53px;
             line-height: 64px;
@@ -192,13 +193,26 @@ main[page="kretekCollection"]{
         .product__item{
             display: flex;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+        .tab-pane{
+            position: relative;
         }
         .left{
-            width: 50%;
+            width: 47%;
             padding: 8rem;
             @include respond(down-tab-port){
                 width: 100%;
                 padding: 4rem;
+            }
+            .arrow{
+                img{
+                    width: 10px;
+                    object-fit: contain;
+                    margin: 0;
+                    transform: rotate(90deg);
+                }
             }
             img{
                 width: 440px;
@@ -247,7 +261,7 @@ main[page="kretekCollection"]{
 
                 .btn-collapse-cs{
                     font-size: 22px;
-                    line-height: 26px;
+                    line-height: 19px;
                     letter-spacing: 0.2px;
                     color: white;
                     padding: 1.5rem 2rem;
@@ -257,6 +271,9 @@ main[page="kretekCollection"]{
                     cursor: pointer;
                     margin-bottom: 1rem;
                     font-family: 'DIN-Bold.woff';
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                 }
 
                 .collapse{
@@ -274,7 +291,7 @@ main[page="kretekCollection"]{
                         color: #999999;
                     }
                 }
-
+                
                 .product_item{
                     margin-bottom: 4rem;
                     .photo_product{
@@ -292,7 +309,8 @@ main[page="kretekCollection"]{
                             left: 50%;
                             transform: translate(-50%,-50%);
                             width: 100%;
-                            object-fit: contain;
+                            height: 100%;
+                            object-fit: cover;
                         }
                     }
                     .desc{
@@ -321,7 +339,7 @@ main[page="kretekCollection"]{
 
         }
         .right{
-            width: 50%;
+            width: 53%;
             h5{
                 font-size: 24px;
                 line-height: 28px;
@@ -339,6 +357,31 @@ main[page="kretekCollection"]{
                 font-family: 'Roboto', sans-serif;
                 font-weight: 400;
                 margin-bottom: 2rem;
+            }
+
+           .arrow_wrapper{
+               position: absolute;
+               top: 55%;
+               left: 50%;
+               transform: translateX(-50%);
+               img{
+                   width: 34px;
+                   height: 34px;
+                   object-fit: contain;
+                   cursor: pointer;
+                   &:first-child{
+                       margin-right: 1rem;
+                   }
+               }
+           }
+
+            .default{
+                .photo_product{
+                    .product{
+                        width: 101%;
+                        left: 40%;
+                    }
+                }
             }
 
             .photo_product{
@@ -366,6 +409,7 @@ main[page="kretekCollection"]{
                 &-box{
                     border: 1px solid white;
                     padding: 4rem;
+                    text-transform: uppercase;
                     h4{
                         font-size: 26px;
                         line-height: 31px;
@@ -376,9 +420,7 @@ main[page="kretekCollection"]{
                 }
             }
         }
-        .full{
 
-        }
     }
 }
 
