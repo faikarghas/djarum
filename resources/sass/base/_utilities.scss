@@ -155,6 +155,9 @@
             cursor: pointer;
             font-weight: 700;
             text-decoration: none;
+            @include respond(down-tab-port){
+                font-size: 1.4rem;
+            }
             img{
                 object-fit: contain;
             }

@@ -225,7 +225,7 @@
                         <span>02 November 2021</span>
                         <div>
                             <p>3 minutes reading</p>
-                            <a href="">READ NOW</a>
+                            <a href="{{route('inspiration-detail','test')}}">READ NOW</a>
                         </div>
                     </div>
                 </div>
@@ -235,7 +235,7 @@
                         <span>02 November 2021</span>
                         <div>
                             <p>3 minutes reading</p>
-                            <a href="">READ NOW</a>
+                            <a href="{{route('inspiration-detail','test')}}">READ NOW</a>
                         </div>
                     </div>
                 </div>
@@ -245,7 +245,7 @@
                         <span>02 November 2021</span>
                         <div>
                             <p>3 minutes reading</p>
-                            <a href="">READ NOW</a>
+                            <a href="{{route('inspiration-detail','test')}}">READ NOW</a>
                         </div>
                     </div>
                 </div>

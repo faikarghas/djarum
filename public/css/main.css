@@ -258,6 +258,11 @@ a {
   font-weight: 700;
   text-decoration: none;
 }
+@media only screen and (max-width: 62em) {
+  .wrapper-content-gmap .right a {
+    font-size: 1.4rem;
+  }
+}
 .wrapper-content-gmap .right a img {
   -o-object-fit: contain;
      object-fit: contain;
