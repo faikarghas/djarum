@@ -17,27 +17,30 @@
             <div class="header_slider_item">
                 <img class="bg" src="{{asset('images/bannerpsd 2.jpg')}}" alt="">
                 <img class="img_on_bg" src="{{asset('images/Banner.png')}}" alt="">
-                <div class="box_banner">
-                    <div class="left">
-                        <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
-                    </div>
-                    <div class="right">
-                        <h3>Kretek for Authenticity/for Vigor/for Pride/for Boldness</h3>
-                    </div>
-                </div>
             </div>
             <div class="header_slider_item">
-                <img class="bg" src="{{asset('images/bannerpsd 2.png')}}" alt="">
-                <img class="img_on_bg" src="{{asset('images/Banner.png')}}" alt="">
-                <div class="box_banner">
-                    <div class="left">
-                        <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
-                    </div>
-                    <div class="right">
-                        <h3>KRETEK FROM DJARUM ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA. </h3>
-                    </div>
-                </div>
+                <img class="bg" src="{{asset('images/pride-banner.jpg')}}" alt="">
+                <img class="img_on_bg" src="{{asset('images/kretek_for_pride.png')}}" alt="">
             </div>
+            <div class="header_slider_item">
+                <img class="bg" src="{{asset('images/bold-banner.jpg')}}" alt="">
+                <img class="img_on_bg" src="{{asset('images/kretek_for_boldness.png')}}" alt="">
+            </div>
+        </div>
+        <div class="box_banner">
+            <div class="left">
+                <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
+            </div>
+            <div class="right">
+                <h3>KRETEK FROM DJARUM ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA.</h3>
+            </div>
+        </div>
+        <div class="slide-indicator">
+            <ul>
+                <li>01</li>
+                <li>02</li>
+                <li>03</li>
+            </ul>
         </div>
     </header>
     <header class="forMobile header-mobile">
@@ -50,7 +53,7 @@
                         <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
                     </div>
                     <div class="right">
-                        <h3>Kretek for Authenticity/for Vigor/for Pride/for Boldness</h3>
+                        <h3>KRETEK PRODUCTS ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA.</h3>
                     </div>
                 </div>
             </div>
@@ -71,7 +74,8 @@
                 </div>
                 <div class="right">
                     <div class="caption">
-                        <h3>Most people believe that what you wear defines your personality. There are times when you decide to dress in a certain way in order to express something about your inner self. Similar to fashion, Kretek from Djarum allows you to express yourself in a unique and authentic way through its distinctive taste and aroma. A piece of Kretek, that was previously hidden and unseen may now be more. Nowadays, Kretek can possibly be worn to enhance your appearance. Through its unique taste and aroma, Kretek can speak about your authentic personality as well. </h3>
+                        <h3 class="text-uppercase">A piece of Kretek, that was previously hidden and unseen may now be more. Nowadays, Kretek can possibly be worn to enhance your appearance. Through its unique taste and aroma, Kretek can speak about your authentic personality as well. 
+                        </h3>
                     </div>
                     <a class="read_all_testimonials" href="{{route('kretek')}}">READ ALL TESTIMONIALS</a>
                 </div>
@@ -133,11 +137,11 @@
                     <div class="item__wrapper">
                         <div class="box">
                             <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
-                            <img class="product" src="{{asset('images/Djarum_black.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/product/Cigarettes1.png')}}" width="100%" alt="" srcset="">
                         </div>
                         <div class="description">
                             <h3 class="title">KRETEK CIGARETTE</h3>
-                            <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                            <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing your vigor.</p>
                             <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
                         </div>
                     </div>
@@ -147,11 +151,11 @@
                     <div class="item__wrapper">
                         <div class="box">
                             <img class="bg" src="{{asset('images/bg-djarumruby.png')}}" width="100%" alt="" srcset="">
-                            <img class="product" src="{{asset('images/Djarum_ruby.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/product/Cigarillos1.png')}}" width="100%" alt="" srcset="">
                         </div>
                         <div class="description">
                             <h3 class="title">KRETEK CIGARILLO</h3>
-                            <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                            <p>An exotic line of cigarillos made with chopped cloves, a wooden mouthpiece, and a natural tobacco leaf wrapper. Choose your Kretek Cigarillos now!</p>
                             <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
                         </div>
                     </div>
@@ -161,11 +165,11 @@
                     <div class="item__wrapper">
                         <div class="box">
                             <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
-                            <img class="product" src="{{asset('images/Djarum_shisha.png')}}" width="100%" alt="" srcset="">
+                            <img class="product" src="{{asset('images/product/Balihai1.png')}}" width="100%" alt="" srcset="">
                         </div>
                         <div class="description">
                             <h3 class="title">KRETEK SHISHA</h3>
-                            <p>The most popular kretek around the world in stylish black paper with an original blend of tobacco and natural chopped cloves. The only natural flavored kretek that has a bright, memorable taste.</p>
+                            <p>Djarum Balihai Shisha is crafted from nature’s finest tobacco leaves, cloves, and unique spices, mixed with our signature blend to produce distinct aroma and smooth vapor to enhance the characteristic of each products. The quality and aroma of each Shisha has been made with such perfection, to deliver nothing but the best for your truly memorable moments.</p>
                             <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
                         </div>
                     </div>
@@ -246,6 +250,17 @@
     <script>
         $( document ).ready(function() {
             var base_url = window.location.origin;
+
+            $(".header_slider").on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+                let idx = currentSlide == undefined ? 0 : currentSlide
+                console.log(idx);
+                $('.slide-indicator ul li').each(function (params) {
+                    if($(this).index() === idx){
+                        $(this).addClass('active')
+                        $('.slide-indicator ul li').not($(this)).removeClass('active');
+                    }
+                })
+            });
 
             $('.header_slider').slick({
                 infinite: true,
