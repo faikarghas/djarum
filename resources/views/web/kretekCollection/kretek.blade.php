@@ -576,6 +576,10 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="arrow_wrapper">
+                                <img class="cigarillo-prev" src="{{asset('images/round-arrow-l.png')}}" alt="">
+                                <img class="cigarillo-next" src="{{asset('images/round-arrow-r.png')}}" alt="">
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="nav-shisha" role="tabpanel" aria-labelledby="nav-shisha-tab">
@@ -670,6 +674,10 @@
                                         </div>
                                     </a>
                                 </div>
+                            </div>
+                            <div class="arrow_wrapper">
+                                <img class="shisha-prev" src="{{asset('images/round-arrow-l.png')}}" alt="">
+                                <img class="shisha-next" src="{{asset('images/round-arrow-r.png')}}" alt="">
                             </div>
                         </div>
                     </div>
