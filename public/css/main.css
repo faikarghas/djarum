@@ -554,6 +554,11 @@ header .box_banner .right h3 {
     font-size: 2.6rem;
   }
 }
+header .follow_vk {
+  position: absolute;
+  right: 2rem;
+  top: 4%;
+}
 header .slide-indicator {
   position: absolute;
   right: 2rem;
@@ -1143,13 +1148,13 @@ main[page=home] .section__third {
     flex-direction: column;
   }
 }
-main[page=home] .section__third .left {
+main[page=home] .section__third > .left {
   width: 35%;
   background-color: black;
   padding: 8rem;
 }
 @media only screen and (max-width: 62em) {
-  main[page=home] .section__third .left {
+  main[page=home] .section__third > .left {
     width: 100%;
     padding: 4rem;
     background: -webkit-gradient(linear, left top, right top, color-stop(70%, black), color-stop(30%, rgba(219, 219, 219, 0)));
@@ -1157,7 +1162,7 @@ main[page=home] .section__third .left {
     background: linear-gradient(90deg, black 70%, rgba(219, 219, 219, 0) 30%);
   }
 }
-main[page=home] .section__third .left h3 {
+main[page=home] .section__third > .left h3 {
   font-size: 5.3rem;
   line-height: 64px;
   letter-spacing: 0.2px;
@@ -1165,12 +1170,12 @@ main[page=home] .section__third .left h3 {
   margin-bottom: 6.6rem;
 }
 @media only screen and (max-width: 62em) {
-  main[page=home] .section__third .left h3 {
+  main[page=home] .section__third > .left h3 {
     font-size: 40px;
     line-height: 48px;
   }
 }
-main[page=home] .section__third .left form select {
+main[page=home] .section__third > .left form select {
   background-color: transparent;
   font-size: 20px;
   line-height: 24px;
@@ -1180,14 +1185,14 @@ main[page=home] .section__third .left form select {
   padding: 1.8rem;
   margin-bottom: 1rem;
 }
-main[page=home] .section__third .left form select option {
+main[page=home] .section__third > .left form select option {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
   font-family: "DIN-Bold.woff";
   color: black;
 }
-main[page=home] .section__third .left .btn-search-now {
+main[page=home] .section__third > .left .btn-search-now {
   background-color: #ED1C24;
   color: white;
   box-shadow: none;
@@ -1205,11 +1210,6 @@ main[page=home] .section__third .right {
   main[page=home] .section__third .right {
     width: 100%;
   }
-}
-main[page=home] .section__third .right img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 @media only screen and (max-width: 62em) {
   main[page=home] .section__third .right #googleMap {

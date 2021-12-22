@@ -76,7 +76,6 @@
             //     ['Tabakpodarki2', 59.975352, 30.407865, 4],
             // ];
             var locations = [];
-            
 
             $('.btn-search-now').on('click',function name(e) {
                 e.preventDefault()

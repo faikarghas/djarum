@@ -35,6 +35,12 @@
                 <h3>KRETEK FROM DJARUM ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA.</h3>
             </div>
         </div>
+
+        <div class="follow_vk">
+            <a href="https://vk.com/club21798278" target="_blank" rel="noopener">
+                <img src="{{asset('images/vk.png')}}" width="15px" alt="" srcset="">
+            </a>
+        </div>
         <div class="slide-indicator">
             <ul>
                 <li class="dots" data-id="0">01</li>
@@ -42,6 +48,8 @@
                 <li class="dots" data-id="2">03</li>
             </ul>
         </div>
+
+
     </header>
     <header class="forMobile header-mobile">
         <div class="header_slider">
@@ -337,6 +345,8 @@
                 ]
             });
 
+            var base_url = window.location.origin;
+
             $('.select-city').each(function name(params) {
                 $(this).on('change',function (params) {
                     let idenCity = $(this).find("option:selected").attr('data-id')
@@ -358,6 +368,10 @@
                 })
             })
 
+            // ex
+            // var locations = [
+            //     ['Tabakpodarki2', 59.975352, 30.407865, 4],
+            // ];
             var locations = [];
 
             $('.btn-search-now').on('click',function name(e) {
@@ -381,13 +395,15 @@
                         success: function(result){
                             locations = []
                             result.data.map((i,a)=>{
-                                locations.push([i.address,i.coordinate.split(',')[0],i.coordinate.split(',')[1]])
+                                locations.push([`<h4 style="padding-right:20px;">${i.address}</h4>`,i.coordinate.split(',')[0],i.coordinate.split(',')[1],i.store_name,i.id])
                             })
                             initialize([locations[0][1],locations[0][2]])
+                            console.log(locations);
                         }
                 });
 
             })
+
             function initialize(cor=[59.975352, 30.407865]) {
 
                 var map = new google.maps.Map(document.getElementById('googleMap'), {
@@ -536,7 +552,7 @@
                             "color": "#3d3d3d"
                             }]
                         }
-                    ]
+                        ]
                 });
 
                 var infowindow = new google.maps.InfoWindow();
@@ -550,11 +566,28 @@
                     });
 
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                        return function() {
-                            infowindow.setContent(locations[i][0]);
+                        return function(e) {
+                            let imageUrl;
+                            if (!locations[i][4]) {
+                                imageUrl = `<img src="${base_url}/images/store-photo/default-store.png" width="100px" height="100px"/>`
+                            } else {
+                                imageUrl = `<img src="${base_url}/images/store-photo/${locations[i][4]}.jpg" width="100%" height="100%"/>`
+                            }
+                            infowindow.setContent(`
+                                <div class="wrapper-content-gmap">
+                                    <div class="left">${imageUrl}</div>
+                                    <div class="right">
+                                        <h3>${locations[i][3]}</h3>
+                                        ${locations[i][0]}
+                                        <br/>
+                                        <a href="https://www.google.com/maps/place/${locations[i][1]},${locations[i][2]}" target="_blank" rel="noopener"><img width="19px" height="19px" src="${base_url}/images/pin-google.png"/> Open in Googlemap</a>
+                                    </div>
+                                </div>
+                            `);
                             infowindow.open(map, marker);
                         }
                     })(marker, i));
+
                 }
             }
 
