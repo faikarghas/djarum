@@ -37,9 +37,9 @@
         </div>
         <div class="slide-indicator">
             <ul>
-                <li>01</li>
-                <li>02</li>
-                <li>03</li>
+                <li class="dots" data-id="0">01</li>
+                <li class="dots" data-id="1">02</li>
+                <li class="dots" data-id="2">03</li>
             </ul>
         </div>
     </header>
@@ -268,6 +268,14 @@
                 slidesToScroll: 1,
                 arrows:false,
             });
+
+            $('.slide-indicator ul .dots').each(function (params) {
+                $(this).on('click',function (params) {
+                    let target = $(this).data('id')
+
+                    $('.header_slider').slick('slickGoTo',target)
+                })
+            })
 
             $('.slider-inpiration').slick({
                 dots: false,

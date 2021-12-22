@@ -571,6 +571,7 @@ header .slide-indicator ul li {
   font-family: "DIN-Bold.woff";
   font-size: 2rem;
   margin-bottom: 2.5rem;
+  cursor: pointer;
 }
 header .slide-indicator ul li.active {
   color: #ffffffab;
