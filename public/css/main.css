@@ -2414,6 +2414,13 @@ main[page=kretek-detail] .section__firstM {
 main[page=kretek-detail] .section__firstM .logo-wrapper {
   padding: 4rem 4rem 8rem 4rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=kretek-detail] .section__firstM .logo-wrapper img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 main[page=kretek-detail] .section__firstM .product-detail {
   height: 320px;
   position: relative;
@@ -2454,11 +2461,21 @@ main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box {
   padding: 2rem;
   position: relative;
 }
+@media only screen and (max-width: 62em) {
+  main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box {
+    padding: 1.5rem;
+  }
+}
 main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box p {
   color: white;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2px;
+}
+@media only screen and (max-width: 62em) {
+  main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box p {
+    font-size: 16px;
+  }
 }
 main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box .pr-img {
   position: absolute;
@@ -2477,6 +2494,11 @@ main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-im
   position: absolute;
   width: 150px;
   bottom: 0;
+}
+@media only screen and (max-width: 62em) {
+  main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-img {
+    width: 130px;
+  }
 }
 main[page=kretek-detail] .section__firstM .product-desc {
   padding: 2rem;
