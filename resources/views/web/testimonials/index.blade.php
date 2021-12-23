@@ -28,8 +28,8 @@
                 <div class="right">
                     <div class="box__wrapper">
                         <div class="border-box">
-                            <p>Similar to fashion, Kretek from Djarum allows you to express yourself in a unique & authentic way through it’s distinctive taste & aroma.</p>
-                            <h4>Miroslava, 24 y.o</h4>
+                            <p>“Kretek has a really pleasant taste with a hint of sweet from the mix of tobacco and other spices. Smoking this basically gives an experience that you would never forget. I simply have no regret trying it.”</p>
+                            <h4>@siairis_</h4>
                         </div>
                     </div>
                 </div>
@@ -38,8 +38,8 @@
                 <div class="right">
                     <div class="box__wrapper even-bw">
                         <div class="border-box">
-                            <p>Similar to fashion, Kretek from Djarum allows you to express yourself in a unique & authentic way through it’s distinctive taste & aroma.</p>
-                            <h4>Miroslava, 24 y.o</h4>
+                            <p>"This has to be a very indulging cigarette to enjoy during your spare time or whenever you feel your authentic self. Each cigarette somehow gives out a warm feeling of youth with every puff, making it even harder to resist."<p>
+                            <h4>Maria Bliznyuk<br/>@maria_bliznyuk</h4>
                         </div>
                     </div>
                 </div>
@@ -54,8 +54,8 @@
                 <div class="right">
                     <div class="box__wrapper">
                         <div class="border-box">
-                            <p>Similar to fashion, Kretek from Djarum allows you to express yourself in a unique & authentic way through it’s distinctive taste & aroma.</p>
-                            <h4>Miroslava, 24 y.o</h4>
+                            <p>“I can’t deny the fact that this cigarette did a great job in giving such a nice flavor. The aromatic spices makes it taste more lavish, and each cig surprisingly gives you enough time to enjoy the moment.”</p>
+                            <h4>Anya Strada<br/>@a.stradaa</h4>
                         </div>
                     </div>
                 </div>
@@ -64,8 +64,8 @@
                 <div class="right">
                     <div class="box__wrapper even-bw">
                         <div class="border-box">
-                            <p>Similar to fashion, Kretek from Djarum allows you to express yourself in a unique & authentic way through it’s distinctive taste & aroma.</p>
-                            <h4>Miroslava, 24 y.o</h4>
+                            <p>“First time trying this kretek and I would say that this got a really unique, smooth, and irresistible taste. I honestly feel the relaxing sensation from the crackle. Truly enjoyable, especially when you spend time together with friends.”</p>
+                            <h4>@n.perovskaya</h4>
                         </div>
                     </div>
                 </div>
@@ -73,6 +73,9 @@
                     <img src="{{asset('images/ins4.png')}}" alt="" srcset="">
                 </div>
             </div>
+
+            <img class="v-img" src="{{asset('images/smoke.jpg')}}" alt="">
+            <img class="v-img-2" src="{{asset('images/smoke.jpg')}}" alt="">
         </section>
     </main>
 @endsection

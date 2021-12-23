@@ -20,7 +20,7 @@
                 <div class="left">
                     <div class="box">
                         <p>The perfect combination of cloves and tobacco, with a spicy aromatic flavor.</p>
-                        <img class="pr-img" src="{{asset('images/product')}}/{{$listProducts[0]->image_detail}}" alt="" srcset="">
+                        <img class="pr-img" src="{{asset('images/product')}}/detail/{{$listProducts[0]->image_detail}}" alt="" srcset="">
                     </div>
                 </div>
                 <div class="right">

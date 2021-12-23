@@ -24,7 +24,7 @@
                                 KRETEK CIGARETTE
                                 <span class="arrow"><img src="{{asset('images/arrow.png')}}" width="10px" alt="" srcset=""></span>
                             </a>
-                            <div class="collapse d-block" id="kretek-cigarette">
+                            <div class="collapse" id="kretek-cigarette">
                                 <p class="first_p">Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing
                                     your vigor.</p>
                                 <div class="slider-product forMobile">
@@ -115,7 +115,7 @@
                                 <div class="product_item default">
                                     <a href="{{route('kretek-detail','test')}}">
                                         <div class="photo_product">
-                                            <img class="product" src="{{asset('images/all-collection-Kretek 1.png')}}" width="100%" alt="" srcset="">
+                                            <img class="product" src="{{asset('images/all-collection-kretek (1).png')}}" width="100%" alt="" srcset="">
                                         </div>
                                     </a>
                                 </div>

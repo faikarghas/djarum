@@ -449,7 +449,20 @@ main[page="testimonials"]{
     .section__first{
         background-color: $color_lightBlack;
         padding-bottom: 10rem;
-
+        position: relative;
+        .v-img{
+            position: absolute;
+            width: 100%;
+            top: 10%;
+            filter: opacity(0.2);
+        }
+        .v-img-2{
+            position: absolute;
+            width: 100%;
+            bottom: 20%;
+            transform: rotate(180deg);
+            filter: opacity(0.2);
+        }
         .iframe-yt{
             position: fixed;
             top: 0;
@@ -484,6 +497,8 @@ main[page="testimonials"]{
         .testimonials__item{
             display: flex;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
             @include respond(down-tab-port){
                 min-height: 500px;
             }

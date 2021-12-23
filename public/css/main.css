@@ -533,11 +533,12 @@ header .header_slider_item .img_on_bg {
 }
 @media only screen and (max-width: 62em) {
   header .header_slider_item .img_on_bg {
-    width: 360px;
-    left: 25px;
-    top: 315px;
+    width: 316px;
+    left: 50%;
+    top: 215px;
     -o-object-fit: contain;
        object-fit: contain;
+    transform: translateX(-50%);
   }
 }
 header .box_banner {
@@ -612,16 +613,32 @@ header .follow_vk {
   right: 2rem;
   top: 4%;
 }
+@media only screen and (max-width: 62em) {
+  header .follow_vk {
+    top: 4%;
+  }
+}
 header .slide-indicator {
   position: absolute;
   right: 2rem;
   top: 20%;
+}
+@media only screen and (max-width: 62em) {
+  header .slide-indicator {
+    top: 15%;
+  }
 }
 header .slide-indicator ul {
   padding: 0;
   padding-right: 2rem;
   padding-top: 4rem;
   border-right: 1px solid #4D4D4D;
+}
+@media only screen and (max-width: 62em) {
+  header .slide-indicator ul {
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
 }
 header .slide-indicator ul li {
   list-style: none;
@@ -633,6 +650,11 @@ header .slide-indicator ul li {
 }
 header .slide-indicator ul li.active {
   color: #ffffffab;
+}
+@media only screen and (max-width: 62em) {
+  header .slide-indicator ul li {
+    font-size: 1.5rem;
+  }
 }
 
 .menu__showcase {
@@ -1849,6 +1871,20 @@ main[page=testimonials] {
 main[page=testimonials] .section__first {
   background-color: #111114;
   padding-bottom: 10rem;
+  position: relative;
+}
+main[page=testimonials] .section__first .v-img {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  filter: opacity(0.2);
+}
+main[page=testimonials] .section__first .v-img-2 {
+  position: absolute;
+  width: 100%;
+  bottom: 20%;
+  transform: rotate(180deg);
+  filter: opacity(0.2);
 }
 main[page=testimonials] .section__first .iframe-yt {
   position: fixed;
@@ -1885,6 +1921,8 @@ main[page=testimonials] .section__first .testimonials__item {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 @media only screen and (max-width: 62em) {
   main[page=testimonials] .section__first .testimonials__item {

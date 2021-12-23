@@ -56,15 +56,35 @@
             <div class="header_slider_item">
                 <img class="bg" src="{{asset('images/bannerpsd 2m.png')}}" alt="">
                 <img class="img_on_bg" src="{{asset('images/Banner.png')}}" alt="">
-                <div class="box_banner">
-                    <div class="left">
-                        <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
-                    </div>
-                    <div class="right">
-                        <h3>KRETEK PRODUCTS ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA.</h3>
-                    </div>
-                </div>
             </div>
+            <div class="header_slider_item">
+                <img class="bg" src="{{asset('images/pride-bannerm.jpg')}}" alt="">
+                <img class="img_on_bg" src="{{asset('images/kretek_for_pride.png')}}" alt="">
+            </div>
+            <div class="header_slider_item">
+                <img class="bg" src="{{asset('images/banner-boldnessm.jpg')}}" alt="">
+                <img class="img_on_bg" src="{{asset('images/kretek_for_boldness.png')}}" alt="">
+            </div>
+        </div>
+        <div class="box_banner">
+            <div class="left">
+                <img src="{{asset('images/djblack1.png')}}" alt="" srcset="">
+            </div>
+            <div class="right">
+                <h3>KRETEK PRODUCTS ALLOWS YOU TO EXPRESS YOURSELF IN A UNIQUE AND AUTHENTIC WAY THROUGH ITS DISTINCTIVE TASTE AND AROMA.</h3>
+            </div>
+        </div>
+        <div class="follow_vk">
+            <a href="https://vk.com/club21798278" target="_blank" rel="noopener">
+                <img src="{{asset('images/vk.png')}}" width="15px" alt="" srcset="">
+            </a>
+        </div>
+        <div class="slide-indicator">
+            <ul>
+                <li class="dots" data-id="0">01</li>
+                <li class="dots" data-id="1">02</li>
+                <li class="dots" data-id="2">03</li>
+            </ul>
         </div>
     </header>
 @endsection
@@ -313,7 +333,7 @@
             $(window).scroll(function (event) {
                 let scroll = $(document).scrollTop();
 
-                $('.img_on_bg').css('transform',`translateY(${scroll * 2 / 5}px)`)
+                $('.img_on_bg').css('transform',`translate(-50%,${scroll * 2 / 5}px)`)
                 // $('.section__first').css('transform',`translateY(${-scroll * 2 / 20 }px)`)
                 // $('.section__first title__sf').css('transform',`translateY(${scroll * 2 / 20 + 50}px)`)
 
