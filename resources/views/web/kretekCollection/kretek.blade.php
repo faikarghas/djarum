@@ -39,7 +39,7 @@
                                                     <div class="desc-box">
                                                         <h4>{{$item->name}}</h4>
                                                         <p>{{$item->quantity_en}}</p>
-                                                        <p><{{$item->description_en}}/p>
+                                                        <p>{{$item->description_en}}</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -67,7 +67,7 @@
                                                     <div class="desc-box">
                                                         <h4>{{$item->name}}</h4>
                                                         <p>{{$item->quantity_en}}</p>
-                                                        <p><{{$item->description_en}}/p>
+                                                        <p>{{$item->description_en}}</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -96,7 +96,7 @@
                                                     <div class="desc-box">
                                                         <h4>{{$item->name}}</h4>
                                                         <p>{{$item->quantity_en}}</p>
-                                                        <p><{{$item->description_en}}/p>
+                                                        <p>{{$item->description_en}}</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -235,7 +235,8 @@
                 arrows:true,
                 adaptiveHeight: true,
                 prevArrow: $('.cigarillo-prev'),
-                nextArrow: $('.cigarillo-next')
+                nextArrow: $('.cigarillo-next'),
+               
             });
 
             $('.slider-product-cigarette').slick({
@@ -245,7 +246,22 @@
                 arrows:true,
                 adaptiveHeight: true,
                 prevArrow: $('.cigarette-prev'),
-                nextArrow: $('.cigarette-next')
+                nextArrow: $('.cigarette-next'),
+                 responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                    }
+                }]
             });
 
             $('.slider-product-shisha').slick({

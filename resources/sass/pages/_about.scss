@@ -178,6 +178,14 @@ main[page="kretekCollection"]{
     .section__first{
         background-color: $color_lightBlack;
         position: relative;
+        @include respond(down-tab-port){
+            .slick-slide {
+                margin: 0 10px;
+            }
+            .slick-list {
+                padding:0 20% 0 0 !important;
+            }
+        }
         h2{
             font-size: 53px;
             line-height: 64px;
@@ -195,6 +203,9 @@ main[page="kretekCollection"]{
             flex-wrap: wrap;
             position: relative;
             z-index: 2;
+            a{
+                text-decoration: none;
+            }
         }
         .tab-pane{
             position: relative;
@@ -289,6 +300,10 @@ main[page="kretekCollection"]{
                         line-height: 24px;
                         letter-spacing: 0.2px;
                         color: #999999;
+                        @include respond(down-tab-port){
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
                     }
                 }
                 
@@ -317,6 +332,10 @@ main[page="kretekCollection"]{
                         &-box{
                             border: 1px solid white;
                             padding: 4rem;
+                            @include respond(down-tab-port){
+                                height: 345px;
+                                padding: 2rem;
+                            }
                             h4{
                                 font-size: 26px;
                                 line-height: 31px;

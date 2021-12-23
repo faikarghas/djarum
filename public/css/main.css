@@ -1572,6 +1572,14 @@ main[page=kretekCollection] .section__first {
   background-color: #111114;
   position: relative;
 }
+@media only screen and (max-width: 62em) {
+  main[page=kretekCollection] .section__first .slick-slide {
+    margin: 0 10px;
+  }
+  main[page=kretekCollection] .section__first .slick-list {
+    padding: 0 20% 0 0 !important;
+  }
+}
 main[page=kretekCollection] .section__first h2 {
   font-size: 53px;
   line-height: 64px;
@@ -1593,6 +1601,9 @@ main[page=kretekCollection] .section__first .product__item {
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
+}
+main[page=kretekCollection] .section__first .product__item a {
+  text-decoration: none;
 }
 main[page=kretekCollection] .section__first .tab-pane {
   position: relative;
@@ -1693,6 +1704,12 @@ main[page=kretekCollection] .section__first .left .cs-kretek .collapse p {
   letter-spacing: 0.2px;
   color: #999999;
 }
+@media only screen and (max-width: 62em) {
+  main[page=kretekCollection] .section__first .left .cs-kretek .collapse p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 main[page=kretekCollection] .section__first .left .cs-kretek .product_item {
   margin-bottom: 4rem;
 }
@@ -1720,6 +1737,12 @@ main[page=kretekCollection] .section__first .left .cs-kretek .product_item .phot
 main[page=kretekCollection] .section__first .left .cs-kretek .product_item .desc-box {
   border: 1px solid white;
   padding: 4rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=kretekCollection] .section__first .left .cs-kretek .product_item .desc-box {
+    height: 345px;
+    padding: 2rem;
+  }
 }
 main[page=kretekCollection] .section__first .left .cs-kretek .product_item .desc-box h4 {
   font-size: 26px;
