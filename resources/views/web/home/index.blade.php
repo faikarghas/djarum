@@ -171,7 +171,7 @@
                         <div class="description">
                             <h3 class="title">KRETEK CIGARETTE</h3>
                             <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing your vigor.</p>
-                            <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                            <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                         </div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@
                         <div class="description">
                             <h3 class="title">KRETEK CIGARILLO</h3>
                             <p>An exotic line of cigarillos made with chopped cloves, a wooden mouthpiece, and a natural tobacco leaf wrapper. Choose your Kretek Cigarillos now!</p>
-                            <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                            <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                         </div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                         <div class="description">
                             <h3 class="title">KRETEK SHISHA</h3>
                             <p>Djarum Balihai Shisha is crafted from nature’s finest tobacco leaves, cloves, and unique spices, mixed with our signature blend to produce distinct aroma and smooth vapor to enhance the characteristic of each products. The quality and aroma of each Shisha has been made with such perfection, to deliver nothing but the best for your truly memorable moments.</p>
-                            <a class="to_all_products" href="">SEE ALL PRODUCT LINE</a>
+                            <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                         </div>
                     </div>
                 </div>
@@ -223,7 +223,7 @@
                         <option selected>METRO</option>
                     </select>
                     <select class="form-select select-store" aria-label="Default select example">
-                        <option selected>STORE NAME</option>
+                        <option selected>TRADE CENTER</option>
                     </select>
                     <button class="btn-search-now">SEARCH NOW</button>
                 </form>
@@ -245,7 +245,7 @@
                         <span>02 November 2021</span>
                         <div>
                             <p>3 minutes reading</p>
-                            <a href="{{route('inspiration-detail','test')}}">READ NOW</a>
+                            <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">READ NOW</a>
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                         <span>02 November 2021</span>
                         <div>
                             <p>3 minutes reading</p>
-                            <a href="{{route('inspiration-detail','test')}}">READ NOW</a>
+                            <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">READ NOW</a>
                         </div>
                     </div>
                 </div>
@@ -265,11 +265,12 @@
                         <span>02 November 2021</span>
                         <div>
                             <p>3 minutes reading</p>
-                            <a href="{{route('inspiration-detail','test')}}">READ NOW</a>
+                            <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">READ NOW</a>
                         </div>
                     </div>
                 </div>
             </div>
+            <a class="to-articles mt-5" href="{{route('inspiration')}}">SEE ALL ARTICLES</a>
         </section>
     </main>
 @endsection
@@ -330,10 +331,19 @@
                 ]
             });
 
+            
+
             $(window).scroll(function (event) {
                 let scroll = $(document).scrollTop();
+                let transVal
 
-                $('.img_on_bg').css('transform',`translate(-50%,${scroll * 2 / 5}px)`)
+                if ($(window).width() < 800) {
+                    transVal = '-50%';
+                } else {
+                    transVal = '43px';
+                }
+
+                $('.img_on_bg').css('transform',`translate(${transVal},${scroll * 2 / 5}px)`)
                 // $('.section__first').css('transform',`translateY(${-scroll * 2 / 20 }px)`)
                 // $('.section__first title__sf').css('transform',`translateY(${scroll * 2 / 20 + 50}px)`)
 
@@ -346,6 +356,7 @@
                 slidesToShow: 2,
                 variableWidth: true,
                 focusOnSelect: true,
+                adaptiveHeight: true,
                 responsive: [
                     {
                     breakpoint: 768,

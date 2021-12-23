@@ -52,7 +52,7 @@
                 <p>Kretek production is much more complicated than conventional cigarette production because, in addition to tobacco, two additional components are used: cloves and a special sauce made from authentic Indonesian spices. It should also be noted that in terms of quality and variety, Indonesian tobacco is one of the most valuable assets in the world.</p>
             </div>
             <div class="about-2">
-                <img src="{{asset('images/red2 1.png')}}" alt="" srcset="">
+                <img src="{{asset('images/red2 1.jpg')}}" alt="" srcset="">
                 <h2>ABOUT KRETEK WORLD</h2>
             </div>
             <div class="about-2-1">

@@ -51,19 +51,16 @@
 
         <footer>
             <div class="left">
-                <div class="get forDesktop-dflex">
+                <div class="get forDesktop">
                     <h3>GET IN TOUCH</h3>
                     <a href="https://vk.com/club21798278" target="_blank" rel="noopener">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="15px" alt="" srcset=""></span></a>
                 </div>
-                <img class="kretek" src="{{asset('images/kreteworld 1.png')}}" width="155px" alt="" srcset="">
-                <br>
-                <a class="forMobile mb-5 color-white" href="https://vk.com/club21798278" target="_blank" rel="noopener">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="18px" alt="" srcset=""></span></a>
-                {{-- <ul class="term">
-                    <li><a href="">Terms & Conditions</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Cookie Policy</a></li>
-                </ul> --}}
-                <p class="forMobile copyright">© 2022 - KRETEK WORLD - All Rights Reserved.</p>
+                <div>
+                    <img class="kretek" src="{{asset('images/kreteworld 1.png')}}" width="155px" alt="" srcset="">
+                    <br>
+                    <a class="forMobile mb-5 color-white" href="https://vk.com/club21798278" target="_blank" rel="noopener">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="18px" alt="" srcset=""></span></a>
+                    <p class="forDesktop copyright">© 2022 - KRETEK WORLD - All Rights Reserved.</p>
+                </div>
             </div>
             <div class="right forDesktop-dflex">
                 <ul>
@@ -72,7 +69,9 @@
                     <li><a href="{{route('kretek')}}">KRETEK COLLECTIONS</a></li>
                     <li><a href="{{route('inspiration')}}">INSPIRATIONS</a></li>
                     <li><a href="{{route('store')}}">STORE LOCATION</a></li>
+                    <li><a href="{{route('testimonials')}}">TESTIMONIALS</a></li>
                     <li><a href="{{route('contact')}}">CONTACT</a></li>
+                    <li><a href="{{route('membership')}}">MEMBERSHIP</a></li>
                 </ul>
             </div>
             <div class="w-100">

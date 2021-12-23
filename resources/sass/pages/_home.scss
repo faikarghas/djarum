@@ -551,6 +551,7 @@ main[page="home"]{
         position: relative;
         @include respond(down-tab-port){
             padding-top: 0;
+            padding-bottom: 0;
         }
         .titleM{
             color: white;
@@ -748,6 +749,10 @@ main[page="home"]{
                         color: black;
                     }
                 }
+                .form-select{
+                    background-image: url('http://127.0.0.1:8000/images/arrowbt.png');
+                    background-position: right 2rem center;
+                }
             }
             .btn-search-now{
                 background-color: $color_red;
@@ -877,6 +882,20 @@ main[page="home"]{
                     }
                 }
             }
+        }
+
+        .to-articles{
+            background-color: $color_red;
+            font-size: 20px;
+            line-height: 24px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "DIN-Bold.woff";
         }
     }
 

@@ -54,8 +54,17 @@
                 </div>
             </div>
             <div class="inspiration__list">
+            <div class="inspiration__item box-list">
+                    <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">
+                        <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
+                        <div class="box_inspiration">
+                            <h2>CHOOSE YOUR CIGS BY YOUR CHARACTER</h2>
+                            <p class="date">02 November 2021</p>
+                        </div>
+                    </a>
+                </div>
                 <div class="inspiration__item box-list">
-                    <a href="">
+                    <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">
                         <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
                         <div class="box_inspiration">
                             <h2>WHICH KRETEK ARE YOU?</h2>
@@ -64,7 +73,7 @@
                     </a>
                 </div>
                 <div class="inspiration__item box-list">
-                    <a href="">
+                    <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">
                         <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
                         <div class="box_inspiration">
                             <h2>WHICH KRETEK ARE YOU?</h2>
@@ -73,7 +82,7 @@
                     </a>
                 </div>
                 <div class="inspiration__item box-list">
-                    <a href="">
+                    <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">
                         <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
                         <div class="box_inspiration">
                             <h2>WHICH KRETEK ARE YOU?</h2>

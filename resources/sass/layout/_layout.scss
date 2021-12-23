@@ -3,12 +3,17 @@ footer{
     background-color: #000000;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 2rem;
     @include respond(down-tab-port){
         padding: 2rem;
     }
     .left{
         width: 50%;
         padding-right: 20rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
          @include respond(down-tab-port){
              width: 100%;
              padding: 0;
@@ -94,21 +99,21 @@ footer{
         width: 50%;
         display: flex;
         justify-content: flex-end;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
         ul{
             margin-bottom: 0;
             padding-left: 0;
             li{
                 list-style: none;
                 &:not(:last-child){
-                    margin-bottom: 1.5rem;
+                    margin-bottom: 0rem;
                 }
                 a{
                     font-family: "DIN-Bold.woff";
                     text-decoration: none;
                     color: white;
-                    font-size: 2.8rem;
-                    line-height: 34px;
+                    font-size: 2.2rem;
+                    line-height: 31px;
                     letter-spacing: 0.2px;
                 }
                 p{

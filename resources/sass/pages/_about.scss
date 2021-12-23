@@ -664,6 +664,11 @@ main[page="store"]{
                             color: black;
                         }
                     }
+
+                    .form-select{
+                        background-image: url('http://127.0.0.1:8000/images/arrowbt.png');
+                        background-position: right 2rem center;
+                    }
                 }
                 .btn-search-now{
                     background-color: $color_red;
@@ -749,6 +754,13 @@ main[page="contact"]{
             }
         }
 
+        .vk{
+            text-decoration: none;
+            color: white;
+            margin-bottom: 4rem;
+            display: block;
+        }
+
         form{
             input{
                 background-color: transparent;
@@ -768,7 +780,27 @@ main[page="contact"]{
                     color: white;
                 }
             }
-
+            select{
+                background-color: transparent;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                font-family: "DIN-Bold.woff";
+                color: white;
+                padding: 1.8rem;
+                margin-bottom: 1rem;
+                option{
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 0.2px;
+                    font-family: "DIN-Bold.woff";
+                    color: black;
+                }
+            }
+            .form-select{
+                background-image: url('http://127.0.0.1:8000/images/arrowbt.png');
+                background-position: right 2rem center;
+            }
             textarea{
                 background-color: transparent;
                 font-size: 20px;
@@ -1186,6 +1218,9 @@ main[page="inspiration"]{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            @include respond(down-tab-port){
+                padding: 4rem;
+            }
         }
 
         .inspiration__item{
@@ -1228,6 +1263,7 @@ main[page="inspiration"]{
                 @include respond(down-tab-port){
                     width: 100%;
                     height: unset;
+                    padding: 0;
                 }
                 &.big{
                     padding-right: 15rem;

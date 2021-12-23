@@ -31,7 +31,7 @@
                                 <option selected>METRO</option>
                             </select>
                             <select class="form-select select-store" aria-label="Default select example">
-                                <option selected>STORE NAME</option>
+                                <option selected>TRADE CENTER</option>
                             </select>
                         </div>
                         <button class="btn-search-now">SEARCH NOW</button>

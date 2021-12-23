@@ -318,6 +318,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 2rem;
 }
 @media only screen and (max-width: 62em) {
   footer {
@@ -327,6 +328,12 @@ footer {
 footer .left {
   width: 50%;
   padding-right: 20rem;
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 62em) {
   footer .left {
@@ -420,7 +427,7 @@ footer .right {
   display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 footer .right ul {
   margin-bottom: 0;
@@ -430,14 +437,14 @@ footer .right ul li {
   list-style: none;
 }
 footer .right ul li:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
 }
 footer .right ul li a {
   font-family: "DIN-Bold.woff";
   text-decoration: none;
   color: white;
-  font-size: 2.8rem;
-  line-height: 34px;
+  font-size: 2.2rem;
+  line-height: 31px;
   letter-spacing: 0.2px;
 }
 footer .right ul li p {
@@ -1094,6 +1101,7 @@ main[page=home] .section__second {
 @media only screen and (max-width: 62em) {
   main[page=home] .section__second {
     padding-top: 0;
+    padding-bottom: 0;
   }
 }
 main[page=home] .section__second .titleM {
@@ -1317,6 +1325,10 @@ main[page=home] .section__third > .left form select option {
   font-family: "DIN-Bold.woff";
   color: black;
 }
+main[page=home] .section__third > .left form .form-select {
+  background-image: url("http://127.0.0.1:8000/images/arrowbt.png");
+  background-position: right 2rem center;
+}
 main[page=home] .section__third > .left .btn-search-now {
   background-color: #ED1C24;
   color: white;
@@ -1458,6 +1470,21 @@ main[page=home] .section__fourth .inspiration__wrapper .ins-box .box a {
     font-size: 18.6881px;
     line-height: 22px;
   }
+}
+main[page=home] .section__fourth .to-articles {
+  background-color: #ED1C24;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DIN-Bold.woff";
 }
 
 main[page=about] {
@@ -2160,6 +2187,10 @@ main[page=store] .section__first .filter_wrapper form .column select option {
   font-family: "DIN-Bold.woff";
   color: black;
 }
+main[page=store] .section__first .filter_wrapper form .column .form-select {
+  background-image: url("http://127.0.0.1:8000/images/arrowbt.png");
+  background-position: right 2rem center;
+}
 main[page=store] .section__first .filter_wrapper form .btn-search-now {
   background-color: #ED1C24;
   color: white;
@@ -2242,6 +2273,12 @@ main[page=contact] .section__first p span img {
     margin-right: 10px;
   }
 }
+main[page=contact] .section__first .vk {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 4rem;
+  display: block;
+}
 main[page=contact] .section__first form input {
   background-color: transparent;
   font-size: 20px;
@@ -2267,6 +2304,27 @@ main[page=contact] .section__first form input:-ms-input-placeholder {
 }
 main[page=contact] .section__first form input::placeholder {
   color: white;
+}
+main[page=contact] .section__first form select {
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: white;
+  padding: 1.8rem;
+  margin-bottom: 1rem;
+}
+main[page=contact] .section__first form select option {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-family: "DIN-Bold.woff";
+  color: black;
+}
+main[page=contact] .section__first form .form-select {
+  background-image: url("http://127.0.0.1:8000/images/arrowbt.png");
+  background-position: right 2rem center;
 }
 main[page=contact] .section__first form textarea {
   background-color: transparent;
@@ -2689,6 +2747,11 @@ main[page=inspiration] .section__first .inspiration__list {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .inspiration__list {
+    padding: 4rem;
+  }
+}
 main[page=inspiration] .section__first .inspiration__item {
   height: 304.5px;
   position: relative;
@@ -2736,6 +2799,7 @@ main[page=inspiration] .section__first .inspiration__item .box_inspiration {
   main[page=inspiration] .section__first .inspiration__item .box_inspiration {
     width: 100%;
     height: unset;
+    padding: 0;
   }
 }
 main[page=inspiration] .section__first .inspiration__item .box_inspiration.big {
