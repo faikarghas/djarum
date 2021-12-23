@@ -58,7 +58,7 @@
                 <img class="kretek" src="{{asset('images/kreteworld 1.png')}}" width="155px" alt="" srcset="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maxime voluptate eveniet, nemo incidunt perferendis officia aperiam ab veniam autem?</p>
                 <br>
-                <h4 class="forMobile mb-5">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="18px" alt="" srcset=""></span></h4>
+                <a class="forMobile mb-5 color-white" href="https://vk.com/club21798278" target="_blank" rel="noopener">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="18px" alt="" srcset=""></span></a>
                 {{-- <ul class="term">
                     <li><a href="">Terms & Conditions</a></li>
                     <li><a href="">Privacy Policy</a></li>
@@ -77,7 +77,7 @@
                 </ul>
             </div>
             <div class="w-100">
-                <p class="copyright">© 2022 - KRETEK WORLD - All Rights Reserved.</p>
+                {{-- <p class="copyright">© 2022 - KRETEK WORLD - All Rights Reserved.</p> --}}
             </div>
         </footer>
 
