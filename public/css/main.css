@@ -2014,6 +2014,11 @@ main[page=testimonials] .section__first .testimonials__item .right .box__wrapper
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+@media only screen and (max-width: 62em) {
+  main[page=testimonials] .section__first .testimonials__item .right .box__wrapper .border-box p {
+    font-size: 1.5rem;
+  }
+}
 main[page=testimonials] .section__first .testimonials__item .right .box__wrapper .border-box h4 {
   font-size: 2rem;
   line-height: 23px;
@@ -2022,6 +2027,11 @@ main[page=testimonials] .section__first .testimonials__item .right .box__wrapper
   color: #ED1C24;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+}
+@media only screen and (max-width: 62em) {
+  main[page=testimonials] .section__first .testimonials__item .right .box__wrapper .border-box h4 {
+    font-size: 1.8rem;
+  }
 }
 
 main[page=store] {
@@ -2310,6 +2320,15 @@ main[page=kretek-detail] .section__first .product-detail .left .box .pr-img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+main[page=kretek-detail] .section__first .product-detail .left .box .pr-img[data-category="3"] {
+  position: absolute;
+  right: -67%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 353px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
 main[page=kretek-detail] .section__first .product-detail .right {
   width: 50%;
   padding: 2rem 8rem;
@@ -2327,6 +2346,7 @@ main[page=kretek-detail] .section__first .product-detail .right h2 {
   letter-spacing: 0.2px;
   color: white;
   margin-bottom: 3rem;
+  text-transform: uppercase;
 }
 main[page=kretek-detail] .section__first .product-detail .right p {
   font-size: 16px;

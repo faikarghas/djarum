@@ -20,15 +20,16 @@
                 <div class="left">
                     <div class="box">
                         <p>The perfect combination of cloves and tobacco, with a spicy aromatic flavor.</p>
-                        <img class="pr-img" src="{{asset('images/product')}}/detail/{{$listProducts[0]->image_detail}}" alt="" srcset="">
+                        <img class="pr-img" data-category="{{$listProducts[0]->category}}" src="{{asset('images/product')}}/detail/{{$listProducts[0]->image_detail}}" alt="" srcset="">
                     </div>
+
                 </div>
                 <div class="right">
                     <img class="img2" src="{{asset('images/ciline.png')}}" width="200px" alt="" srcset="">
                     <h2>{{$listProducts[0]->name}}</h2>
                     <p>{{$listProducts[0]->quantity_en}}</p>
                     <p class="desc"> {{$listProducts[0]->description_en}}</p>
-                    <a class="to-other" href="">SEE OTHER COLLECTIONS</a>
+                    <a class="to-other" href="{{route('kretek')}}">SEE OTHER COLLECTIONS</a>
                 </div>
             </div>
         </section>
