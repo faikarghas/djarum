@@ -73,7 +73,7 @@
             <div class="product-desc">
                 <p>{{$listProducts[0]->quantity_en}}</p>
                 <p>{{$listProducts[0]->description_en}}</p>
-                <a class="to-other" href="{{route('kretek')}}">SEE OTHER COLLECTIONS</a>
+                <a class="to-other mt-5" href="{{route('kretek')}}">SEE OTHER COLLECTIONS</a>
             </div>
         </section>
     </main>
