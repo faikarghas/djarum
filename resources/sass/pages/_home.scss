@@ -193,6 +193,9 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include respond(down-tab-port){
+            padding-top: 13rem;
+        }
         .btn-close{
             position: absolute;
             top: 33px;
@@ -215,12 +218,20 @@ header{
                     letter-spacing: 0.3px;
                     color: white;
                     font-family: "DIN-Bold.woff";
+                    @include respond(down-tab-port){
+                        font-size: 21px;
+                        line-height: 21px;
+                    }
                 }
             }
         }
         .lang{
             display: flex;
             align-items: center;
+            @include respond(down-tab-port){
+                justify-content: space-between;
+                align-items: center;
+            }
             a{
                 text-decoration: none;
                 color: white;
@@ -231,6 +242,12 @@ header{
             }
             .lang-init{
                 color: $color_red;
+            }
+            .lang-ind{
+                @include respond(down-tab-port){
+                    display: flex;
+                    align-items: center;
+                }
             }
             p{
                 color: white;
@@ -244,6 +261,9 @@ header{
                 height: 19px;
                 object-fit: contain;
                 cursor: pointer;
+                @include respond(down-tab-port){
+                    width:16px;
+                }
             }
         }
     }

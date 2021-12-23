@@ -39,9 +39,11 @@
                     <li><a href="{{route('membership')}}">MEMBERSHIP</a></li>
                 </ul>
                 <div class="lang">
-                    <a class="lang-init" href="">ENG</a>
-                    <p>|</p>
-                    <a href="">RUS</a>
+                    <div class="lang-ind">
+                        <a class="lang-init" href="">ENG</a>
+                        <p>|</p>
+                        <a href="">RUS</a>
+                    </div>
                     <img class="btn-search" src="{{asset('images/search.png')}}" width="30px" alt="">
                 </div>
             </div>

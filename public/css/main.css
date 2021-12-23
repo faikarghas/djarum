@@ -682,6 +682,11 @@ header .slide-indicator ul li.active {
   flex-direction: column;
   justify-content: space-between;
 }
+@media only screen and (max-width: 62em) {
+  .menu__showcase .box {
+    padding-top: 13rem;
+  }
+}
 .menu__showcase .box .btn-close {
   position: absolute;
   top: 33px;
@@ -708,11 +713,23 @@ header .slide-indicator ul li.active {
   color: white;
   font-family: "DIN-Bold.woff";
 }
+@media only screen and (max-width: 62em) {
+  .menu__showcase .box ul li a {
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
 .menu__showcase .box .lang {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 62em) {
+  .menu__showcase .box .lang {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .menu__showcase .box .lang a {
   text-decoration: none;
@@ -724,6 +741,14 @@ header .slide-indicator ul li.active {
 }
 .menu__showcase .box .lang .lang-init {
   color: #ED1C24;
+}
+@media only screen and (max-width: 62em) {
+  .menu__showcase .box .lang .lang-ind {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+  }
 }
 .menu__showcase .box .lang p {
   color: white;
@@ -738,6 +763,11 @@ header .slide-indicator ul li.active {
   -o-object-fit: contain;
      object-fit: contain;
   cursor: pointer;
+}
+@media only screen and (max-width: 62em) {
+  .menu__showcase .box .lang .btn-search {
+    width: 16px;
+  }
 }
 
 .confirmation__wrapper {
