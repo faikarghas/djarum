@@ -75,7 +75,7 @@
                 </ul>
             </div>
             <div class="w-100">
-                {{-- <p class="copyright">© 2022 - KRETEK WORLD - All Rights Reserved.</p> --}}
+                <p class="copyright forMobile">© 2022 - KRETEK WORLD - All Rights Reserved.</p>
             </div>
         </footer>
 
