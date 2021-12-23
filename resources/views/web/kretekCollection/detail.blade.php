@@ -51,7 +51,13 @@
                 @endif
             </div>
             <div class="product-detail">
-                <img class="bg" src="{{asset('images/djblackpr1.png')}}" width="400px" alt="">
+                @if ($listProducts[0]->category == '1')
+                    <img class="bg" src="{{asset('images/djblackpr1.png')}}" width="200px" alt="" srcset="">
+                @elseif($listProducts[0]->category == '2')
+                    <img class="bg" src="{{asset('images/cigar-bg.jpg')}}" width="200px" alt="" srcset="">
+                @elseif($listProducts[0]->category == '3')
+                    <img class="bg" src="{{asset('images/shisa-bg.jpg')}}" width="200px" alt="" srcset="">
+                @endif
                 <div class="red-box">
                     <div class="left">
                         <h2>{{$listProducts[0]->name}}</h2>

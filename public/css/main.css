@@ -2430,6 +2430,7 @@ main[page=kretek-detail] .section__firstM .product-detail .bg {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: brightness(0.3);
 }
 main[page=kretek-detail] .section__firstM .product-detail .red-box {
   background-color: #ED1C24;
@@ -2450,9 +2451,9 @@ main[page=kretek-detail] .section__firstM .product-detail .red-box .left {
 main[page=kretek-detail] .section__firstM .product-detail .red-box .left h2 {
   letter-spacing: 0.2px;
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 29px;
   line-height: 29px;
 }
 main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box {
@@ -2498,6 +2499,19 @@ main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-im
 @media only screen and (max-width: 62em) {
   main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-img {
     width: 130px;
+  }
+}
+@media only screen and (max-width: 62em) {
+  main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-img[data-category="2"] {
+    width: 150px;
+    left: 11px;
+  }
+}
+@media only screen and (max-width: 62em) {
+  main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-img[data-category="3"] {
+    width: 154px;
+    top: -49px;
+    bottom: unset;
   }
 }
 main[page=kretek-detail] .section__firstM .product-desc {
