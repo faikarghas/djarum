@@ -24,7 +24,7 @@
                                 KRETEK CIGARETTE
                                 <span class="arrow"><img src="{{asset('images/arrow.png')}}" width="10px" alt="" srcset=""></span>
                             </a>
-                            <div class="collapse" id="kretek-cigarette">
+                            <div class="collapse d-block" id="kretek-cigarette">
                                 <p class="first_p">Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing
                                     your vigor.</p>
                                 <div class="slider-product forMobile">
@@ -84,7 +84,7 @@
                             <div class="collapse" id="kretek-shisha">
                                 <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing
                                     your vigor.</p>
-                                    <div class="slider-product-cigarillo forMobile">
+                                    <div class="slider-product-shisha forMobile">
                                          @foreach ($listShisha as $item)
                                         <div class="product_item">
                                             <a href="{{route('kretek-detail',$item->slug)}}">

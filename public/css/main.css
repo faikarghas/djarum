@@ -129,7 +129,7 @@ a {
 
 /* hamburger menu */
 #menu-hamburger {
-  width: 30px;
+  width: 48px;
   height: 34px;
   position: relative;
   transform: rotate(0deg);
@@ -444,6 +444,11 @@ footer .copyright {
   line-height: 14px;
   letter-spacing: 0.2px;
   color: white;
+}
+@media only screen and (max-width: 62em) {
+  footer .copyright {
+    text-align: center;
+  }
 }
 
 menu {
@@ -1750,6 +1755,7 @@ main[page=kretekCollection] .section__first .left .cs-kretek .product_item .desc
   letter-spacing: 0.2px;
   color: white;
   margin-bottom: 2.5rem;
+  text-transform: uppercase;
 }
 main[page=kretekCollection] .section__first .left .cs-kretek .product_item .desc-box span {
   font-size: 16px;
