@@ -16,8 +16,14 @@ class KretekCollectionController extends Controller
     }
 
     public function kretek(){
+        $listCigarette = DB::table('products')->where('category',1)->get();
+        $listCigarillos = DB::table('products')->where('category',2)->get();
+        $listShisha = DB::table('products')->where('category',3)->get();
 
         $data = [
+            'listCigarette' => $listCigarette,
+            'listCigarillos' => $listCigarillos,
+            'listShisha' => $listShisha
         ];
 
         return view('web.kretekCollection.kretek',$data);
@@ -25,7 +31,10 @@ class KretekCollectionController extends Controller
 
     public function detail($slug){
 
+        $listProducts = DB::table('products')->where('slug',$slug)->get();
+
         $data = [
+            'listProducts' => $listProducts
         ];
 
         return view('web.kretekCollection.detail',$data);
