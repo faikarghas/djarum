@@ -32,7 +32,7 @@
                 <ul>
                     <li><a href="{{route('about')}}">ABOUT</a></li>
                     <li><a href="{{route('kretek')}}">KRETEK COLLECTIONS</a></li>
-                    <li><a href="{{route('inspiration')}}">INSPIRATION</a></li>
+                    <li><a href="{{route('inspiration')}}">INSPIRATIONS</a></li>
                     <li><a href="{{route('store')}}">STORE LOCATION</a></li>
                     <li><a href="{{route('testimonials')}}">TESTIMONIALS</a></li>
                     <li><a href="{{route('contact')}}">CONTACT</a></li>
@@ -71,7 +71,7 @@
                     <li><p>Sitemap</p></li>
                     <li><a href="{{route('about')}}">ABOUT</a></li>
                     <li><a href="{{route('kretek')}}">KRETEK COLLECTIONS</a></li>
-                    <li><a href="{{route('inspiration')}}">INSPIRATION</a></li>
+                    <li><a href="{{route('inspiration')}}">INSPIRATIONS</a></li>
                     <li><a href="{{route('store')}}">STORE LOCATION</a></li>
                     <li><a href="{{route('contact')}}">CONTACT</a></li>
                 </ul>

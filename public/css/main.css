@@ -671,6 +671,7 @@ header .slide-indicator ul li.active {
 @media only screen and (max-width: 62em) {
   .menu__showcase {
     padding: 3rem;
+    padding-bottom: 7rem;
   }
 }
 .menu__showcase.show-menu {

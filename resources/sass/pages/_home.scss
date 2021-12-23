@@ -182,6 +182,7 @@ header{
     transition: 0.2s all ease-in;
     @include respond(down-tab-port){
         padding: 3rem;
+        padding-bottom: 7rem;
     }
 
     &.show-menu{
