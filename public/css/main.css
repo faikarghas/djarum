@@ -129,7 +129,7 @@ a {
 
 /* hamburger menu */
 #menu-hamburger {
-  width: 48px;
+  width: 40px;
   height: 34px;
   position: relative;
   transform: rotate(0deg);
@@ -469,7 +469,7 @@ menu {
 }
 @media only screen and (max-width: 62em) {
   menu {
-    padding: 0 4rem;
+    padding: 0 2rem;
   }
 }
 menu img {

@@ -12,7 +12,7 @@ menu{
     min-height: 80px;
     z-index: 99;
     @include respond(down-tab-port){
-        padding: 0 4rem;
+        padding: 0 2rem;
     }
     img{
         object-fit: contain;
