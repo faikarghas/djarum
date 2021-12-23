@@ -270,7 +270,7 @@
                     </div>
                 </div>
             </div>
-            <a class="to-articles mt-5" href="{{route('inspiration')}}">SEE ALL ARTICLES</a>
+            <a class="to-articles mt-5 forMobile" href="{{route('inspiration')}}">SEE ALL ARTICLES</a>
         </section>
     </main>
 @endsection
