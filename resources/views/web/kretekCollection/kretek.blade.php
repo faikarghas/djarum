@@ -56,7 +56,7 @@
                                 <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing
                                     your vigor.</p>
                                 <div class="slider-product forMobile">
-                                    @foreach ($listCigarrilos as $item)
+                                    @foreach ($listCigarillos as $item)
                                         <div class="product_item">
                                             <a href="{{route('kretek-detail',$item->slug)}}">
                                                 <div class="photo_product">
