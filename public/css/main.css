@@ -668,6 +668,11 @@ header .slide-indicator ul li.active {
   z-index: 9999;
   transition: 0.2s all ease-in;
 }
+@media only screen and (max-width: 62em) {
+  .menu__showcase {
+    padding: 3rem;
+  }
+}
 .menu__showcase.show-menu {
   right: 0%;
 }

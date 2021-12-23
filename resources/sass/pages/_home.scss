@@ -180,6 +180,9 @@ header{
     height: 100vh;
     z-index: 9999;
     transition: 0.2s all ease-in;
+    @include respond(down-tab-port){
+        padding: 3rem;
+    }
 
     &.show-menu{
         right: 0%;
