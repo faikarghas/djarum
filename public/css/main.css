@@ -2411,6 +2411,12 @@ main[page=kretek-detail] .section__firstM .product-detail .red-box .left h2 {
   color: white;
   margin-bottom: 4rem;
 }
+@media only screen and (max-width: 62em) {
+  main[page=kretek-detail] .section__firstM .product-detail .red-box .left h2 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
 main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box {
   width: 120%;
   border: 1px solid white;
