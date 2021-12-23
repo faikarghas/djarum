@@ -1061,7 +1061,7 @@ main[page="inspiration"]{
         padding: 8rem;
         background-color: $color_lightBlack;
         @include respond(down-tab-port){
-            padding: 4rem;
+            padding: 0;
         }
         h2{
             font-size: 53px;
@@ -1069,9 +1069,57 @@ main[page="inspiration"]{
             letter-spacing: 0.2px;
             color: white;
             margin-bottom: 4rem;
+            @include respond(down-tab-port){
+                padding: 4rem;
+                padding-bottom: 5px;
+                margin-bottom: 0rem;
+            }
+        }
+        .ins-img{
+            @include respond(down-tab-port){
+                width: 100%;
+            }
+        }
+
+        .date{
+            color: white;
+            font-size: 11px;
+            line-height: 13px;
+            letter-spacing: 0.35618px;
+            margin-bottom: 3rem;
+            display:block;
+            @include respond(down-tab-port){
+                padding-left: 4rem;
+            }
+        }
+
+        .box_title{
+            margin-left: 9rem;
+            background-color: $color_red;
+            text-align: end;
+            padding: 2rem;
+            transform: translateY(-68px);
+            h3{
+                font-size: 32px;
+                line-height: 1em;
+                letter-spacing: 0.2px;
+                color: white;
+                margin-bottom: 2rem;
+            }
+            .minutes{
+                color: white;
+                font-size: 13.0817px;
+                letter-spacing: 0.373762px;
+                margin-bottom: 0;
+                display:block;
+            }
         }
 
         .content-detail{
+            @include respond(down-tab-port){
+                padding: 4rem;
+                padding-top: 0;
+            }
             .minutes{
                 color: white;
                 font-size: 13.0817px;
@@ -1093,7 +1141,38 @@ main[page="inspiration"]{
             p{
                 color: white;
             }
+ 
         }
+
+        .btn-wrapper{
+            padding: 0 4rem;
+            .btn-djarum{
+                font-size: 20px;
+                line-height: 24px;
+                text-decoration: none;
+                color: white;
+                display: block;
+                padding: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-family: "DIN-Bold.woff";
+                margin-top:1rem;
+                width: 100%;
+                box-shadow: none;
+                border: none;
+            }
+    
+            .btn-blue-djarum{
+                background-color: $color_blue;
+            }
+            .btn-red-djarum{
+                background-color: $color_red;
+            }
+        }
+
+       
 
         .mb-2rem{
             margin-bottom: 2rem;

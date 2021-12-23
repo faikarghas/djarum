@@ -56,7 +56,6 @@
                     <a href="https://vk.com/club21798278" target="_blank" rel="noopener">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="15px" alt="" srcset=""></span></a>
                 </div>
                 <img class="kretek" src="{{asset('images/kreteworld 1.png')}}" width="155px" alt="" srcset="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maxime voluptate eveniet, nemo incidunt perferendis officia aperiam ab veniam autem?</p>
                 <br>
                 <a class="forMobile mb-5 color-white" href="https://vk.com/club21798278" target="_blank" rel="noopener">FOLLOW US <span><img src="{{asset('images/logof.png')}}" width="18px" alt="" srcset=""></span></a>
                 {{-- <ul class="term">

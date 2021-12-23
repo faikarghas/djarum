@@ -2565,7 +2565,7 @@ main[page=inspiration] .section__first {
 }
 @media only screen and (max-width: 62em) {
   main[page=inspiration] .section__first {
-    padding: 4rem;
+    padding: 0;
   }
 }
 main[page=inspiration] .section__first h2 {
@@ -2574,6 +2574,58 @@ main[page=inspiration] .section__first h2 {
   letter-spacing: 0.2px;
   color: white;
   margin-bottom: 4rem;
+}
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first h2 {
+    padding: 4rem;
+    padding-bottom: 5px;
+    margin-bottom: 0rem;
+  }
+}
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .ins-img {
+    width: 100%;
+  }
+}
+main[page=inspiration] .section__first .date {
+  color: white;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.35618px;
+  margin-bottom: 3rem;
+  display: block;
+}
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .date {
+    padding-left: 4rem;
+  }
+}
+main[page=inspiration] .section__first .box_title {
+  margin-left: 9rem;
+  background-color: #ED1C24;
+  text-align: end;
+  padding: 2rem;
+  transform: translateY(-68px);
+}
+main[page=inspiration] .section__first .box_title h3 {
+  font-size: 32px;
+  line-height: 1em;
+  letter-spacing: 0.2px;
+  color: white;
+  margin-bottom: 2rem;
+}
+main[page=inspiration] .section__first .box_title .minutes {
+  color: white;
+  font-size: 13.0817px;
+  letter-spacing: 0.373762px;
+  margin-bottom: 0;
+  display: block;
+}
+@media only screen and (max-width: 62em) {
+  main[page=inspiration] .section__first .content-detail {
+    padding: 4rem;
+    padding-top: 0;
+  }
 }
 main[page=inspiration] .section__first .content-detail .minutes {
   color: white;
@@ -2595,6 +2647,34 @@ main[page=inspiration] .section__first .content-detail h2 {
 }
 main[page=inspiration] .section__first .content-detail p {
   color: white;
+}
+main[page=inspiration] .section__first .btn-wrapper {
+  padding: 0 4rem;
+}
+main[page=inspiration] .section__first .btn-wrapper .btn-djarum {
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "DIN-Bold.woff";
+  margin-top: 1rem;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+}
+main[page=inspiration] .section__first .btn-wrapper .btn-blue-djarum {
+  background-color: #268BCD;
+}
+main[page=inspiration] .section__first .btn-wrapper .btn-red-djarum {
+  background-color: #ED1C24;
 }
 main[page=inspiration] .section__first .mb-2rem {
   margin-bottom: 2rem;
