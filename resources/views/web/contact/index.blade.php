@@ -39,7 +39,7 @@
                             <div class="mb-3">
                                 <textarea class="form-control" id="message" rows="3" placeholder="MESSAGE" required></textarea>
                             </div>
-                            <button class="btn-submit btn-contact" type="submit">SUMBIT</button>
+                            <button class="btn-submit btn-contact btn-red" type="submit">SUMBIT</button>
                         </form>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
             <div class="d-flex align-items-center justify-content-center flex-column w-100 h-100">
                 <img class="mb-5" src="{{asset('images/kreteworld 1.png')}}" alt="" srcset="">
                 <h3 class="mb-5">Thanks for contacting us! <br/> We will be in touch with you shortly.</h3>
-                <button class="btn-thank">BACK TO WEBSITE</button>
+                <button class="btn-thank btn-red">BACK TO WEBSITE</button>
             </div>
         </div>
     </main>

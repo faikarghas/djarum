@@ -347,6 +347,54 @@ a {
   }
 }
 
+.modal_sorry {
+  text-align: center;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  display: none;
+}
+.modal_sorry img {
+  width: 250px;
+}
+.modal_sorry h3 {
+  color: white;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.modal_sorry h4 {
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+.modal_sorry button {
+  width: 170px;
+  padding: 0.5rem 0;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  background-color: #ED1C24;
+  color: white;
+  box-shadow: none;
+  border: none;
+  font-family: "DIN-Bold.woff";
+}
+@media only screen and (max-width: 62em) {
+  .modal_sorry button {
+    font-size: 15px;
+    margin: 1rem;
+  }
+}
+
 .btn-red {
   transition: 0.5s all linear;
 }

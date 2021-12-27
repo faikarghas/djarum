@@ -51,9 +51,11 @@ $( document ).ready(function() {
         // Apply setCookie
         setCookie('confirmation', 'yes', 30);
         $('.confirmation__wrapper').hide()
-        console.log('test');
     })
 
+    $('.btn-no').on('click',function (){
+        $('.modal_sorry').show()
+    })
 
     $('#menu-hamburger').on('click',function () {
         $(this).addClass('open')

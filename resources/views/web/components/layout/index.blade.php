@@ -79,6 +79,13 @@
             </div>
         </footer>
 
+        <div class="modal_sorry">
+            <div class="d-flex align-items-center justify-content-center flex-column w-100 h-100">
+                <h3 class="mb-2">Sorry, you are not of legal age yet</h3>
+                <h4 class="mb-5">We will be glad to see you on our website in the future</h4>
+                <button class="btn-backToWeb btn-red">BACK TO WEBSITE</button>
+            </div>
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
