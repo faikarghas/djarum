@@ -55,6 +55,7 @@ $( document ).ready(function() {
 
     $('.btn-no').on('click',function (){
         $('.modal_sorry').show()
+        $('.confirmation__wrapper').hide()
     })
 
     $('#menu-hamburger').on('click',function () {
