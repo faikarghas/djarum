@@ -106,7 +106,7 @@
                             <h3 class="text-uppercase">A piece of Kretek, that was previously hidden and unseen may now be more. Nowadays, Kretek can possibly be worn to enhance your appearance. Through its unique taste and aroma, Kretek can speak about your authentic personality as well.
                             </h3>
                         </div>
-                        <a class="read_all_testimonials" href="{{route('kretek')}}">READ ALL TESTIMONIALS</a>
+                        <a class="read_all_testimonials btn-red" href="{{route('kretek')}}">READ ALL TESTIMONIALS</a>
                     </div>
                 </div>
             </section>
@@ -121,7 +121,7 @@
                                 <img class="product" src="{{asset('images/product/Cigarettes1.png')}}" width="100%" alt="" srcset="">
                                 <div class="description">
                                     <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing your vigor. </p>
-                                    <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
+                                    <a class="to_all_products btn-red" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                                 <img class="product" src="{{asset('images/product/Cigarillos1.png')}}" width="100%" alt="" srcset="">
                                 <div class="description">
                                     <p>An exotic line of cigarillos made with chopped cloves, a wooden mouthpiece, and a natural tobacco leaf wrapper. Choose your Kretek Cigarillos now!</p>
-                                    <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
+                                    <a class="to_all_products btn-red" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                                 <img class="product" src="{{asset('images/product/Balihai1.png')}}" width="100%" alt="" srcset="">
                                 <div class="description">
                                     <p>Exceptional product manufactured in Indonesia that come from ancestral heritage receipe. A special collection of six distinct aroma’s derived from handpicked tobacco leaves, sauces, and spices from the Indonesian island of Java.</p>
-                                    <a class="to_all_products" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
+                                    <a class="to_all_products btn-red" href="{{route('kretek')}}">SEE ALL PRODUCT LINE</a>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                     <select class="form-select select-store" aria-label="Default select example">
                         <option selected>TRADE CENTER</option>
                     </select>
-                    <button class="btn-search-now">SEARCH NOW</button>
+                    <button class="btn-search-now btn-red">SEARCH NOW</button>
                 </form>
             </div>
             <div class="right">
@@ -247,7 +247,7 @@
                             <div>
                                 <h2>{{$item->title}}</h2>
                                 <p>{{$item->time}} minutes reading</p>
-                                <a href="{{route('inspiration-detail',$item->slug)}}">READ NOW</a>
+                                <a class="btn-red" href="{{route('inspiration-detail',$item->slug)}}">READ NOW</a>
                             </div>
                         </div>
                     </div>

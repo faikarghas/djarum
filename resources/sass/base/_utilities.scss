@@ -229,3 +229,10 @@
         }
     }
 }
+
+.btn-red{
+    transition: 0.5s all linear;
+    &:hover{
+        background-color: $color_darkRed !important;
+    }
+}

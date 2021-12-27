@@ -347,6 +347,13 @@ a {
   }
 }
 
+.btn-red {
+  transition: 0.5s all linear;
+}
+.btn-red:hover {
+  background-color: #c7181e !important;
+}
+
 @font-face {
   font-family: "DIN-Bold.woff";
   src: url("/fonts/DINCondensed-Bold.woff") format("woff");
@@ -803,6 +810,12 @@ header .slide-indicator ul li.active {
 .menu__showcase .box .lang .lang-init {
   color: #ED1C24;
 }
+.menu__showcase .box .lang .lang-ind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+}
 @media only screen and (max-width: 62em) {
   .menu__showcase .box .lang .lang-ind {
     display: -webkit-box;
@@ -1130,6 +1143,10 @@ main[page=home] .section__first .box__sf .right .read_all_testimonials {
   font-family: "DIN-Bold.woff";
   padding: 0.5rem;
   text-align: center;
+  transition: 0.5s all linear;
+}
+main[page=home] .section__first .box__sf .right .read_all_testimonials:hover {
+  background-color: #c7181e;
 }
 main[page=home] .section__first .box__sf .right .video_yt {
   margin-top: 8rem;
@@ -1760,6 +1777,7 @@ main[page=kretekCollection] .section__first .left {
 @media only screen and (max-width: 62em) {
   main[page=kretekCollection] .section__first .left {
     width: 100%;
+    min-height: 100vh;
     padding: 4rem;
   }
 }
@@ -2267,6 +2285,7 @@ main[page=contact] .section__first {
 @media only screen and (max-width: 62em) {
   main[page=contact] .section__first {
     padding: 4rem;
+    min-height: 100vh;
   }
 }
 main[page=contact] .section__first h2 {
@@ -2593,6 +2612,7 @@ main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box {
 @media only screen and (max-width: 62em) {
   main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box {
     padding: 1.5rem;
+    padding-right: 3rem;
   }
 }
 main[page=kretek-detail] .section__firstM .product-detail .red-box .left .box p {
@@ -2631,9 +2651,14 @@ main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-im
   }
 }
 @media only screen and (max-width: 62em) {
+  main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-img[data-category="1"] {
+    left: 25px;
+  }
+}
+@media only screen and (max-width: 62em) {
   main[page=kretek-detail] .section__firstM .product-detail .red-box .right .pr-img[data-category="2"] {
     width: 150px;
-    left: 11px;
+    left: 25px;
   }
 }
 @media only screen and (max-width: 62em) {

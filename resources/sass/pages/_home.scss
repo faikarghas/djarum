@@ -248,6 +248,8 @@ header{
                 color: $color_red;
             }
             .lang-ind{
+                display: flex;
+                flex-direction: row;
                 @include respond(down-tab-port){
                     display: flex;
                     align-items: center;
@@ -537,6 +539,10 @@ main[page="home"]{
                     font-family: "DIN-Bold.woff";
                     padding: 0.5rem;
                     text-align: center;
+                    transition: 0.5s all linear;
+                    &:hover{
+                        background-color: $color_darkRed;
+                    }
                 }
                 .video_yt{
                     margin-top: 8rem;
