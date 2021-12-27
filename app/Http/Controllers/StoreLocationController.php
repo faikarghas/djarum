@@ -11,7 +11,7 @@ class StoreLocationController extends Controller
 
         $storeData = DB::table('store_location')->get();
 
-        $listCity = DB::table('store_location')->select(DB::raw('DISTINCT city'))->get();
+        $listCity = DB::table('store_location')->select(DB::raw('DISTINCT city'))->orderBy('city','ASC')->get();
         $listStoreName = DB::table('store_location')->select(DB::raw('DISTINCT store_name'))->get();
 
         $data = [
