@@ -18,11 +18,14 @@ class HomeController extends Controller
 
         $listCity = DB::table('store_location')->select(DB::raw('DISTINCT city'))->get();
         $listStoreName = DB::table('store_location')->select(DB::raw('DISTINCT store_name'))->get();
+        $listInspiration = DB::table('inspiration')->limit(3)->get();
+
 
         $data = [
             'storeData' => $storeData,
             'listCity' => $listCity,
-            'listStoreName' => $listStoreName
+            'listStoreName' => $listStoreName,
+            'listInspiration' => $listInspiration
         ];
 
         return view('web.home.index',$data);

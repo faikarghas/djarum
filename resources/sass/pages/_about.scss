@@ -1108,6 +1108,8 @@ main[page="inspiration"]{
             }
         }
         .ins-img{
+            width: 100%;
+            padding-right: 4rem;
             @include respond(down-tab-port){
                 width: 100%;
             }
@@ -1173,11 +1175,15 @@ main[page="inspiration"]{
             p{
                 color: white;
             }
- 
         }
 
         .btn-wrapper{
-            padding: 0 4rem;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            @include respond(down-tab-port){
+                padding: 0 4rem;
+            }
             .btn-djarum{
                 font-size: 20px;
                 line-height: 24px;
@@ -1198,6 +1204,7 @@ main[page="inspiration"]{
     
             .btn-blue-djarum{
                 background-color: $color_blue;
+                margin-right: 1rem;
             }
             .btn-red-djarum{
                 background-color: $color_red;

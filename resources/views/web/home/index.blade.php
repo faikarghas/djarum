@@ -239,36 +239,19 @@
                 <p class="forDesktop see-all">SEE ALL ARTICLES</p>
             </div>
             <div class="inspiration__wrapper slider-inpiration">
-                <div class="ins-box">
-                    <img src="{{asset('images/foto1.png')}}" alt="">
-                    <div class="box">
-                        <span>02 November 2021</span>
-                        <div>
-                            <p>3 minutes reading</p>
-                            <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">READ NOW</a>
+                @foreach ($listInspiration as $item)
+                    <div class="ins-box">
+                        <img src="{{asset('images')}}/{{$item->image}}" alt="">
+                        <div class="box">
+                            <span>{{$item->date}}</span>
+                            <div>
+                                <h2>{{$item->title}}</h2>
+                                <p>{{$item->time}} minutes reading</p>
+                                <a href="{{route('inspiration-detail',$item->slug)}}">READ NOW</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="ins-box">
-                    <img src="{{asset('images/foto2.png')}}" alt="">
-                    <div class="box">
-                        <span>02 November 2021</span>
-                        <div>
-                            <p>3 minutes reading</p>
-                            <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">READ NOW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="ins-box">
-                    <img src="{{asset('images/foto3.png')}}" alt="">
-                    <div class="box">
-                        <span>02 November 2021</span>
-                        <div>
-                            <p>3 minutes reading</p>
-                            <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">READ NOW</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <a class="to-articles mt-5 forMobile" href="{{route('inspiration')}}">SEE ALL ARTICLES</a>
         </section>
@@ -296,6 +279,10 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows:false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                focusOnSelect: false
+
             });
 
             $('.slide-indicator ul .dots').each(function (params) {
@@ -331,7 +318,6 @@
                 ]
             });
 
-            
 
             $(window).scroll(function (event) {
                 let scroll = $(document).scrollTop();

@@ -15,9 +15,13 @@ class InspirationController extends Controller
         return view('web.inspiration.index',$data);
     }
 
-    public function detail(){
+    public function detail($slug){
+
+        $detailInspiration = DB::table('inspiration')->where('slug',$slug)->get();
+
 
         $data = [
+            'detailInspiration' => $detailInspiration
         ];
 
         return view('web.inspiration.detail',$data);
