@@ -919,8 +919,6 @@ header .slide-indicator ul li.active {
 .confirmation__wrapper .confirmation img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .confirmation__wrapper .confirmation .box {
   position: absolute;
