@@ -106,7 +106,7 @@
                             <h3 class="text-uppercase">A piece of Kretek, that was previously hidden and unseen may now be more. Nowadays, Kretek can possibly be worn to enhance your appearance. Through its unique taste and aroma, Kretek can speak about your authentic personality as well.
                             </h3>
                         </div>
-                        <a class="read_all_testimonials btn-red" href="{{route('kretek')}}">READ ALL TESTIMONIALS</a>
+                        <a class="read_all_testimonials btn-red" href="{{route('testimonials')}}">READ ALL TESTIMONIALS</a>
                     </div>
                 </div>
             </section>
@@ -253,7 +253,7 @@
                     </div>
                 @endforeach
             </div>
-            <a class="to-articles mt-5 forMobile" href="{{route('inspiration')}}">SEE ALL ARTICLES</a>
+            <a class="to-articles mt-5 forMobile text-center" href="{{route('inspiration')}}">SEE ALL ARTICLES</a>
         </section>
     </main>
 @endsection
