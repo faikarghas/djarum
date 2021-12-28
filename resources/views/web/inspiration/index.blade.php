@@ -19,77 +19,61 @@
             <div class="container-fluid g-0 forDesktop">
                 <div class="row g-0">
                     <div class="col-12 col-lg-8 pr-2">
-                        <a href="">
+                        <a href="{{route('inspiration-detail',$listInspiration[0]->slug)}}">
                             <div class="inspiration__item big">
-                                <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
+                                <img src="{{asset('images')}}/{{$listInspiration[0]->image}}" alt="" srcset="">
                                 <div class="box_inspiration big">
-                                    <h2>CHOOSE YOUR CIGS BY YOUR CHARACTER</h2>
-                                    <p class="date">02 November 2021</p>
+                                    <h2>{{$listInspiration[0]->title}}</h2>
+                                    <p class="date">{{$listInspiration[0]->date}}</p>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-12 col-lg-4 mb-5rem">
                         <div class="row g-0">
+                            @foreach ($listInspirationSkip1 as $item)
                             <div class="col-lg-12">
                                 <div class="inspiration__item mb-2rem">
-                                    <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
-                                    <div class="box_inspiration">
-                                        <h2>WHICH KRETEK ARE YOU?</h2>
-                                        <p class="date">02 November 2021</p>
-                                    </div>
+                                    <a href="{{route('inspiration-detail',$item->slug)}}">
+                                        <img src="{{asset('images')}}/{{$item->image}}" alt="" srcset="">
+                                        <div class="box_inspiration">
+                                            <h2>{{$item->title}}</h2>
+                                            <p class="date">{{$item->date}}</p>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="inspiration__item">
-                                    <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
-                                    <div class="box_inspiration">
-                                        <h2>WHICH KRETEK ARE YOU?</h2>
-                                        <p class="date">02 November 2021</p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="inspiration__list">
-            <div class="inspiration__item box-list">
-                    <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">
-                        <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
-                        <div class="box_inspiration">
-                            <h2>CHOOSE YOUR CIGS BY YOUR CHARACTER</h2>
-                            <p class="date">02 November 2021</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="inspiration__item box-list">
-                    <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">
-                        <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
-                        <div class="box_inspiration">
-                            <h2>WHICH KRETEK ARE YOU?</h2>
-                            <p class="date">02 November 2021</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="inspiration__item box-list">
-                    <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">
-                        <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
-                        <div class="box_inspiration">
-                            <h2>WHICH KRETEK ARE YOU?</h2>
-                            <p class="date">02 November 2021</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="inspiration__item box-list">
-                    <a href="{{route('inspiration-detail','choose-your-cigs-by-your-character')}}">
-                        <img src="{{asset('images/foto1.png')}}" alt="" srcset="">
-                        <div class="box_inspiration">
-                            <h2>WHICH KRETEK ARE YOU?</h2>
-                            <p class="date">02 November 2021</p>
-                        </div>
-                    </a>
-                </div>
+            <div class="inspiration__list forDesktop-dflex">
+                @foreach ($listInspirationSkip3 as $item)
+                    <div class="inspiration__item box-list">
+                        <a href="{{route('inspiration-detail',$item->slug)}}">
+                            <img src="{{asset('images')}}/{{$item->image}}" alt="" srcset="">
+                            <div class="box_inspiration">
+                                <h2>{{$item->title}}</h2>
+                                <p class="date">{{$item->date}}</p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="inspiration__list forMobile-dflex">
+                @foreach ($listInspiration as $item)
+                    <div class="inspiration__item box-list">
+                        <a href="{{route('inspiration-detail',$item->slug)}}">
+                            <img src="{{asset('images')}}/{{$item->image}}" alt="" srcset="">
+                            <div class="box_inspiration">
+                                <h2>{{$item->title}}</h2>
+                                <p class="date">{{$item->date}}</p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </section>
     </main>
