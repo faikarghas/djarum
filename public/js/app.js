@@ -2095,6 +2095,7 @@ $(document).ready(function () {
     // Apply setCookie
     setCookie('confirmation', 'yes', 30);
     $('.confirmation__wrapper').hide();
+    $('.modal_sorry').hide();
   });
   $('.btn-no').on('click', function () {
     $('.modal_sorry').show();
