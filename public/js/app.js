@@ -2100,6 +2100,9 @@ $(document).ready(function () {
     $('.modal_sorry').show();
     $('.confirmation__wrapper').hide();
   });
+  $('.btn-backToWeb').on('click', function (params) {
+    $('.confirmation__wrapper').show();
+  });
   $('#menu-hamburger').on('click', function () {
     $(this).addClass('open');
     $('.menu__showcase').addClass('show-menu');
