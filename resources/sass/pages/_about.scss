@@ -1191,6 +1191,7 @@ main[page="inspiration"]{
             margin-top: 4rem;
             @include respond(down-tab-port){
                 padding: 0 4rem;
+                flex-direction: column;
             }
             .btn-djarum{
                 font-size: 20px;

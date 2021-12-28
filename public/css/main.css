@@ -2839,6 +2839,7 @@ main[page=inspiration] .section__first .btn-wrapper {
 @media only screen and (max-width: 62em) {
   main[page=inspiration] .section__first .btn-wrapper {
     padding: 0 4rem;
+    flex-direction: column;
   }
 }
 main[page=inspiration] .section__first .btn-wrapper .btn-djarum {
