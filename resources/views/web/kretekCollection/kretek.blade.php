@@ -32,7 +32,7 @@
                                         <div class="product_item">
                                             <a href="{{route('kretek-detail',$item->slug)}}">
                                                 <div class="photo_product">
-                                                    <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="">
+                                                    {{-- <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt=""> --}}
                                                     <img class="product" src="{{asset('images/product')}}/{{$item->image}}" width="100%" alt="" srcset="">
                                                 </div>
                                                 <div class="desc">
@@ -60,7 +60,7 @@
                                         <div class="product_item">
                                             <a href="{{route('kretek-detail',$item->slug)}}">
                                                 <div class="photo_product">
-                                                    <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="">
+                                                    {{-- <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt=""> --}}
                                                     <img class="product" src="{{asset('images/product')}}/{{$item->image}}" width="100%" alt="" srcset="">
                                                 </div>
                                                 <div class="desc">
@@ -89,7 +89,7 @@
                                         <div class="product_item">
                                             <a href="{{route('kretek-detail',$item->slug)}}">
                                                 <div class="photo_product">
-                                                    <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="">
+                                                    {{-- <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt=""> --}}
                                                     <img class="product" src="{{asset('images/product')}}/{{$item->image}}" width="100%" alt="" srcset="">
                                                 </div>
                                                 <div class="desc">
@@ -128,7 +128,7 @@
                                     <div class="product_item">
                                         <a href="{{route('kretek-detail',$item->slug)}}">
                                             <div class="photo_product">
-                                                <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="">
+                                                {{-- <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt=""> --}}
                                                 <img class="product" src="{{asset('images/product')}}/{{$item->image}}" width="100%" alt="" srcset="">
                                             </div>
                                             <div class="desc">
@@ -154,7 +154,7 @@
                                     <div class="product_item">
                                         <a href="{{route('kretek-detail',$item->slug)}}">
                                             <div class="photo_product">
-                                                <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="">
+                                                {{-- <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt=""> --}}
                                                 <img class="product" src="{{asset('images/product')}}/{{$item->image}}" width="100%" alt="" srcset="">
                                             </div>
                                             <div class="desc">
@@ -180,7 +180,7 @@
                                     <div class="product_item">
                                         <a href="{{route('kretek-detail',$item->slug)}}">
                                             <div class="photo_product">
-                                                <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="">
+                                                {{-- <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt=""> --}}
                                                 <img class="product" src="{{asset('images/product')}}/{{$item->image}}" width="100%" alt="" srcset="">
                                             </div>
                                             <div class="desc">

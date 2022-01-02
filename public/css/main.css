@@ -2956,7 +2956,9 @@ main[page=inspiration] .section__first .inspiration__item .box_inspiration h2 {
 }
 @media only screen and (max-width: 62em) {
   main[page=inspiration] .section__first .inspiration__item .box_inspiration h2 {
-    font-size: 32px;
+    padding: 2rem 4rem 1rem 4rem;
+    margin-bottom: 0;
+    font-size: 2rem;
     line-height: 30px;
     letter-spacing: 0.2px;
   }

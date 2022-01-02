@@ -117,7 +117,7 @@
                         <div class="item__wrapper">
                             <div class="box">
                                 <h3 class="title">KRETEK CIGARETTE</h3>
-                                <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
+                                {{-- <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset=""> --}}
                                 <img class="product" src="{{asset('images/product/Cigarettes1.png')}}" width="100%" alt="" srcset="">
                                 <div class="description">
                                     <p>Kretek cigarettes is made of premium tobacco and clove which give you strong taste and aroma. This product line of cigarettes is created for enhancing your vigor. </p>

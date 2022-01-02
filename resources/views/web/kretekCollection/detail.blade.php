@@ -15,7 +15,13 @@
 @section('main')
     <main page="kretek-detail">
         <section class="section__first forDesktop">
-            <img class="bg-kretek-detail" src="{{asset('images/djblackpr1.png')}}" width="400px" alt="">
+            @if ($listProducts[0]->category == '1')
+                <img class="bg-kretek-detail" src="{{asset('images/bg-cl.jpg')}}" width="400px" alt="">
+            @elseif($listProducts[0]->category == '2')
+                <img class="bg-kretek-detail" src="{{asset('images/bg-crl.jpg')}}" width="400px" alt="">
+            @elseif($listProducts[0]->category == '3')
+                <img class="bg-kretek-detail" src="{{asset('images/bg-sh.jpg')}}" width="400px" alt="">
+            @endif
             <div class="product-detail">
                 <div class="left">
                     <div class="box">
@@ -52,11 +58,11 @@
             </div>
             <div class="product-detail">
                 @if ($listProducts[0]->category == '1')
-                    <img class="bg" src="{{asset('images/djblackpr1.png')}}" width="200px" alt="" srcset="">
+                    <img class="bg" src="{{asset('images/bg-cl.jpg')}}" width="400px" alt="">
                 @elseif($listProducts[0]->category == '2')
-                    <img class="bg" src="{{asset('images/cigar-bg.jpg')}}" width="200px" alt="" srcset="">
+                    <img class="bg" src="{{asset('images/bg-crl.jpg')}}" width="400px" alt="">
                 @elseif($listProducts[0]->category == '3')
-                    <img class="bg" src="{{asset('images/shisa-bg.jpg')}}" width="200px" alt="" srcset="">
+                    <img class="bg" src="{{asset('images/bg-sh.jpg')}}" width="400px" alt="">
                 @endif
                 <div class="red-box">
                     <div class="left">
