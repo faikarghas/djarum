@@ -165,7 +165,7 @@
                 <div class="slider__products-item">
                     <div class="item__wrapper">
                         <div class="box">
-                            <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset="">
+                            {{-- <img class="bg" src="{{asset('images/bg-djarumblack.png')}}" width="100%" alt="" srcset=""> --}}
                             <img class="product" src="{{asset('images/product/Cigarettes1.png')}}" width="100%" alt="" srcset="">
                         </div>
                         <div class="description">
