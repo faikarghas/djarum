@@ -2127,7 +2127,9 @@ $(document).ready(function () {
     $('.img_on_bg').css('transform', "translate(".concat(transVal, ",").concat(scroll * 2 / 5, "px)")); //Testimonials
 
     $('.animate-testimonials').css('transform', "translateY(".concat(-scroll * 2 / 10, "px)"));
-    $('[page=testimonials]').css('margin-bottom', "".concat(-scroll * 2 / 20, "px")); // $('.section__first title__sf').css('transform',`translateY(${scroll * 2 / 20 + 50}px)`)
+    $('[page=testimonials]').css('margin-bottom', "".concat(-scroll * 2 / 20, "px"));
+    $('[page=about] .right-1').css('transform', "translateY(".concat(-scroll * 2 / 10, "px)"));
+    $('[page=about] .left-2').css('transform', "translateY(".concat(-scroll * 2 / 10, "px)")); // $('.section__first title__sf').css('transform',`translateY(${scroll * 2 / 20 + 50}px)`)
   });
 });
 

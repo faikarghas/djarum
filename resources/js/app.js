@@ -94,6 +94,10 @@ $( document ).ready(function() {
         $('.animate-testimonials').css('transform',`translateY(${-scroll * 2 / 10 }px)`)
         $('[page=testimonials]').css('margin-bottom',`${-scroll * 2 / 20 }px`)
 
+        $('[page=about] .right-1').css('transform',`translateY(${-scroll * 2 / 10 }px)`)
+        $('[page=about] .left-2').css('transform',`translateY(${-scroll * 2 / 10 }px)`)
+
+
         // $('.section__first title__sf').css('transform',`translateY(${scroll * 2 / 20 + 50}px)`)
 
     });
