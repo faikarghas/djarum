@@ -407,8 +407,9 @@ main[page="kretekCollection"]{
             }
 
             .photo_product{
-                height: 595px;
+                height: 552px;
                 position: relative;
+                // background-color: black;
                 .bg{
                     height: 100%;
                     object-fit: cover;
@@ -419,7 +420,8 @@ main[page="kretekCollection"]{
                     left: 50%;
                     transform: translate(-50%,-50%);
                     // width: 200px;
-                    object-fit: contain;
+                    object-fit: cover;
+                    width: 110%;
                 }
             }
             a{

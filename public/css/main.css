@@ -2014,7 +2014,7 @@ main[page=kretekCollection] .section__first .right .default .photo_product .prod
   left: 40%;
 }
 main[page=kretekCollection] .section__first .right .photo_product {
-  height: 595px;
+  height: 552px;
   position: relative;
 }
 main[page=kretekCollection] .section__first .right .photo_product .bg {
@@ -2027,8 +2027,9 @@ main[page=kretekCollection] .section__first .right .photo_product .product {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 110%;
 }
 main[page=kretekCollection] .section__first .right a {
   text-decoration: none;
