@@ -89,6 +89,7 @@ $( document ).ready(function() {
 
         // Logo banner home
         $('.img_on_bg').css('transform',`translate(${transVal},${scroll * 2 / 5}px)`)
+        $('[page=home] .section__first').css('transform',`translateY(${(scroll - 550) * 2 / 10 }px)`)
 
         //Testimonials
         $('.animate-testimonials').css('transform',`translateY(${-scroll * 2 / 10 }px)`)

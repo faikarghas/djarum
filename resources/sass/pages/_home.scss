@@ -374,33 +374,35 @@ header{
 main[page="home"]{
     padding-top: 8rem;
     background-color: $color_lightBlack;
+    .smoke_bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        // transform: translateY(-50%);
+        width: 100%;
+        @include respond(down-tab-port){
+            top: 1%;
+        }
+        img{
+            object-fit: contain;
+            transform: rotateY(180deg);
+            width: 100%;
+            filter: opacity(0.2);
+        }
+    }
     .section__first{
         padding-left: 13.4rem;
         padding-right: 8.4rem;
         padding-bottom: 17rem;
         position: relative;
+        z-index: 2;
         @include respond(down-tab-port){
             padding-left: 4rem;
             padding-right:4rem;
             padding-bottom: 4rem;
         }
-        .smoke_bg{
-            position: absolute;
-            top: 50%;
-            left: 0;
-            z-index: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            @include respond(down-tab-port){
-                top: 1%;
-            }
-            img{
-                object-fit: contain;
-                transform: rotateY(180deg);
-                width: 100%;
-                filter: opacity(0.2);
-            }
-        }
+        
         .title__sf{
             margin-bottom: 2rem;
             position: relative;

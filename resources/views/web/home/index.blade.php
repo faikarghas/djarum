@@ -91,8 +91,9 @@
 @section('main')
     <main page="home">
         <div class="position-relative">
+            <div class="smoke_bg"><img src="{{asset('images/smoke.jpg')}}" alt="" srcset=""></div>
+
             <section class="section__first">
-                <div class="smoke_bg"><img src="{{asset('images/smoke.jpg')}}" alt="" srcset=""></div>
                 <div class="title__sf">
                     <h2>HERE TO <span>STAND OUT</span>,</h2>
                     <h2>NOT TO BLEND IN.</h2>

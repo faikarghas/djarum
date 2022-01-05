@@ -997,11 +997,31 @@ main[page=home] {
   padding-top: 8rem;
   background-color: #111114;
 }
+main[page=home] .smoke_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+}
+@media only screen and (max-width: 62em) {
+  main[page=home] .smoke_bg {
+    top: 1%;
+  }
+}
+main[page=home] .smoke_bg img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: rotateY(180deg);
+  width: 100%;
+  filter: opacity(0.2);
+}
 main[page=home] .section__first {
   padding-left: 13.4rem;
   padding-right: 8.4rem;
   padding-bottom: 17rem;
   position: relative;
+  z-index: 2;
 }
 @media only screen and (max-width: 62em) {
   main[page=home] .section__first {
@@ -1009,26 +1029,6 @@ main[page=home] .section__first {
     padding-right: 4rem;
     padding-bottom: 4rem;
   }
-}
-main[page=home] .section__first .smoke_bg {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 0;
-  transform: translateY(-50%);
-  width: 100%;
-}
-@media only screen and (max-width: 62em) {
-  main[page=home] .section__first .smoke_bg {
-    top: 1%;
-  }
-}
-main[page=home] .section__first .smoke_bg img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  transform: rotateY(180deg);
-  width: 100%;
-  filter: opacity(0.2);
 }
 main[page=home] .section__first .title__sf {
   margin-bottom: 2rem;
