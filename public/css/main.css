@@ -2029,7 +2029,7 @@ main[page=kretekCollection] .section__first .right .photo_product .product {
   transform: translate(-50%, -50%);
   -o-object-fit: cover;
      object-fit: cover;
-  width: 110%;
+  width: 102%;
 }
 main[page=kretekCollection] .section__first .right a {
   text-decoration: none;
