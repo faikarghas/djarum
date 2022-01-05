@@ -74,4 +74,28 @@ $( document ).ready(function() {
     })
 
 
+    // PARALLAX
+
+
+    $(window).scroll(function (event) {
+        let scroll = $(document).scrollTop();
+        let transVal
+
+        if ($(window).width() < 800) {
+            transVal = '-50%';
+        } else {
+            transVal = '43px';
+        }
+
+        // Logo banner home
+        $('.img_on_bg').css('transform',`translate(${transVal},${scroll * 2 / 5}px)`)
+
+        //Testimonials
+        $('.animate-testimonials').css('transform',`translateY(${-scroll * 2 / 10 }px)`)
+        $('[page=testimonials]').css('margin-bottom',`${-scroll * 2 / 20 }px`)
+
+        // $('.section__first title__sf').css('transform',`translateY(${scroll * 2 / 20 + 50}px)`)
+
+    });
+
 });

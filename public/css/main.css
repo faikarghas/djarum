@@ -414,6 +414,8 @@ footer {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 @media only screen and (max-width: 62em) {
   footer {
@@ -1609,6 +1611,7 @@ main[page=about] .bar {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  height: 100%;
   z-index: 1;
 }
 main[page=about] .section__first {
@@ -2049,24 +2052,26 @@ main[page=kretekCollection] .section__first .right .desc-box h4 {
 
 main[page=testimonials] {
   margin-top: 80px;
-}
-main[page=testimonials] .section__first {
-  background-color: #111114;
-  padding-bottom: 10rem;
   position: relative;
+  background-color: #111114;
 }
-main[page=testimonials] .section__first .v-img {
+main[page=testimonials] .v-img {
   position: absolute;
   width: 100%;
   top: 10%;
   filter: opacity(0.2);
 }
-main[page=testimonials] .section__first .v-img-2 {
+main[page=testimonials] .v-img-2 {
   position: absolute;
   width: 100%;
   bottom: 20%;
   transform: rotate(180deg);
   filter: opacity(0.2);
+}
+main[page=testimonials] .section__first {
+  padding-bottom: 10rem;
+  position: relative;
+  z-index: 2;
 }
 main[page=testimonials] .section__first .iframe-yt {
   position: fixed;

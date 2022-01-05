@@ -2111,6 +2111,23 @@ $(document).ready(function () {
   $('.btn-close').on('click', function () {
     $('#menu-hamburger').removeClass('open');
     $('.menu__showcase').removeClass('show-menu');
+  }); // PARALLAX
+
+  $(window).scroll(function (event) {
+    var scroll = $(document).scrollTop();
+    var transVal;
+
+    if ($(window).width() < 800) {
+      transVal = '-50%';
+    } else {
+      transVal = '43px';
+    } // Logo banner home
+
+
+    $('.img_on_bg').css('transform', "translate(".concat(transVal, ",").concat(scroll * 2 / 5, "px)")); //Testimonials
+
+    $('.animate-testimonials').css('transform', "translateY(".concat(-scroll * 2 / 10, "px)"));
+    $('[page=testimonials]').css('margin-bottom', "".concat(-scroll * 2 / 20, "px")); // $('.section__first title__sf').css('transform',`translateY(${scroll * 2 / 20 + 50}px)`)
   });
 });
 

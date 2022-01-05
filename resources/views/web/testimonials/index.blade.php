@@ -14,7 +14,7 @@
 @endsection
 @section('main')
     <main page="testimonials">
-        <section class="section__first">
+        <section class="section__first animate-testimonials">
             <h2>TESTIMONIALS</h2>
             <div class="iframe-yt">
                 <iframe id="iframeYT" width="100%" height="100%" src="https://www.youtube.com/embed/RLnGX_oRq2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -74,9 +74,10 @@
                 </div>
             </div>
 
-            <img class="v-img" src="{{asset('images/smoke.jpg')}}" alt="">
-            <img class="v-img-2" src="{{asset('images/smoke.jpg')}}" alt="">
         </section>
+
+        <img class="v-img" src="{{asset('images/smoke.jpg')}}" alt="">
+        <img class="v-img-2" src="{{asset('images/smoke.jpg')}}" alt="">
     </main>
 @endsection
 @section('script')

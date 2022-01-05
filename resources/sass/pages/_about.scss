@@ -9,6 +9,7 @@ main[page="about"]{
         left: 50%;
         transform: translate(-50%,-50%);
         width: 100%;
+        height: 100%;
         z-index: 1;
     }
     .section__first{
@@ -447,23 +448,25 @@ main[page="kretekCollection"]{
 
 main[page="testimonials"]{
     margin-top: 80px;
+    position: relative;
+    background-color: $color_lightBlack;
+    .v-img{
+        position: absolute;
+        width: 100%;
+        top: 10%;
+        filter: opacity(0.2);
+    }
+    .v-img-2{
+        position: absolute;
+        width: 100%;
+        bottom: 20%;
+        transform: rotate(180deg);
+        filter: opacity(0.2);
+    }
     .section__first{
-        background-color: $color_lightBlack;
         padding-bottom: 10rem;
         position: relative;
-        .v-img{
-            position: absolute;
-            width: 100%;
-            top: 10%;
-            filter: opacity(0.2);
-        }
-        .v-img-2{
-            position: absolute;
-            width: 100%;
-            bottom: 20%;
-            transform: rotate(180deg);
-            filter: opacity(0.2);
-        }
+        z-index: 2;
         .iframe-yt{
             position: fixed;
             top: 0;
