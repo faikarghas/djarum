@@ -41,7 +41,7 @@
                 <img src="{{asset('images/vk.png')}}" width="15px" alt="" srcset="">
             </a>
         </div>
-        <div class="slide-indicator">
+        <div class="slide-indicator dots_wrapperD">
             <ul>
                 <li class="dots" data-id="0">01</li>
                 <li class="dots" data-id="1">02</li>
@@ -79,7 +79,7 @@
                 <img src="{{asset('images/vk.png')}}" width="15px" alt="" srcset="">
             </a>
         </div>
-        <div class="slide-indicator">
+        <div class="slide-indicator dots_wrapperM">
             <ul>
                 <li class="dots" data-id="0">01</li>
                 <li class="dots" data-id="1">02</li>
@@ -266,10 +266,17 @@
             $(".header_slider").on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
                 let idx = currentSlide == undefined ? 0 : currentSlide
                 console.log(idx);
-                $('.slide-indicator ul li').each(function (params) {
+                $('.dots_wrapperD ul li').each(function (params) {
                     if($(this).index() === idx){
                         $(this).addClass('active')
-                        $('.slide-indicator ul li').not($(this)).removeClass('active');
+                        $('.dots_wrapperD ul li').not($(this)).removeClass('active');
+                    }
+                })
+
+                $('.dots_wrapperm ul li').each(function (params) {
+                    if($(this).index() === idx){
+                        $(this).addClass('active')
+                        $('.dots_wrapperm ul li').not($(this)).removeClass('active');
                     }
                 })
             });
